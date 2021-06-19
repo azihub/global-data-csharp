@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile></DocumentationFile>
+    <WarningsAsErrors>;NU1605;NU1574</WarningsAsErrors>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CsvHelper" Version="26.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Country\NewFolder\" />
+    <Folder Include="Address\" />
+  </ItemGroup>
+
+</Project>
