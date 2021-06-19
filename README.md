@@ -1,5 +1,5 @@
 # Global Data
 
-- Country
-- Currency
-- Bank
+- Counties
+- Currencies (Fiat)
+- Banks
