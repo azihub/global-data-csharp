@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31402.337
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GlobalData", "GlobalData\GlobalData.csproj", "{C666F68D-E2F4-42F1-8B4C-60CC0E7FA6D1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GlobalData.Base", "GlobalData.Base\GlobalData.Base.csproj", "{C666F68D-E2F4-42F1-8B4C-60CC0E7FA6D1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GlobalData.Tests", "GlobalData.Tests\GlobalData.Tests.csproj", "{703E5905-32F2-442D-9C7B-963B537A02B8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GlobalData.Base.Tests", "GlobalData.Base.Tests\GlobalData.Base.Tests.csproj", "{703E5905-32F2-442D-9C7B-963B537A02B8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GlobalData.Banks", "GlobalData.Banks\GlobalData.Banks.csproj", "{3A00AA65-8B98-4DC0-8E39-CC0F53D942F0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{703E5905-32F2-442D-9C7B-963B537A02B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{703E5905-32F2-442D-9C7B-963B537A02B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{703E5905-32F2-442D-9C7B-963B537A02B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A00AA65-8B98-4DC0-8E39-CC0F53D942F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A00AA65-8B98-4DC0-8E39-CC0F53D942F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A00AA65-8B98-4DC0-8E39-CC0F53D942F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A00AA65-8B98-4DC0-8E39-CC0F53D942F0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
