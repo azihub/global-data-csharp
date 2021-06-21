@@ -27,7 +27,7 @@ namespace Azihub.GlobalData.Base.Country
         }
 
         #region Dictionary
-        public static Dictionary<string, CountryIso2Code> Codes { get; } = new()
+        public static Dictionary<string, CountryIso2Code> Codes { get; } = new Dictionary<string, CountryIso2Code>()
         {
             {Iso2Codes.AB, new CountryIso2Code(Iso2Codes.AB)},
             {Iso2Codes.AC, new CountryIso2Code(Iso2Codes.AC)},
@@ -304,1245 +304,1245 @@ namespace Azihub.GlobalData.Base.Country
         SELECT CONCAT('/// <summary>', CHARACTER(13),
               '/// ',name,' (',country_code_iso2,')', CHARACTER(13),
               '/// </summary>', CHARACTER(13),
-              'public static CountryIso2Code ', REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(name, ',', '') , ' ', '_') , '(', '') , ')', '') , '-', '_'), ' => new(Iso2Codes.',country_code_iso2,');', CHARACTER(13), CHARACTER(13))
+              'public static CountryIso2Code ', REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(name, ',', '') , ' ', '_') , '(', '') , ')', '') , '-', '_'), ' => new CountryIso2Code(Iso2Codes.',country_code_iso2,');', CHARACTER(13), CHARACTER(13))
         FROM `gd_countries`
         ORDER BY `country_code_iso2`			  		 
         */
         /// <summary>
         /// Abkhazia (AB)
         /// </summary>
-        public static CountryIso2Code Abkhazia => new(Iso2Codes.AB);
+        public static CountryIso2Code Abkhazia => new CountryIso2Code(Iso2Codes.AB);
 
         /// <summary>
         /// Ascension Island (AC)
         /// </summary>
-        public static CountryIso2Code AscensionIsland => new(Iso2Codes.AC);
+        public static CountryIso2Code AscensionIsland => new CountryIso2Code(Iso2Codes.AC);
 
         /// <summary>
         /// Andorra (AD)
         /// </summary>
-        public static CountryIso2Code Andorra => new(Iso2Codes.AD);
+        public static CountryIso2Code Andorra => new CountryIso2Code(Iso2Codes.AD);
 
         /// <summary>
         /// United Arab Emirates (AE)
         /// </summary>
-        public static CountryIso2Code UnitedArabEmirates => new(Iso2Codes.AE);
+        public static CountryIso2Code UnitedArabEmirates => new CountryIso2Code(Iso2Codes.AE);
 
         /// <summary>
         /// Afghanistan (AF)
         /// </summary>
-        public static CountryIso2Code Afghanistan => new(Iso2Codes.AF);
+        public static CountryIso2Code Afghanistan => new CountryIso2Code(Iso2Codes.AF);
 
         /// <summary>
         /// Antigua And Barbuda (AG)
         /// </summary>
-        public static CountryIso2Code AntiguaAndBarbuda => new(Iso2Codes.AG);
+        public static CountryIso2Code AntiguaAndBarbuda => new CountryIso2Code(Iso2Codes.AG);
 
         /// <summary>
         /// Anguilla (AI)
         /// </summary>
-        public static CountryIso2Code Anguilla => new(Iso2Codes.AI);
+        public static CountryIso2Code Anguilla => new CountryIso2Code(Iso2Codes.AI);
 
         /// <summary>
         /// Albania (AL)
         /// </summary>
-        public static CountryIso2Code Albania => new(Iso2Codes.AL);
+        public static CountryIso2Code Albania => new CountryIso2Code(Iso2Codes.AL);
 
         /// <summary>
         /// Armenia (AM)
         /// </summary>
-        public static CountryIso2Code Armenia => new(Iso2Codes.AM);
+        public static CountryIso2Code Armenia => new CountryIso2Code(Iso2Codes.AM);
 
         /// <summary>
         /// Netherlands Antilles (AN)
         /// </summary>
-        public static CountryIso2Code NetherlandsAntilles => new(Iso2Codes.AN);
+        public static CountryIso2Code NetherlandsAntilles => new CountryIso2Code(Iso2Codes.AN);
 
         /// <summary>
         /// Angola (AO)
         /// </summary>
-        public static CountryIso2Code Angola => new(Iso2Codes.AO);
+        public static CountryIso2Code Angola => new CountryIso2Code(Iso2Codes.AO);
 
         /// <summary>
         /// Antarctica (AQ)
         /// </summary>
-        public static CountryIso2Code Antarctica => new(Iso2Codes.AQ);
+        public static CountryIso2Code Antarctica => new CountryIso2Code(Iso2Codes.AQ);
 
         /// <summary>
         /// Argentina (AR)
         /// </summary>
-        public static CountryIso2Code Argentina => new(Iso2Codes.AR);
+        public static CountryIso2Code Argentina => new CountryIso2Code(Iso2Codes.AR);
 
         /// <summary>
         /// American Samoa (AS)
         /// </summary>
-        public static CountryIso2Code AmericanSamoa => new(Iso2Codes.AS);
+        public static CountryIso2Code AmericanSamoa => new CountryIso2Code(Iso2Codes.AS);
 
         /// <summary>
         /// Austria (AT)
         /// </summary>
-        public static CountryIso2Code Austria => new(Iso2Codes.AT);
+        public static CountryIso2Code Austria => new CountryIso2Code(Iso2Codes.AT);
 
         /// <summary>
         /// Australia (AU)
         /// </summary>
-        public static CountryIso2Code Australia => new(Iso2Codes.AU);
+        public static CountryIso2Code Australia => new CountryIso2Code(Iso2Codes.AU);
 
         /// <summary>
         /// Aruba (AW)
         /// </summary>
-        public static CountryIso2Code Aruba => new(Iso2Codes.AW);
+        public static CountryIso2Code Aruba => new CountryIso2Code(Iso2Codes.AW);
 
         /// <summary>
         /// Aland Islands (AX)
         /// </summary>
-        public static CountryIso2Code AlandIslands => new(Iso2Codes.AX);
+        public static CountryIso2Code AlandIslands => new CountryIso2Code(Iso2Codes.AX);
 
         /// <summary>
         /// Azerbaijan (AZ)
         /// </summary>
-        public static CountryIso2Code Azerbaijan => new(Iso2Codes.AZ);
+        public static CountryIso2Code Azerbaijan => new CountryIso2Code(Iso2Codes.AZ);
 
         /// <summary>
         /// Bosnia And Herzegovina (BA)
         /// </summary>
-        public static CountryIso2Code BosniaAndHerzegovina => new(Iso2Codes.BA);
+        public static CountryIso2Code BosniaAndHerzegovina => new CountryIso2Code(Iso2Codes.BA);
 
         /// <summary>
         /// Barbados (BB)
         /// </summary>
-        public static CountryIso2Code Barbados => new(Iso2Codes.BB);
+        public static CountryIso2Code Barbados => new CountryIso2Code(Iso2Codes.BB);
 
         /// <summary>
         /// Bangladesh (BD)
         /// </summary>
-        public static CountryIso2Code Bangladesh => new(Iso2Codes.BD);
+        public static CountryIso2Code Bangladesh => new CountryIso2Code(Iso2Codes.BD);
 
         /// <summary>
         /// Belgium (BE)
         /// </summary>
-        public static CountryIso2Code Belgium => new(Iso2Codes.BE);
+        public static CountryIso2Code Belgium => new CountryIso2Code(Iso2Codes.BE);
 
         /// <summary>
         /// Burkina Faso (BF)
         /// </summary>
-        public static CountryIso2Code BurkinaFaso => new(Iso2Codes.BF);
+        public static CountryIso2Code BurkinaFaso => new CountryIso2Code(Iso2Codes.BF);
 
         /// <summary>
         /// Bulgaria (BG)
         /// </summary>
-        public static CountryIso2Code Bulgaria => new(Iso2Codes.BG);
+        public static CountryIso2Code Bulgaria => new CountryIso2Code(Iso2Codes.BG);
 
         /// <summary>
         /// Bahrain (BH)
         /// </summary>
-        public static CountryIso2Code Bahrain => new(Iso2Codes.BH);
+        public static CountryIso2Code Bahrain => new CountryIso2Code(Iso2Codes.BH);
 
         /// <summary>
         /// Burundi (BI)
         /// </summary>
-        public static CountryIso2Code Burundi => new(Iso2Codes.BI);
+        public static CountryIso2Code Burundi => new CountryIso2Code(Iso2Codes.BI);
 
         /// <summary>
         /// Benin (BJ)
         /// </summary>
-        public static CountryIso2Code Benin => new(Iso2Codes.BJ);
+        public static CountryIso2Code Benin => new CountryIso2Code(Iso2Codes.BJ);
 
         /// <summary>
         /// Bermuda (BM)
         /// </summary>
-        public static CountryIso2Code Bermuda => new(Iso2Codes.BM);
+        public static CountryIso2Code Bermuda => new CountryIso2Code(Iso2Codes.BM);
 
         /// <summary>
         /// Brunei Darussalam (BN)
         /// </summary>
-        public static CountryIso2Code BruneiDarussalam => new(Iso2Codes.BN);
+        public static CountryIso2Code BruneiDarussalam => new CountryIso2Code(Iso2Codes.BN);
 
         /// <summary>
         /// Bolivia (BO)
         /// </summary>
-        public static CountryIso2Code Bolivia => new(Iso2Codes.BO);
+        public static CountryIso2Code Bolivia => new CountryIso2Code(Iso2Codes.BO);
 
         /// <summary>
         /// Brazil (BR)
         /// </summary>
-        public static CountryIso2Code Brazil => new(Iso2Codes.BR);
+        public static CountryIso2Code Brazil => new CountryIso2Code(Iso2Codes.BR);
 
         /// <summary>
         /// Bahamas (BS)
         /// </summary>
-        public static CountryIso2Code Bahamas => new(Iso2Codes.BS);
+        public static CountryIso2Code Bahamas => new CountryIso2Code(Iso2Codes.BS);
 
         /// <summary>
         /// Bhutan (BT)
         /// </summary>
-        public static CountryIso2Code Bhutan => new(Iso2Codes.BT);
+        public static CountryIso2Code Bhutan => new CountryIso2Code(Iso2Codes.BT);
 
         /// <summary>
         /// Botswana (BW)
         /// </summary>
-        public static CountryIso2Code Botswana => new(Iso2Codes.BW);
+        public static CountryIso2Code Botswana => new CountryIso2Code(Iso2Codes.BW);
 
         /// <summary>
         /// Belarus (BY)
         /// </summary>
-        public static CountryIso2Code Belarus => new(Iso2Codes.BY);
+        public static CountryIso2Code Belarus => new CountryIso2Code(Iso2Codes.BY);
 
         /// <summary>
         /// Belize (BZ)
         /// </summary>
-        public static CountryIso2Code Belize => new(Iso2Codes.BZ);
+        public static CountryIso2Code Belize => new CountryIso2Code(Iso2Codes.BZ);
 
         /// <summary>
         /// Canada (CA)
         /// </summary>
-        public static CountryIso2Code Canada => new(Iso2Codes.CA);
+        public static CountryIso2Code Canada => new CountryIso2Code(Iso2Codes.CA);
 
         /// <summary>
         /// Cocos (Keeling) Islands (CC)
         /// </summary>
-        public static CountryIso2Code CocosKeelingIslands => new(Iso2Codes.CC);
+        public static CountryIso2Code CocosKeelingIslands => new CountryIso2Code(Iso2Codes.CC);
 
         /// <summary>
         /// Congo, Democratic Republic of the (CD)
         /// </summary>
-        public static CountryIso2Code CongoDemocraticRepublicOfThe => new(Iso2Codes.CD);
+        public static CountryIso2Code CongoDemocraticRepublicOfThe => new CountryIso2Code(Iso2Codes.CD);
 
         /// <summary>
         /// Central African Republic (CF)
         /// </summary>
-        public static CountryIso2Code CentralAfricanRepublic => new(Iso2Codes.CF);
+        public static CountryIso2Code CentralAfricanRepublic => new CountryIso2Code(Iso2Codes.CF);
 
         /// <summary>
         /// Congo, Republic of the (CG)
         /// </summary>
-        public static CountryIso2Code CongoRepublicOfThe => new(Iso2Codes.CG);
+        public static CountryIso2Code CongoRepublicOfThe => new CountryIso2Code(Iso2Codes.CG);
 
         /// <summary>
         /// Switzerland (CH)
         /// </summary>
-        public static CountryIso2Code Switzerland => new(Iso2Codes.CH);
+        public static CountryIso2Code Switzerland => new CountryIso2Code(Iso2Codes.CH);
 
         /// <summary>
         /// Ivory Coast (CI)
         /// </summary>
-        public static CountryIso2Code IvoryCoast => new(Iso2Codes.CI);
+        public static CountryIso2Code IvoryCoast => new CountryIso2Code(Iso2Codes.CI);
 
         /// <summary>
         /// Cook Islands (CK)
         /// </summary>
-        public static CountryIso2Code CookIslands => new(Iso2Codes.CK);
+        public static CountryIso2Code CookIslands => new CountryIso2Code(Iso2Codes.CK);
 
         /// <summary>
         /// Chile (CL)
         /// </summary>
-        public static CountryIso2Code Chile => new(Iso2Codes.CL);
+        public static CountryIso2Code Chile => new CountryIso2Code(Iso2Codes.CL);
 
         /// <summary>
         /// Cameroon (CM)
         /// </summary>
-        public static CountryIso2Code Cameroon => new(Iso2Codes.CM);
+        public static CountryIso2Code Cameroon => new CountryIso2Code(Iso2Codes.CM);
 
         /// <summary>
         /// China (CN)
         /// </summary>
-        public static CountryIso2Code China => new(Iso2Codes.CN);
+        public static CountryIso2Code China => new CountryIso2Code(Iso2Codes.CN);
 
         /// <summary>
         /// Colombia (CO)
         /// </summary>
-        public static CountryIso2Code Colombia => new(Iso2Codes.CO);
+        public static CountryIso2Code Colombia => new CountryIso2Code(Iso2Codes.CO);
 
         /// <summary>
         /// Costa Rica (CR)
         /// </summary>
-        public static CountryIso2Code CostaRica => new(Iso2Codes.CR);
+        public static CountryIso2Code CostaRica => new CountryIso2Code(Iso2Codes.CR);
 
         /// <summary>
         /// Cuba (CU)
         /// </summary>
-        public static CountryIso2Code Cuba => new(Iso2Codes.CU);
+        public static CountryIso2Code Cuba => new CountryIso2Code(Iso2Codes.CU);
 
         /// <summary>
         /// Cape Verde (CV)
         /// </summary>
-        public static CountryIso2Code CapeVerde => new(Iso2Codes.CV);
+        public static CountryIso2Code CapeVerde => new CountryIso2Code(Iso2Codes.CV);
 
         /// <summary>
         /// Christmas Island (CX)
         /// </summary>
-        public static CountryIso2Code ChristmasIsland => new(Iso2Codes.CX);
+        public static CountryIso2Code ChristmasIsland => new CountryIso2Code(Iso2Codes.CX);
 
         /// <summary>
         /// Cyprus (CY)
         /// </summary>
-        public static CountryIso2Code Cyprus => new(Iso2Codes.CY);
+        public static CountryIso2Code Cyprus => new CountryIso2Code(Iso2Codes.CY);
 
         /// <summary>
         /// Czech Republic (CZ)
         /// </summary>
-        public static CountryIso2Code CzechRepublic => new(Iso2Codes.CZ);
+        public static CountryIso2Code CzechRepublic => new CountryIso2Code(Iso2Codes.CZ);
 
         /// <summary>
         /// Germany (DE)
         /// </summary>
-        public static CountryIso2Code Germany => new(Iso2Codes.DE);
+        public static CountryIso2Code Germany => new CountryIso2Code(Iso2Codes.DE);
 
         /// <summary>
         /// Djibouti (DJ)
         /// </summary>
-        public static CountryIso2Code Djibouti => new(Iso2Codes.DJ);
+        public static CountryIso2Code Djibouti => new CountryIso2Code(Iso2Codes.DJ);
 
         /// <summary>
         /// Denmark (DK)
         /// </summary>
-        public static CountryIso2Code Denmark => new(Iso2Codes.DK);
+        public static CountryIso2Code Denmark => new CountryIso2Code(Iso2Codes.DK);
 
         /// <summary>
         /// Dominica (DM)
         /// </summary>
-        public static CountryIso2Code Dominica => new(Iso2Codes.DM);
+        public static CountryIso2Code Dominica => new CountryIso2Code(Iso2Codes.DM);
 
         /// <summary>
         /// Dominican Republic (DO)
         /// </summary>
-        public static CountryIso2Code DominicanRepublic => new(Iso2Codes.DO);
+        public static CountryIso2Code DominicanRepublic => new CountryIso2Code(Iso2Codes.DO);
 
         /// <summary>
         /// Algeria (DZ)
         /// </summary>
-        public static CountryIso2Code Algeria => new(Iso2Codes.DZ);
+        public static CountryIso2Code Algeria => new CountryIso2Code(Iso2Codes.DZ);
 
         /// <summary>
         /// Ecuador (EC)
         /// </summary>
-        public static CountryIso2Code Ecuador => new(Iso2Codes.EC);
+        public static CountryIso2Code Ecuador => new CountryIso2Code(Iso2Codes.EC);
 
         /// <summary>
         /// Estonia (EE)
         /// </summary>
-        public static CountryIso2Code Estonia => new(Iso2Codes.EE);
+        public static CountryIso2Code Estonia => new CountryIso2Code(Iso2Codes.EE);
 
         /// <summary>
         /// Egypt (EG)
         /// </summary>
-        public static CountryIso2Code Egypt => new(Iso2Codes.EG);
+        public static CountryIso2Code Egypt => new CountryIso2Code(Iso2Codes.EG);
 
         /// <summary>
         /// Western Sahara (EH)
         /// </summary>
-        public static CountryIso2Code WesternSahara => new(Iso2Codes.EH);
+        public static CountryIso2Code WesternSahara => new CountryIso2Code(Iso2Codes.EH);
 
         /// <summary>
         /// Eritrea (ER)
         /// </summary>
-        public static CountryIso2Code Eritrea => new(Iso2Codes.ER);
+        public static CountryIso2Code Eritrea => new CountryIso2Code(Iso2Codes.ER);
 
         /// <summary>
         /// Spain (ES)
         /// </summary>
-        public static CountryIso2Code Spain => new(Iso2Codes.ES);
+        public static CountryIso2Code Spain => new CountryIso2Code(Iso2Codes.ES);
 
         /// <summary>
         /// Ethiopia (ET)
         /// </summary>
-        public static CountryIso2Code Ethiopia => new(Iso2Codes.ET);
+        public static CountryIso2Code Ethiopia => new CountryIso2Code(Iso2Codes.ET);
 
         /// <summary>
         /// Finland (FI)
         /// </summary>
-        public static CountryIso2Code Finland => new(Iso2Codes.FI);
+        public static CountryIso2Code Finland => new CountryIso2Code(Iso2Codes.FI);
 
         /// <summary>
         /// Fiji (FJ)
         /// </summary>
-        public static CountryIso2Code Fiji => new(Iso2Codes.FJ);
+        public static CountryIso2Code Fiji => new CountryIso2Code(Iso2Codes.FJ);
 
         /// <summary>
         /// Falkland Islands (FK)
         /// </summary>
-        public static CountryIso2Code FalklandIslands => new(Iso2Codes.FK);
+        public static CountryIso2Code FalklandIslands => new CountryIso2Code(Iso2Codes.FK);
 
         /// <summary>
         /// Micronesia (FM)
         /// </summary>
-        public static CountryIso2Code Micronesia => new(Iso2Codes.FM);
+        public static CountryIso2Code Micronesia => new CountryIso2Code(Iso2Codes.FM);
 
         /// <summary>
         /// Faroe Islands (FO)
         /// </summary>
-        public static CountryIso2Code FaroeIslands => new(Iso2Codes.FO);
+        public static CountryIso2Code FaroeIslands => new CountryIso2Code(Iso2Codes.FO);
 
         /// <summary>
         /// France (FR)
         /// </summary>
-        public static CountryIso2Code France => new(Iso2Codes.FR);
+        public static CountryIso2Code France => new CountryIso2Code(Iso2Codes.FR);
 
         /// <summary>
         /// Gabon (GA)
         /// </summary>
-        public static CountryIso2Code Gabon => new(Iso2Codes.GA);
+        public static CountryIso2Code Gabon => new CountryIso2Code(Iso2Codes.GA);
 
         /// <summary>
         /// United Kingdom (GB)
         /// </summary>
-        public static CountryIso2Code UnitedKingdom => new(Iso2Codes.GB);
+        public static CountryIso2Code UnitedKingdom => new CountryIso2Code(Iso2Codes.GB);
 
         /// <summary>
         /// Grenada (GD)
         /// </summary>
-        public static CountryIso2Code Grenada => new(Iso2Codes.GD);
+        public static CountryIso2Code Grenada => new CountryIso2Code(Iso2Codes.GD);
 
         /// <summary>
         /// Georgia (GE)
         /// </summary>
-        public static CountryIso2Code Georgia => new(Iso2Codes.GE);
+        public static CountryIso2Code Georgia => new CountryIso2Code(Iso2Codes.GE);
 
         /// <summary>
         /// French Guiana (GF)
         /// </summary>
-        public static CountryIso2Code FrenchGuiana => new(Iso2Codes.GF);
+        public static CountryIso2Code FrenchGuiana => new CountryIso2Code(Iso2Codes.GF);
 
         /// <summary>
         /// Guernsey (GG)
         /// </summary>
-        public static CountryIso2Code Guernsey => new(Iso2Codes.GG);
+        public static CountryIso2Code Guernsey => new CountryIso2Code(Iso2Codes.GG);
 
         /// <summary>
         /// Ghana (GH)
         /// </summary>
-        public static CountryIso2Code Ghana => new(Iso2Codes.GH);
+        public static CountryIso2Code Ghana => new CountryIso2Code(Iso2Codes.GH);
 
         /// <summary>
         /// Gibraltar (GI)
         /// </summary>
-        public static CountryIso2Code Gibraltar => new(Iso2Codes.GI);
+        public static CountryIso2Code Gibraltar => new CountryIso2Code(Iso2Codes.GI);
 
         /// <summary>
         /// Greenland (GL)
         /// </summary>
-        public static CountryIso2Code Greenland => new(Iso2Codes.GL);
+        public static CountryIso2Code Greenland => new CountryIso2Code(Iso2Codes.GL);
 
         /// <summary>
         /// Gambia (GM)
         /// </summary>
-        public static CountryIso2Code Gambia => new(Iso2Codes.GM);
+        public static CountryIso2Code Gambia => new CountryIso2Code(Iso2Codes.GM);
 
         /// <summary>
         /// Guinea, Republic of (GN)
         /// </summary>
-        public static CountryIso2Code GuineaRepublicOf => new(Iso2Codes.GN);
+        public static CountryIso2Code GuineaRepublicOf => new CountryIso2Code(Iso2Codes.GN);
 
         /// <summary>
         /// Global System (GO)
         /// </summary>
-        public static CountryIso2Code GlobalSystem => new(Iso2Codes.GO);
+        public static CountryIso2Code GlobalSystem => new CountryIso2Code(Iso2Codes.GO);
 
         /// <summary>
         /// Guadeloupe (GP)
         /// </summary>
-        public static CountryIso2Code Guadeloupe => new(Iso2Codes.GP);
+        public static CountryIso2Code Guadeloupe => new CountryIso2Code(Iso2Codes.GP);
 
         /// <summary>
         /// Equatorial Guinea (GQ)
         /// </summary>
-        public static CountryIso2Code EquatorialGuinea => new(Iso2Codes.GQ);
+        public static CountryIso2Code EquatorialGuinea => new CountryIso2Code(Iso2Codes.GQ);
 
         /// <summary>
         /// Greece (GR)
         /// </summary>
-        public static CountryIso2Code Greece => new(Iso2Codes.GR);
+        public static CountryIso2Code Greece => new CountryIso2Code(Iso2Codes.GR);
 
         /// <summary>
         /// South Georgia (GS)
         /// </summary>
-        public static CountryIso2Code SouthGeorgia => new(Iso2Codes.GS);
+        public static CountryIso2Code SouthGeorgia => new CountryIso2Code(Iso2Codes.GS);
 
         /// <summary>
         /// Guatemala (GT)
         /// </summary>
-        public static CountryIso2Code Guatemala => new(Iso2Codes.GT);
+        public static CountryIso2Code Guatemala => new CountryIso2Code(Iso2Codes.GT);
 
         /// <summary>
         /// Guam (GU)
         /// </summary>
-        public static CountryIso2Code Guam => new(Iso2Codes.GU);
+        public static CountryIso2Code Guam => new CountryIso2Code(Iso2Codes.GU);
 
         /// <summary>
         /// Guinea-Bissau (GW)
         /// </summary>
-        public static CountryIso2Code GuineaBissau => new(Iso2Codes.GW);
+        public static CountryIso2Code GuineaBissau => new CountryIso2Code(Iso2Codes.GW);
 
         /// <summary>
         /// Guyana (GY)
         /// </summary>
-        public static CountryIso2Code Guyana => new(Iso2Codes.GY);
+        public static CountryIso2Code Guyana => new CountryIso2Code(Iso2Codes.GY);
 
         /// <summary>
         /// Hong Kong (HK)
         /// </summary>
-        public static CountryIso2Code HongKong => new(Iso2Codes.HK);
+        public static CountryIso2Code HongKong => new CountryIso2Code(Iso2Codes.HK);
 
         /// <summary>
         /// Honduras (HN)
         /// </summary>
-        public static CountryIso2Code Honduras => new(Iso2Codes.HN);
+        public static CountryIso2Code Honduras => new CountryIso2Code(Iso2Codes.HN);
 
         /// <summary>
         /// Croatia (HR)
         /// </summary>
-        public static CountryIso2Code Croatia => new(Iso2Codes.HR);
+        public static CountryIso2Code Croatia => new CountryIso2Code(Iso2Codes.HR);
 
         /// <summary>
         /// Haiti (HT)
         /// </summary>
-        public static CountryIso2Code Haiti => new(Iso2Codes.HT);
+        public static CountryIso2Code Haiti => new CountryIso2Code(Iso2Codes.HT);
 
         /// <summary>
         /// Hungary (HU)
         /// </summary>
-        public static CountryIso2Code Hungary => new(Iso2Codes.HU);
+        public static CountryIso2Code Hungary => new CountryIso2Code(Iso2Codes.HU);
 
         /// <summary>
         /// Indonesia (ID)
         /// </summary>
-        public static CountryIso2Code Indonesia => new(Iso2Codes.ID);
+        public static CountryIso2Code Indonesia => new CountryIso2Code(Iso2Codes.ID);
 
         /// <summary>
         /// Ireland (IE)
         /// </summary>
-        public static CountryIso2Code Ireland => new(Iso2Codes.IE);
+        public static CountryIso2Code Ireland => new CountryIso2Code(Iso2Codes.IE);
 
         /// <summary>
         /// Israel (IL)
         /// </summary>
-        public static CountryIso2Code Israel => new(Iso2Codes.IL);
+        public static CountryIso2Code Israel => new CountryIso2Code(Iso2Codes.IL);
 
         /// <summary>
         /// Isle of Man (IM)
         /// </summary>
-        public static CountryIso2Code IsleOfMan => new(Iso2Codes.IM);
+        public static CountryIso2Code IsleOfMan => new CountryIso2Code(Iso2Codes.IM);
 
         /// <summary>
         /// India (IN)
         /// </summary>
-        public static CountryIso2Code India => new(Iso2Codes.IN);
+        public static CountryIso2Code India => new CountryIso2Code(Iso2Codes.IN);
 
         /// <summary>
         /// British Indian Ocean Territory (IO)
         /// </summary>
-        public static CountryIso2Code BritishIndianOceanTerritory => new(Iso2Codes.IO);
+        public static CountryIso2Code BritishIndianOceanTerritory => new CountryIso2Code(Iso2Codes.IO);
 
         /// <summary>
         /// Iraq (IQ)
         /// </summary>
-        public static CountryIso2Code Iraq => new(Iso2Codes.IQ);
+        public static CountryIso2Code Iraq => new CountryIso2Code(Iso2Codes.IQ);
 
         /// <summary>
         /// Iran (IR)
         /// </summary>
         [DataMember(Order = 7)]
-        public static CountryIso2Code Iran => new(Iso2Codes.IR);
+        public static CountryIso2Code Iran => new CountryIso2Code(Iso2Codes.IR);
 
         /// <summary>
         /// Iceland (IS)
         /// </summary>
-        public static CountryIso2Code Iceland => new(Iso2Codes.IS);
+        public static CountryIso2Code Iceland => new CountryIso2Code(Iso2Codes.IS);
 
         /// <summary>
         /// Italy (IT)
         /// </summary>
-        public static CountryIso2Code Italy => new(Iso2Codes.IT);
+        public static CountryIso2Code Italy => new CountryIso2Code(Iso2Codes.IT);
 
         /// <summary>
         /// Jersey (JE)
         /// </summary>
-        public static CountryIso2Code Jersey => new(Iso2Codes.JE);
+        public static CountryIso2Code Jersey => new CountryIso2Code(Iso2Codes.JE);
 
         /// <summary>
         /// Jamaica (JM)
         /// </summary>
-        public static CountryIso2Code Jamaica => new(Iso2Codes.JM);
+        public static CountryIso2Code Jamaica => new CountryIso2Code(Iso2Codes.JM);
 
         /// <summary>
         /// Jordan (JO)
         /// </summary>
-        public static CountryIso2Code Jordan => new(Iso2Codes.JO);
+        public static CountryIso2Code Jordan => new CountryIso2Code(Iso2Codes.JO);
 
         /// <summary>
         /// Japan (JP)
         /// </summary>
-        public static CountryIso2Code Japan => new(Iso2Codes.JP);
+        public static CountryIso2Code Japan => new CountryIso2Code(Iso2Codes.JP);
 
         /// <summary>
         /// Kenya (KE)
         /// </summary>
-        public static CountryIso2Code Kenya => new(Iso2Codes.KE);
+        public static CountryIso2Code Kenya => new CountryIso2Code(Iso2Codes.KE);
 
         /// <summary>
         /// Kyrgyzstan (KG)
         /// </summary>
-        public static CountryIso2Code Kyrgyzstan => new(Iso2Codes.KG);
+        public static CountryIso2Code Kyrgyzstan => new CountryIso2Code(Iso2Codes.KG);
 
         /// <summary>
         /// Cambodia (KH)
         /// </summary>
-        public static CountryIso2Code Cambodia => new(Iso2Codes.KH);
+        public static CountryIso2Code Cambodia => new CountryIso2Code(Iso2Codes.KH);
 
         /// <summary>
         /// Kiribati (KI)
         /// </summary>
-        public static CountryIso2Code Kiribati => new(Iso2Codes.KI);
+        public static CountryIso2Code Kiribati => new CountryIso2Code(Iso2Codes.KI);
 
         /// <summary>
         /// Comoros (KM)
         /// </summary>
-        public static CountryIso2Code Comoros => new(Iso2Codes.KM);
+        public static CountryIso2Code Comoros => new CountryIso2Code(Iso2Codes.KM);
 
         /// <summary>
         /// Saint Kitts And Nevis (KN)
         /// </summary>
-        public static CountryIso2Code SaintKittsAndNevis => new(Iso2Codes.KN);
+        public static CountryIso2Code SaintKittsAndNevis => new CountryIso2Code(Iso2Codes.KN);
 
         /// <summary>
         /// Korea, North (KP)
         /// </summary>
-        public static CountryIso2Code KoreaNorth => new(Iso2Codes.KP);
+        public static CountryIso2Code KoreaNorth => new CountryIso2Code(Iso2Codes.KP);
 
         /// <summary>
         /// Korea, South (KR)
         /// </summary>
-        public static CountryIso2Code KoreaSouth => new(Iso2Codes.KR);
+        public static CountryIso2Code KoreaSouth => new CountryIso2Code(Iso2Codes.KR);
 
         /// <summary>
         /// Kuwait (KW)
         /// </summary>
-        public static CountryIso2Code Kuwait => new(Iso2Codes.KW);
+        public static CountryIso2Code Kuwait => new CountryIso2Code(Iso2Codes.KW);
 
         /// <summary>
         /// Cayman Islands (KY)
         /// </summary>
-        public static CountryIso2Code CaymanIslands => new(Iso2Codes.KY);
+        public static CountryIso2Code CaymanIslands => new CountryIso2Code(Iso2Codes.KY);
 
         /// <summary>
         /// Kazakhstan (KZ)
         /// </summary>
-        public static CountryIso2Code Kazakhstan => new(Iso2Codes.KZ);
+        public static CountryIso2Code Kazakhstan => new CountryIso2Code(Iso2Codes.KZ);
 
         /// <summary>
         /// Laos (LA)
         /// </summary>
-        public static CountryIso2Code Laos => new(Iso2Codes.LA);
+        public static CountryIso2Code Laos => new CountryIso2Code(Iso2Codes.LA);
 
         /// <summary>
         /// Lebanon (LB)
         /// </summary>
-        public static CountryIso2Code Lebanon => new(Iso2Codes.LB);
+        public static CountryIso2Code Lebanon => new CountryIso2Code(Iso2Codes.LB);
 
         /// <summary>
         /// Saint Lucia (LC)
         /// </summary>
-        public static CountryIso2Code SaintLucia => new(Iso2Codes.LC);
+        public static CountryIso2Code SaintLucia => new CountryIso2Code(Iso2Codes.LC);
 
         /// <summary>
         /// Liechtenstein (LI)
         /// </summary>
-        public static CountryIso2Code Liechtenstein => new(Iso2Codes.LI);
+        public static CountryIso2Code Liechtenstein => new CountryIso2Code(Iso2Codes.LI);
 
         /// <summary>
         /// Sri Lanka (LK)
         /// </summary>
-        public static CountryIso2Code SriLanka => new(Iso2Codes.LK);
+        public static CountryIso2Code SriLanka => new CountryIso2Code(Iso2Codes.LK);
 
         /// <summary>
         /// Liberia (LR)
         /// </summary>
-        public static CountryIso2Code Liberia => new(Iso2Codes.LR);
+        public static CountryIso2Code Liberia => new CountryIso2Code(Iso2Codes.LR);
 
         /// <summary>
         /// Lesotho (LS)
         /// </summary>
-        public static CountryIso2Code Lesotho => new(Iso2Codes.LS);
+        public static CountryIso2Code Lesotho => new CountryIso2Code(Iso2Codes.LS);
 
         /// <summary>
         /// Lithuania (LT)
         /// </summary>
-        public static CountryIso2Code Lithuania => new(Iso2Codes.LT);
+        public static CountryIso2Code Lithuania => new CountryIso2Code(Iso2Codes.LT);
 
         /// <summary>
         /// Luxembourg (LU)
         /// </summary>
-        public static CountryIso2Code Luxembourg => new(Iso2Codes.LU);
+        public static CountryIso2Code Luxembourg => new CountryIso2Code(Iso2Codes.LU);
 
         /// <summary>
         /// Latvia (LV)
         /// </summary>
-        public static CountryIso2Code Latvia => new(Iso2Codes.LV);
+        public static CountryIso2Code Latvia => new CountryIso2Code(Iso2Codes.LV);
 
         /// <summary>
         /// Libya (LY)
         /// </summary>
-        public static CountryIso2Code Libya => new(Iso2Codes.LY);
+        public static CountryIso2Code Libya => new CountryIso2Code(Iso2Codes.LY);
 
         /// <summary>
         /// Morocco (MA)
         /// </summary>
-        public static CountryIso2Code Morocco => new(Iso2Codes.MA);
+        public static CountryIso2Code Morocco => new CountryIso2Code(Iso2Codes.MA);
 
         /// <summary>
         /// Monaco (MC)
         /// </summary>
-        public static CountryIso2Code Monaco => new(Iso2Codes.MC);
+        public static CountryIso2Code Monaco => new CountryIso2Code(Iso2Codes.MC);
 
         /// <summary>
         /// Moldova (MD)
         /// </summary>
-        public static CountryIso2Code Moldova => new(Iso2Codes.MD);
+        public static CountryIso2Code Moldova => new CountryIso2Code(Iso2Codes.MD);
 
         /// <summary>
         /// Montenegro (ME)
         /// </summary>
-        public static CountryIso2Code Montenegro => new(Iso2Codes.ME);
+        public static CountryIso2Code Montenegro => new CountryIso2Code(Iso2Codes.ME);
 
         /// <summary>
         /// Madagascar (MG)
         /// </summary>
-        public static CountryIso2Code Madagascar => new(Iso2Codes.MG);
+        public static CountryIso2Code Madagascar => new CountryIso2Code(Iso2Codes.MG);
 
         /// <summary>
         /// Marshall islands (MH)
         /// </summary>
-        public static CountryIso2Code MarshallIslands => new(Iso2Codes.MH);
+        public static CountryIso2Code MarshallIslands => new CountryIso2Code(Iso2Codes.MH);
 
         /// <summary>
         /// Macedonia (MK)
         /// </summary>
-        public static CountryIso2Code Macedonia => new(Iso2Codes.MK);
+        public static CountryIso2Code Macedonia => new CountryIso2Code(Iso2Codes.MK);
 
         /// <summary>
         /// Mali (ML)
         /// </summary>
-        public static CountryIso2Code Mali => new(Iso2Codes.ML);
+        public static CountryIso2Code Mali => new CountryIso2Code(Iso2Codes.ML);
 
         /// <summary>
         /// Myanmar (MM)
         /// </summary>
-        public static CountryIso2Code Myanmar => new(Iso2Codes.MM);
+        public static CountryIso2Code Myanmar => new CountryIso2Code(Iso2Codes.MM);
 
         /// <summary>
         /// Mongolia (MN)
         /// </summary>
-        public static CountryIso2Code Mongolia => new(Iso2Codes.MN);
+        public static CountryIso2Code Mongolia => new CountryIso2Code(Iso2Codes.MN);
 
         /// <summary>
         /// Macau (MO)
         /// </summary>
-        public static CountryIso2Code Macau => new(Iso2Codes.MO);
+        public static CountryIso2Code Macau => new CountryIso2Code(Iso2Codes.MO);
 
         /// <summary>
         /// Northern Mariana Islands (MP)
         /// </summary>
-        public static CountryIso2Code NorthernMarianaIslands => new(Iso2Codes.MP);
+        public static CountryIso2Code NorthernMarianaIslands => new CountryIso2Code(Iso2Codes.MP);
 
         /// <summary>
         /// Martinique (MQ)
         /// </summary>
-        public static CountryIso2Code Martinique => new(Iso2Codes.MQ);
+        public static CountryIso2Code Martinique => new CountryIso2Code(Iso2Codes.MQ);
 
         /// <summary>
         /// Mauritania (MR)
         /// </summary>
-        public static CountryIso2Code Mauritania => new(Iso2Codes.MR);
+        public static CountryIso2Code Mauritania => new CountryIso2Code(Iso2Codes.MR);
 
         /// <summary>
         /// Montserrat (MS)
         /// </summary>
-        public static CountryIso2Code Montserrat => new(Iso2Codes.MS);
+        public static CountryIso2Code Montserrat => new CountryIso2Code(Iso2Codes.MS);
 
         /// <summary>
         /// Malta (MT)
         /// </summary>
-        public static CountryIso2Code Malta => new(Iso2Codes.MT);
+        public static CountryIso2Code Malta => new CountryIso2Code(Iso2Codes.MT);
 
         /// <summary>
         /// Mauritius (MU)
         /// </summary>
-        public static CountryIso2Code Mauritius => new(Iso2Codes.MU);
+        public static CountryIso2Code Mauritius => new CountryIso2Code(Iso2Codes.MU);
 
         /// <summary>
         /// Maldives (MV)
         /// </summary>
-        public static CountryIso2Code Maldives => new(Iso2Codes.MV);
+        public static CountryIso2Code Maldives => new CountryIso2Code(Iso2Codes.MV);
 
         /// <summary>
         /// Malawi (MW)
         /// </summary>
-        public static CountryIso2Code Malawi => new(Iso2Codes.MW);
+        public static CountryIso2Code Malawi => new CountryIso2Code(Iso2Codes.MW);
 
         /// <summary>
         /// Mexico (MX)
         /// </summary>
-        public static CountryIso2Code Mexico => new(Iso2Codes.MX);
+        public static CountryIso2Code Mexico => new CountryIso2Code(Iso2Codes.MX);
 
         /// <summary>
         /// Malaysia (MY)
         /// </summary>
-        public static CountryIso2Code Malaysia => new(Iso2Codes.MY);
+        public static CountryIso2Code Malaysia => new CountryIso2Code(Iso2Codes.MY);
 
         /// <summary>
         /// Mozambique (MZ)
         /// </summary>
-        public static CountryIso2Code Mozambique => new(Iso2Codes.MZ);
+        public static CountryIso2Code Mozambique => new CountryIso2Code(Iso2Codes.MZ);
 
         /// <summary>
         /// Namibia (NA)
         /// </summary>
-        public static CountryIso2Code Namibia => new(Iso2Codes.NA);
+        public static CountryIso2Code Namibia => new CountryIso2Code(Iso2Codes.NA);
 
         /// <summary>
         /// New Caledonia (NC)
         /// </summary>
-        public static CountryIso2Code NewCaledonia => new(Iso2Codes.NC);
+        public static CountryIso2Code NewCaledonia => new CountryIso2Code(Iso2Codes.NC);
 
         /// <summary>
         /// Niger (NE)
         /// </summary>
-        public static CountryIso2Code Niger => new(Iso2Codes.NE);
+        public static CountryIso2Code Niger => new CountryIso2Code(Iso2Codes.NE);
 
         /// <summary>
         /// Norfolk Island (NF)
         /// </summary>
-        public static CountryIso2Code NorfolkIsland => new(Iso2Codes.NF);
+        public static CountryIso2Code NorfolkIsland => new CountryIso2Code(Iso2Codes.NF);
 
         /// <summary>
         /// Nigeria (NG)
         /// </summary>
-        public static CountryIso2Code Nigeria => new(Iso2Codes.NG);
+        public static CountryIso2Code Nigeria => new CountryIso2Code(Iso2Codes.NG);
 
         /// <summary>
         /// Nicaragua (NI)
         /// </summary>
-        public static CountryIso2Code Nicaragua => new(Iso2Codes.NI);
+        public static CountryIso2Code Nicaragua => new CountryIso2Code(Iso2Codes.NI);
 
         /// <summary>
         /// Netherlands, The (NL)
         /// </summary>
-        public static CountryIso2Code NetherlandsThe => new(Iso2Codes.NL);
+        public static CountryIso2Code NetherlandsThe => new CountryIso2Code(Iso2Codes.NL);
 
         /// <summary>
         /// Norway (NO)
         /// </summary>
-        public static CountryIso2Code Norway => new(Iso2Codes.NO);
+        public static CountryIso2Code Norway => new CountryIso2Code(Iso2Codes.NO);
 
         /// <summary>
         /// Nepal (NP)
         /// </summary>
-        public static CountryIso2Code Nepal => new(Iso2Codes.NP);
+        public static CountryIso2Code Nepal => new CountryIso2Code(Iso2Codes.NP);
 
         /// <summary>
         /// Nauru (NR)
         /// </summary>
-        public static CountryIso2Code Nauru => new(Iso2Codes.NR);
+        public static CountryIso2Code Nauru => new CountryIso2Code(Iso2Codes.NR);
 
         /// <summary>
         /// Niue (NU)
         /// </summary>
-        public static CountryIso2Code Niue => new(Iso2Codes.NU);
+        public static CountryIso2Code Niue => new CountryIso2Code(Iso2Codes.NU);
 
         /// <summary>
         /// New Zealand (NZ)
         /// </summary>
-        public static CountryIso2Code NewZealand => new(Iso2Codes.NZ);
+        public static CountryIso2Code NewZealand => new CountryIso2Code(Iso2Codes.NZ);
 
         /// <summary>
         /// Oman (OM)
         /// </summary>
-        public static CountryIso2Code Oman => new(Iso2Codes.OM);
+        public static CountryIso2Code Oman => new CountryIso2Code(Iso2Codes.OM);
 
         /// <summary>
         /// Panama (PA)
         /// </summary>
-        public static CountryIso2Code Panama => new(Iso2Codes.PA);
+        public static CountryIso2Code Panama => new CountryIso2Code(Iso2Codes.PA);
 
         /// <summary>
         /// Peru (PE)
         /// </summary>
-        public static CountryIso2Code Peru => new(Iso2Codes.PE);
+        public static CountryIso2Code Peru => new CountryIso2Code(Iso2Codes.PE);
 
         /// <summary>
         /// French Polynesia (PF)
         /// </summary>
-        public static CountryIso2Code FrenchPolynesia => new(Iso2Codes.PF);
+        public static CountryIso2Code FrenchPolynesia => new CountryIso2Code(Iso2Codes.PF);
 
         /// <summary>
         /// Papua New Guinea (PG)
         /// </summary>
-        public static CountryIso2Code PapuaNewGuinea => new(Iso2Codes.PG);
+        public static CountryIso2Code PapuaNewGuinea => new CountryIso2Code(Iso2Codes.PG);
 
         /// <summary>
         /// Philippines (PH)
         /// </summary>
-        public static CountryIso2Code Philippines => new(Iso2Codes.PH);
+        public static CountryIso2Code Philippines => new CountryIso2Code(Iso2Codes.PH);
 
         /// <summary>
         /// Pakistan (PK)
         /// </summary>
-        public static CountryIso2Code Pakistan => new(Iso2Codes.PK);
+        public static CountryIso2Code Pakistan => new CountryIso2Code(Iso2Codes.PK);
 
         /// <summary>
         /// Poland (PL)
         /// </summary>
-        public static CountryIso2Code Poland => new(Iso2Codes.PL);
+        public static CountryIso2Code Poland => new CountryIso2Code(Iso2Codes.PL);
 
         /// <summary>
         /// Saint Pierre and Miquelon (PM)
         /// </summary>
-        public static CountryIso2Code SaintPierreAndMiquelon => new(Iso2Codes.PM);
+        public static CountryIso2Code SaintPierreAndMiquelon => new CountryIso2Code(Iso2Codes.PM);
 
         /// <summary>
         /// Pitcairn Islands (PN)
         /// </summary>
-        public static CountryIso2Code PitcairnIslands => new(Iso2Codes.PN);
+        public static CountryIso2Code PitcairnIslands => new CountryIso2Code(Iso2Codes.PN);
 
         /// <summary>
         /// Puerto Rico (PR)
         /// </summary>
-        public static CountryIso2Code PuertoRico => new(Iso2Codes.PR);
+        public static CountryIso2Code PuertoRico => new CountryIso2Code(Iso2Codes.PR);
 
         /// <summary>
         /// Palestine (PS)
         /// </summary>
-        public static CountryIso2Code Palestine => new(Iso2Codes.PS);
+        public static CountryIso2Code Palestine => new CountryIso2Code(Iso2Codes.PS);
 
         /// <summary>
         /// Portugal (PT)
         /// </summary>
-        public static CountryIso2Code Portugal => new(Iso2Codes.PT);
+        public static CountryIso2Code Portugal => new CountryIso2Code(Iso2Codes.PT);
 
         /// <summary>
         /// Palau (PW)
         /// </summary>
-        public static CountryIso2Code Palau => new(Iso2Codes.PW);
+        public static CountryIso2Code Palau => new CountryIso2Code(Iso2Codes.PW);
 
         /// <summary>
         /// Paraguay (PY)
         /// </summary>
-        public static CountryIso2Code Paraguay => new(Iso2Codes.PY);
+        public static CountryIso2Code Paraguay => new CountryIso2Code(Iso2Codes.PY);
 
         /// <summary>
         /// Qatar (QA)
         /// </summary>
-        public static CountryIso2Code Qatar => new(Iso2Codes.QA);
+        public static CountryIso2Code Qatar => new CountryIso2Code(Iso2Codes.QA);
 
         /// <summary>
         /// Reunion (RE)
         /// </summary>
-        public static CountryIso2Code Reunion => new(Iso2Codes.RE);
+        public static CountryIso2Code Reunion => new CountryIso2Code(Iso2Codes.RE);
 
         /// <summary>
         /// Romania (RO)
         /// </summary>
-        public static CountryIso2Code Romania => new(Iso2Codes.RO);
+        public static CountryIso2Code Romania => new CountryIso2Code(Iso2Codes.RO);
 
         /// <summary>
         /// Serbia (RS)
         /// </summary>
-        public static CountryIso2Code Serbia => new(Iso2Codes.RS);
+        public static CountryIso2Code Serbia => new CountryIso2Code(Iso2Codes.RS);
 
         /// <summary>
         /// Russia (RU)
         /// </summary>
-        public static CountryIso2Code Russia => new(Iso2Codes.RU);
+        public static CountryIso2Code Russia => new CountryIso2Code(Iso2Codes.RU);
 
         /// <summary>
         /// Rwanda (RW)
         /// </summary>
-        public static CountryIso2Code Rwanda => new(Iso2Codes.RW);
+        public static CountryIso2Code Rwanda => new CountryIso2Code(Iso2Codes.RW);
 
         /// <summary>
         /// Saudi Arabia (SA)
         /// </summary>
-        public static CountryIso2Code SaudiArabia => new(Iso2Codes.SA);
+        public static CountryIso2Code SaudiArabia => new CountryIso2Code(Iso2Codes.SA);
 
         /// <summary>
         /// Solomon Islands (SB)
         /// </summary>
-        public static CountryIso2Code SolomonIslands => new(Iso2Codes.SB);
+        public static CountryIso2Code SolomonIslands => new CountryIso2Code(Iso2Codes.SB);
 
         /// <summary>
         /// Seychelles (SC)
         /// </summary>
-        public static CountryIso2Code Seychelles => new(Iso2Codes.SC);
+        public static CountryIso2Code Seychelles => new CountryIso2Code(Iso2Codes.SC);
 
         /// <summary>
         /// Sudan (SD)
         /// </summary>
-        public static CountryIso2Code Sudan => new(Iso2Codes.SD);
+        public static CountryIso2Code Sudan => new CountryIso2Code(Iso2Codes.SD);
 
         /// <summary>
         /// Sweden (SE)
         /// </summary>
-        public static CountryIso2Code Sweden => new(Iso2Codes.SE);
+        public static CountryIso2Code Sweden => new CountryIso2Code(Iso2Codes.SE);
 
         /// <summary>
         /// Singapore (SG)
         /// </summary>
-        public static CountryIso2Code Singapore => new(Iso2Codes.SG);
+        public static CountryIso2Code Singapore => new CountryIso2Code(Iso2Codes.SG);
 
         /// <summary>
         /// Saint Helena (SH)
         /// </summary>
-        public static CountryIso2Code SaintHelena => new(Iso2Codes.SH);
+        public static CountryIso2Code SaintHelena => new CountryIso2Code(Iso2Codes.SH);
 
         /// <summary>
         /// Slovenia (SI)
         /// </summary>
-        public static CountryIso2Code Slovenia => new(Iso2Codes.SI);
+        public static CountryIso2Code Slovenia => new CountryIso2Code(Iso2Codes.SI);
 
         /// <summary>
         /// Slovakia (SK)
         /// </summary>
-        public static CountryIso2Code Slovakia => new(Iso2Codes.SK);
+        public static CountryIso2Code Slovakia => new CountryIso2Code(Iso2Codes.SK);
 
         /// <summary>
         /// Sierra Leone (SL)
         /// </summary>
-        public static CountryIso2Code SierraLeone => new(Iso2Codes.SL);
+        public static CountryIso2Code SierraLeone => new CountryIso2Code(Iso2Codes.SL);
 
         /// <summary>
         /// San Marino (SM)
         /// </summary>
-        public static CountryIso2Code SanMarino => new(Iso2Codes.SM);
+        public static CountryIso2Code SanMarino => new CountryIso2Code(Iso2Codes.SM);
 
         /// <summary>
         /// Senegal (SN)
         /// </summary>
-        public static CountryIso2Code Senegal => new(Iso2Codes.SN);
+        public static CountryIso2Code Senegal => new CountryIso2Code(Iso2Codes.SN);
 
         /// <summary>
         /// Somalia (SO)
         /// </summary>
-        public static CountryIso2Code Somalia => new(Iso2Codes.SO);
+        public static CountryIso2Code Somalia => new CountryIso2Code(Iso2Codes.SO);
 
         /// <summary>
         /// Suriname (SR)
         /// </summary>
-        public static CountryIso2Code Suriname => new(Iso2Codes.SR);
+        public static CountryIso2Code Suriname => new CountryIso2Code(Iso2Codes.SR);
 
         /// <summary>
         /// South Sudan (SS)
         /// </summary>
-        public static CountryIso2Code SouthSudan => new(Iso2Codes.SS);
+        public static CountryIso2Code SouthSudan => new CountryIso2Code(Iso2Codes.SS);
 
         /// <summary>
         /// Sao Tome and Principe (ST)
         /// </summary>
-        public static CountryIso2Code SaoTomeAndPrincipe => new(Iso2Codes.ST);
+        public static CountryIso2Code SaoTomeAndPrincipe => new CountryIso2Code(Iso2Codes.ST);
 
         /// <summary>
         /// El Salvador (SV)
         /// </summary>
-        public static CountryIso2Code ElSalvador => new(Iso2Codes.SV);
+        public static CountryIso2Code ElSalvador => new CountryIso2Code(Iso2Codes.SV);
 
         /// <summary>
         /// Sint Maarten (SX)
         /// </summary>
-        public static CountryIso2Code SintMaarten => new(Iso2Codes.SX);
+        public static CountryIso2Code SintMaarten => new CountryIso2Code(Iso2Codes.SX);
 
         /// <summary>
         /// Syria (SY)
         /// </summary>
-        public static CountryIso2Code Syria => new(Iso2Codes.SY);
+        public static CountryIso2Code Syria => new CountryIso2Code(Iso2Codes.SY);
 
         /// <summary>
         /// Swaziland (SZ)
         /// </summary>
-        public static CountryIso2Code Swaziland => new(Iso2Codes.SZ);
+        public static CountryIso2Code Swaziland => new CountryIso2Code(Iso2Codes.SZ);
 
         /// <summary>
         /// Tristan da Cunha (TA)
         /// </summary>
-        public static CountryIso2Code TristanDaCunha => new(Iso2Codes.TA);
+        public static CountryIso2Code TristanDaCunha => new CountryIso2Code(Iso2Codes.TA);
 
         /// <summary>
         /// Turks And Caicos Islands (TC)
         /// </summary>
-        public static CountryIso2Code TurksAndCaicosIslands => new(Iso2Codes.TC);
+        public static CountryIso2Code TurksAndCaicosIslands => new CountryIso2Code(Iso2Codes.TC);
 
         /// <summary>
         /// Chad (TD)
         /// </summary>
-        public static CountryIso2Code Chad => new(Iso2Codes.TD);
+        public static CountryIso2Code Chad => new CountryIso2Code(Iso2Codes.TD);
 
         /// <summary>
         /// Togo (TG)
         /// </summary>
-        public static CountryIso2Code Togo => new(Iso2Codes.TG);
+        public static CountryIso2Code Togo => new CountryIso2Code(Iso2Codes.TG);
 
         /// <summary>
         /// Thailand (TH)
         /// </summary>
-        public static CountryIso2Code Thailand => new(Iso2Codes.TH);
+        public static CountryIso2Code Thailand => new CountryIso2Code(Iso2Codes.TH);
 
         /// <summary>
         /// Tajikistan (TJ)
         /// </summary>
-        public static CountryIso2Code Tajikistan => new(Iso2Codes.TJ);
+        public static CountryIso2Code Tajikistan => new CountryIso2Code(Iso2Codes.TJ);
 
         /// <summary>
         /// Tokelau (TK)
         /// </summary>
-        public static CountryIso2Code Tokelau => new(Iso2Codes.TK);
+        public static CountryIso2Code Tokelau => new CountryIso2Code(Iso2Codes.TK);
 
         /// <summary>
         /// East Timor (TL)
         /// </summary>
-        public static CountryIso2Code EastTimor => new(Iso2Codes.TL);
+        public static CountryIso2Code EastTimor => new CountryIso2Code(Iso2Codes.TL);
 
         /// <summary>
         /// Turkmenistan (TM)
         /// </summary>
-        public static CountryIso2Code Turkmenistan => new(Iso2Codes.TM);
+        public static CountryIso2Code Turkmenistan => new CountryIso2Code(Iso2Codes.TM);
 
         /// <summary>
         /// Tunisia (TN)
         /// </summary>
-        public static CountryIso2Code Tunisia => new(Iso2Codes.TN);
+        public static CountryIso2Code Tunisia => new CountryIso2Code(Iso2Codes.TN);
 
         /// <summary>
         /// Tonga (TO)
         /// </summary>
-        public static CountryIso2Code Tonga => new(Iso2Codes.TO);
+        public static CountryIso2Code Tonga => new CountryIso2Code(Iso2Codes.TO);
 
         /// <summary>
         /// Turkey (TR)
         /// </summary>
-        public static CountryIso2Code Turkey => new(Iso2Codes.TR);
+        public static CountryIso2Code Turkey => new CountryIso2Code(Iso2Codes.TR);
 
         /// <summary>
         /// Trinidad And Tobago (TT)
         /// </summary>
-        public static CountryIso2Code TrinidadAndTobago => new(Iso2Codes.TT);
+        public static CountryIso2Code TrinidadAndTobago => new CountryIso2Code(Iso2Codes.TT);
 
         /// <summary>
         /// Tuvalu (TV)
         /// </summary>
-        public static CountryIso2Code Tuvalu => new(Iso2Codes.TV);
+        public static CountryIso2Code Tuvalu => new CountryIso2Code(Iso2Codes.TV);
 
         /// <summary>
         /// Taiwan (TW)
         /// </summary>
-        public static CountryIso2Code Taiwan => new(Iso2Codes.TW);
+        public static CountryIso2Code Taiwan => new CountryIso2Code(Iso2Codes.TW);
 
         /// <summary>
         /// Tanzania (TZ)
         /// </summary>
-        public static CountryIso2Code Tanzania => new(Iso2Codes.TZ);
+        public static CountryIso2Code Tanzania => new CountryIso2Code(Iso2Codes.TZ);
 
         /// <summary>
         /// Ukraine (UA)
         /// </summary>
-        public static CountryIso2Code Ukraine => new(Iso2Codes.UA);
+        public static CountryIso2Code Ukraine => new CountryIso2Code(Iso2Codes.UA);
 
         /// <summary>
         /// Uganda (UG)
         /// </summary>
-        public static CountryIso2Code Uganda => new(Iso2Codes.UG);
+        public static CountryIso2Code Uganda => new CountryIso2Code(Iso2Codes.UG);
 
         /// <summary>
         /// United States (US)
         /// </summary>
-        public static CountryIso2Code UnitedStates => new(Iso2Codes.US);
+        public static CountryIso2Code UnitedStates => new CountryIso2Code(Iso2Codes.US);
 
         /// <summary>
         /// Uruguay (UY)
         /// </summary>
-        public static CountryIso2Code Uruguay => new(Iso2Codes.UY);
+        public static CountryIso2Code Uruguay => new CountryIso2Code(Iso2Codes.UY);
 
         /// <summary>
         /// Uzbekistan (UZ)
         /// </summary>
-        public static CountryIso2Code Uzbekistan => new(Iso2Codes.UZ);
+        public static CountryIso2Code Uzbekistan => new CountryIso2Code(Iso2Codes.UZ);
 
         /// <summary>
         /// Vatican City (VA)
         /// </summary>
-        public static CountryIso2Code VaticanCity => new(Iso2Codes.VA);
+        public static CountryIso2Code VaticanCity => new CountryIso2Code(Iso2Codes.VA);
 
         /// <summary>
         /// Saint Vincent and the Grenadines (VC)
         /// </summary>
-        public static CountryIso2Code SaintVincentAndTheGrenadines => new(Iso2Codes.VC);
+        public static CountryIso2Code SaintVincentAndTheGrenadines => new CountryIso2Code(Iso2Codes.VC);
 
         /// <summary>
         /// Venezuela (VE)
         /// </summary>
-        public static CountryIso2Code Venezuela => new(Iso2Codes.VE);
+        public static CountryIso2Code Venezuela => new CountryIso2Code(Iso2Codes.VE);
 
         /// <summary>
         /// British Virgin Islands (VG)
         /// </summary>
-        public static CountryIso2Code BritishVirginIslands => new(Iso2Codes.VG);
+        public static CountryIso2Code BritishVirginIslands => new CountryIso2Code(Iso2Codes.VG);
 
         /// <summary>
         /// US Virgin Islands (VI)
         /// </summary>
-        public static CountryIso2Code UsVirginIslands => new(Iso2Codes.VI);
+        public static CountryIso2Code UsVirginIslands => new CountryIso2Code(Iso2Codes.VI);
 
         /// <summary>
         /// Vietnam (VN)
         /// </summary>
-        public static CountryIso2Code Vietnam => new(Iso2Codes.VN);
+        public static CountryIso2Code Vietnam => new CountryIso2Code(Iso2Codes.VN);
 
         /// <summary>
         /// Vanuatu (VU)
         /// </summary>
-        public static CountryIso2Code Vanuatu => new(Iso2Codes.VU);
+        public static CountryIso2Code Vanuatu => new CountryIso2Code(Iso2Codes.VU);
 
         /// <summary>
         /// Wallis And Futuna (WF)
         /// </summary>
-        public static CountryIso2Code WallisAndFutuna => new(Iso2Codes.WF);
+        public static CountryIso2Code WallisAndFutuna => new CountryIso2Code(Iso2Codes.WF);
 
         /// <summary>
         /// Samoa (WS)
         /// </summary>
-        public static CountryIso2Code Samoa => new(Iso2Codes.WS);
+        public static CountryIso2Code Samoa => new CountryIso2Code(Iso2Codes.WS);
 
         /// <summary>
         /// Kosovo (XK)
         /// </summary>
-        public static CountryIso2Code Kosovo => new(Iso2Codes.XK);
+        public static CountryIso2Code Kosovo => new CountryIso2Code(Iso2Codes.XK);
 
         /// <summary>
         /// Inmarsat (XN)
         /// </summary>
-        public static CountryIso2Code Inmarsat => new(Iso2Codes.XN);
+        public static CountryIso2Code Inmarsat => new CountryIso2Code(Iso2Codes.XN);
 
         /// <summary>
         /// Yemen (YE)
         /// </summary>
-        public static CountryIso2Code Yemen => new(Iso2Codes.YE);
+        public static CountryIso2Code Yemen => new CountryIso2Code(Iso2Codes.YE);
 
         /// <summary>
         /// Mayotte (YT)
         /// </summary>
-        public static CountryIso2Code Mayotte => new(Iso2Codes.YT);
+        public static CountryIso2Code Mayotte => new CountryIso2Code(Iso2Codes.YT);
 
         /// <summary>
         /// South Africa (ZA)
         /// </summary>
-        public static CountryIso2Code SouthAfrica => new(Iso2Codes.ZA);
+        public static CountryIso2Code SouthAfrica => new CountryIso2Code(Iso2Codes.ZA);
 
         /// <summary>
         /// Zambia (ZM)
         /// </summary>
-        public static CountryIso2Code Zambia => new(Iso2Codes.ZM);
+        public static CountryIso2Code Zambia => new CountryIso2Code(Iso2Codes.ZM);
 
         /// <summary>
         /// Zimbabwe (ZW)
         /// </summary>
-        public static CountryIso2Code Zimbabwe => new(Iso2Codes.ZW);
+        public static CountryIso2Code Zimbabwe => new CountryIso2Code(Iso2Codes.ZW);
 
         #endregion
     }

@@ -21,7 +21,7 @@ namespace Azihub.GlobalData.Base.Country
         /// <summary>
         /// Hold all countries in private memory space
         /// </summary>
-        private static Dictionary<string, GdCountryIso3Code> Codes { get; } = new()
+        private static Dictionary<string, GdCountryIso3Code> Codes { get; } = new Dictionary<string, GdCountryIso3Code>()
         {
             { Iso3Codes.ABK, new GdCountryIso3Code(Iso3Codes.ABK) }, // Abkhazia
             { Iso3Codes.ABW, new GdCountryIso3Code(Iso3Codes.ABW) }, // Aruba
@@ -295,1237 +295,1237 @@ namespace Azihub.GlobalData.Base.Country
         /// <summary>
         /// Abkhazia (ABK)
         /// </summary>
-        public static GdCountryIso3Code Abkhazia => new(Iso3Codes.ABK);
+        public static GdCountryIso3Code Abkhazia => new GdCountryIso3Code(Iso3Codes.ABK);
 
         /// <summary>
         /// Ascension Island (ASC)
         /// </summary>
-        public static GdCountryIso3Code AscensionIsland => new(Iso3Codes.ASC);
+        public static GdCountryIso3Code AscensionIsland => new GdCountryIso3Code(Iso3Codes.ASC);
 
         /// <summary>
         /// Andorra (AND)
         /// </summary>
-        public static GdCountryIso3Code Andorra => new(Iso3Codes.AND);
+        public static GdCountryIso3Code Andorra => new GdCountryIso3Code(Iso3Codes.AND);
 
         /// <summary>
         /// United Arab Emirates (ARE)
         /// </summary>
-        public static GdCountryIso3Code UnitedArabEmirates => new(Iso3Codes.ARE);
+        public static GdCountryIso3Code UnitedArabEmirates => new GdCountryIso3Code(Iso3Codes.ARE);
 
         /// <summary>
         /// Afghanistan (AFG)
         /// </summary>
-        public static GdCountryIso3Code Afghanistan => new(Iso3Codes.AFG);
+        public static GdCountryIso3Code Afghanistan => new GdCountryIso3Code(Iso3Codes.AFG);
 
         /// <summary>
         /// Antigua And Barbuda (ATG)
         /// </summary>
-        public static GdCountryIso3Code AntiguaAndBarbuda => new(Iso3Codes.ATG);
+        public static GdCountryIso3Code AntiguaAndBarbuda => new GdCountryIso3Code(Iso3Codes.ATG);
 
         /// <summary>
         /// Anguilla (AIA)
         /// </summary>
-        public static GdCountryIso3Code Anguilla => new(Iso3Codes.AIA);
+        public static GdCountryIso3Code Anguilla => new GdCountryIso3Code(Iso3Codes.AIA);
 
         /// <summary>
         /// Albania (ALB)
         /// </summary>
-        public static GdCountryIso3Code Albania => new(Iso3Codes.ALB);
+        public static GdCountryIso3Code Albania => new GdCountryIso3Code(Iso3Codes.ALB);
 
         /// <summary>
         /// Armenia (ARM)
         /// </summary>
-        public static GdCountryIso3Code Armenia => new(Iso3Codes.ARM);
+        public static GdCountryIso3Code Armenia => new GdCountryIso3Code(Iso3Codes.ARM);
 
         /// <summary>
         /// Netherlands Antilles (ANT)
         /// </summary>
-        public static GdCountryIso3Code NetherlandsAntilles => new(Iso3Codes.ANT);
+        public static GdCountryIso3Code NetherlandsAntilles => new GdCountryIso3Code(Iso3Codes.ANT);
 
         /// <summary>
         /// Angola (AGO)
         /// </summary>
-        public static GdCountryIso3Code Angola => new(Iso3Codes.AGO);
+        public static GdCountryIso3Code Angola => new GdCountryIso3Code(Iso3Codes.AGO);
 
         /// <summary>
         /// Antarctica (ATA)
         /// </summary>
-        public static GdCountryIso3Code Antarctica => new(Iso3Codes.ATA);
+        public static GdCountryIso3Code Antarctica => new GdCountryIso3Code(Iso3Codes.ATA);
 
         /// <summary>
         /// Argentina (ARG)
         /// </summary>
-        public static GdCountryIso3Code Argentina => new(Iso3Codes.ARG);
+        public static GdCountryIso3Code Argentina => new GdCountryIso3Code(Iso3Codes.ARG);
 
         /// <summary>
         /// American Samoa (ASM)
         /// </summary>
-        public static GdCountryIso3Code AmericanSamoa => new(Iso3Codes.ASM);
+        public static GdCountryIso3Code AmericanSamoa => new GdCountryIso3Code(Iso3Codes.ASM);
 
         /// <summary>
         /// Austria (AUT)
         /// </summary>
-        public static GdCountryIso3Code Austria => new(Iso3Codes.AUT);
+        public static GdCountryIso3Code Austria => new GdCountryIso3Code(Iso3Codes.AUT);
 
         /// <summary>
         /// Australia (AUS)
         /// </summary>
-        public static GdCountryIso3Code Australia => new(Iso3Codes.AUS);
+        public static GdCountryIso3Code Australia => new GdCountryIso3Code(Iso3Codes.AUS);
 
         /// <summary>
         /// Aruba (ABW)
         /// </summary>
-        public static GdCountryIso3Code Aruba => new(Iso3Codes.ABW);
+        public static GdCountryIso3Code Aruba => new GdCountryIso3Code(Iso3Codes.ABW);
 
         /// <summary>
         /// Aland Islands (ALA)
         /// </summary>
-        public static GdCountryIso3Code AlandIslands => new(Iso3Codes.ALA);
+        public static GdCountryIso3Code AlandIslands => new GdCountryIso3Code(Iso3Codes.ALA);
 
         /// <summary>
         /// Azerbaijan (AZE)
         /// </summary>
-        public static GdCountryIso3Code Azerbaijan => new(Iso3Codes.AZE);
+        public static GdCountryIso3Code Azerbaijan => new GdCountryIso3Code(Iso3Codes.AZE);
 
         /// <summary>
         /// Bosnia And Herzegovina (BIH)
         /// </summary>
-        public static GdCountryIso3Code BosniaAndHerzegovina => new(Iso3Codes.BIH);
+        public static GdCountryIso3Code BosniaAndHerzegovina => new GdCountryIso3Code(Iso3Codes.BIH);
 
         /// <summary>
         /// Barbados (BRB)
         /// </summary>
-        public static GdCountryIso3Code Barbados => new(Iso3Codes.BRB);
+        public static GdCountryIso3Code Barbados => new GdCountryIso3Code(Iso3Codes.BRB);
 
         /// <summary>
         /// Bangladesh (BGD)
         /// </summary>
-        public static GdCountryIso3Code Bangladesh => new(Iso3Codes.BGD);
+        public static GdCountryIso3Code Bangladesh => new GdCountryIso3Code(Iso3Codes.BGD);
 
         /// <summary>
         /// Belgium (BEL)
         /// </summary>
-        public static GdCountryIso3Code Belgium => new(Iso3Codes.BEL);
+        public static GdCountryIso3Code Belgium => new GdCountryIso3Code(Iso3Codes.BEL);
 
         /// <summary>
         /// Burkina Faso (BFA)
         /// </summary>
-        public static GdCountryIso3Code BurkinaFaso => new(Iso3Codes.BFA);
+        public static GdCountryIso3Code BurkinaFaso => new GdCountryIso3Code(Iso3Codes.BFA);
 
         /// <summary>
         /// Bulgaria (BGR)
         /// </summary>
-        public static GdCountryIso3Code Bulgaria => new(Iso3Codes.BGR);
+        public static GdCountryIso3Code Bulgaria => new GdCountryIso3Code(Iso3Codes.BGR);
 
         /// <summary>
         /// Bahrain (BHR)
         /// </summary>
-        public static GdCountryIso3Code Bahrain => new(Iso3Codes.BHR);
+        public static GdCountryIso3Code Bahrain => new GdCountryIso3Code(Iso3Codes.BHR);
 
         /// <summary>
         /// Burundi (BDI)
         /// </summary>
-        public static GdCountryIso3Code Burundi => new(Iso3Codes.BDI);
+        public static GdCountryIso3Code Burundi => new GdCountryIso3Code(Iso3Codes.BDI);
 
         /// <summary>
         /// Benin (BEN)
         /// </summary>
-        public static GdCountryIso3Code Benin => new(Iso3Codes.BEN);
+        public static GdCountryIso3Code Benin => new GdCountryIso3Code(Iso3Codes.BEN);
 
         /// <summary>
         /// Bermuda (BMU)
         /// </summary>
-        public static GdCountryIso3Code Bermuda => new(Iso3Codes.BMU);
+        public static GdCountryIso3Code Bermuda => new GdCountryIso3Code(Iso3Codes.BMU);
 
         /// <summary>
         /// Brunei Darussalam (BRN)
         /// </summary>
-        public static GdCountryIso3Code BruneiDarussalam => new(Iso3Codes.BRN);
+        public static GdCountryIso3Code BruneiDarussalam => new GdCountryIso3Code(Iso3Codes.BRN);
 
         /// <summary>
         /// Bolivia (BOL)
         /// </summary>
-        public static GdCountryIso3Code Bolivia => new(Iso3Codes.BOL);
+        public static GdCountryIso3Code Bolivia => new GdCountryIso3Code(Iso3Codes.BOL);
 
         /// <summary>
         /// Brazil (BRA)
         /// </summary>
-        public static GdCountryIso3Code Brazil => new(Iso3Codes.BRA);
+        public static GdCountryIso3Code Brazil => new GdCountryIso3Code(Iso3Codes.BRA);
 
         /// <summary>
         /// Bahamas (BHS)
         /// </summary>
-        public static GdCountryIso3Code Bahamas => new(Iso3Codes.BHS);
+        public static GdCountryIso3Code Bahamas => new GdCountryIso3Code(Iso3Codes.BHS);
 
         /// <summary>
         /// Bhutan (BTN)
         /// </summary>
-        public static GdCountryIso3Code Bhutan => new(Iso3Codes.BTN);
+        public static GdCountryIso3Code Bhutan => new GdCountryIso3Code(Iso3Codes.BTN);
 
         /// <summary>
         /// Botswana (BWA)
         /// </summary>
-        public static GdCountryIso3Code Botswana => new(Iso3Codes.BWA);
+        public static GdCountryIso3Code Botswana => new GdCountryIso3Code(Iso3Codes.BWA);
 
         /// <summary>
         /// Belarus (BLR)
         /// </summary>
-        public static GdCountryIso3Code Belarus => new(Iso3Codes.BLR);
+        public static GdCountryIso3Code Belarus => new GdCountryIso3Code(Iso3Codes.BLR);
 
         /// <summary>
         /// Belize (BLZ)
         /// </summary>
-        public static GdCountryIso3Code Belize => new(Iso3Codes.BLZ);
+        public static GdCountryIso3Code Belize => new GdCountryIso3Code(Iso3Codes.BLZ);
 
         /// <summary>
         /// Canada (CAN)
         /// </summary>
-        public static GdCountryIso3Code Canada => new(Iso3Codes.CAN);
+        public static GdCountryIso3Code Canada => new GdCountryIso3Code(Iso3Codes.CAN);
 
         /// <summary>
         /// Cocos (Keeling) Islands (CCK)
         /// </summary>
-        public static GdCountryIso3Code CocosKeelingIslands => new(Iso3Codes.CCK);
+        public static GdCountryIso3Code CocosKeelingIslands => new GdCountryIso3Code(Iso3Codes.CCK);
 
         /// <summary>
         /// Congo, Democratic Republic of the (COD)
         /// </summary>
-        public static GdCountryIso3Code CongoDemocraticRepublicOfThe => new(Iso3Codes.COD);
+        public static GdCountryIso3Code CongoDemocraticRepublicOfThe => new GdCountryIso3Code(Iso3Codes.COD);
 
         /// <summary>
         /// Central African Republic (CAF)
         /// </summary>
-        public static GdCountryIso3Code CentralAfricanRepublic => new(Iso3Codes.CAF);
+        public static GdCountryIso3Code CentralAfricanRepublic => new GdCountryIso3Code(Iso3Codes.CAF);
 
         /// <summary>
         /// Congo, Republic of the (COG)
         /// </summary>
-        public static GdCountryIso3Code CongoRepublicOfThe => new(Iso3Codes.COG);
+        public static GdCountryIso3Code CongoRepublicOfThe => new GdCountryIso3Code(Iso3Codes.COG);
 
         /// <summary>
         /// Switzerland (CHE)
         /// </summary>
-        public static GdCountryIso3Code Switzerland => new(Iso3Codes.CHE);
+        public static GdCountryIso3Code Switzerland => new GdCountryIso3Code(Iso3Codes.CHE);
 
         /// <summary>
         /// Ivory Coast (CIV)
         /// </summary>
-        public static GdCountryIso3Code IvoryCoast => new(Iso3Codes.CIV);
+        public static GdCountryIso3Code IvoryCoast => new GdCountryIso3Code(Iso3Codes.CIV);
 
         /// <summary>
         /// Cook Islands (COK)
         /// </summary>
-        public static GdCountryIso3Code CookIslands => new(Iso3Codes.COK);
+        public static GdCountryIso3Code CookIslands => new GdCountryIso3Code(Iso3Codes.COK);
 
         /// <summary>
         /// Chile (CHL)
         /// </summary>
-        public static GdCountryIso3Code Chile => new(Iso3Codes.CHL);
+        public static GdCountryIso3Code Chile => new GdCountryIso3Code(Iso3Codes.CHL);
 
         /// <summary>
         /// Cameroon (CMR)
         /// </summary>
-        public static GdCountryIso3Code Cameroon => new(Iso3Codes.CMR);
+        public static GdCountryIso3Code Cameroon => new GdCountryIso3Code(Iso3Codes.CMR);
 
         /// <summary>
         /// China (CHN)
         /// </summary>
-        public static GdCountryIso3Code China => new(Iso3Codes.CHN);
+        public static GdCountryIso3Code China => new GdCountryIso3Code(Iso3Codes.CHN);
 
         /// <summary>
         /// Colombia (COL)
         /// </summary>
-        public static GdCountryIso3Code Colombia => new(Iso3Codes.COL);
+        public static GdCountryIso3Code Colombia => new GdCountryIso3Code(Iso3Codes.COL);
 
         /// <summary>
         /// Costa Rica (CRI)
         /// </summary>
-        public static GdCountryIso3Code CostaRica => new(Iso3Codes.CRI);
+        public static GdCountryIso3Code CostaRica => new GdCountryIso3Code(Iso3Codes.CRI);
 
         /// <summary>
         /// Cuba (CUB)
         /// </summary>
-        public static GdCountryIso3Code Cuba => new(Iso3Codes.CUB);
+        public static GdCountryIso3Code Cuba => new GdCountryIso3Code(Iso3Codes.CUB);
 
         /// <summary>
         /// Cape Verde (CPV)
         /// </summary>
-        public static GdCountryIso3Code CapeVerde => new(Iso3Codes.CPV);
+        public static GdCountryIso3Code CapeVerde => new GdCountryIso3Code(Iso3Codes.CPV);
 
         /// <summary>
         /// Christmas Island (CXR)
         /// </summary>
-        public static GdCountryIso3Code ChristmasIsland => new(Iso3Codes.CXR);
+        public static GdCountryIso3Code ChristmasIsland => new GdCountryIso3Code(Iso3Codes.CXR);
 
         /// <summary>
         /// Cyprus (CYP)
         /// </summary>
-        public static GdCountryIso3Code Cyprus => new(Iso3Codes.CYP);
+        public static GdCountryIso3Code Cyprus => new GdCountryIso3Code(Iso3Codes.CYP);
 
         /// <summary>
         /// Czech Republic (CZE)
         /// </summary>
-        public static GdCountryIso3Code CzechRepublic => new(Iso3Codes.CZE);
+        public static GdCountryIso3Code CzechRepublic => new GdCountryIso3Code(Iso3Codes.CZE);
 
         /// <summary>
         /// Germany (DEU)
         /// </summary>
-        public static GdCountryIso3Code Germany => new(Iso3Codes.DEU);
+        public static GdCountryIso3Code Germany => new GdCountryIso3Code(Iso3Codes.DEU);
 
         /// <summary>
         /// Djibouti (DJI)
         /// </summary>
-        public static GdCountryIso3Code Djibouti => new(Iso3Codes.DJI);
+        public static GdCountryIso3Code Djibouti => new GdCountryIso3Code(Iso3Codes.DJI);
 
         /// <summary>
         /// Denmark (DNK)
         /// </summary>
-        public static GdCountryIso3Code Denmark => new(Iso3Codes.DNK);
+        public static GdCountryIso3Code Denmark => new GdCountryIso3Code(Iso3Codes.DNK);
 
         /// <summary>
         /// Dominica (DMA)
         /// </summary>
-        public static GdCountryIso3Code Dominica => new(Iso3Codes.DMA);
+        public static GdCountryIso3Code Dominica => new GdCountryIso3Code(Iso3Codes.DMA);
 
         /// <summary>
         /// Dominican Republic (DOM)
         /// </summary>
-        public static GdCountryIso3Code DominicanRepublic => new(Iso3Codes.DOM);
+        public static GdCountryIso3Code DominicanRepublic => new GdCountryIso3Code(Iso3Codes.DOM);
 
         /// <summary>
         /// Algeria (DZA)
         /// </summary>
-        public static GdCountryIso3Code Algeria => new(Iso3Codes.DZA);
+        public static GdCountryIso3Code Algeria => new GdCountryIso3Code(Iso3Codes.DZA);
 
         /// <summary>
         /// Ecuador (ECU)
         /// </summary>
-        public static GdCountryIso3Code Ecuador => new(Iso3Codes.ECU);
+        public static GdCountryIso3Code Ecuador => new GdCountryIso3Code(Iso3Codes.ECU);
 
         /// <summary>
         /// Estonia (EST)
         /// </summary>
-        public static GdCountryIso3Code Estonia => new(Iso3Codes.EST);
+        public static GdCountryIso3Code Estonia => new GdCountryIso3Code(Iso3Codes.EST);
 
         /// <summary>
         /// Egypt (EGY)
         /// </summary>
-        public static GdCountryIso3Code Egypt => new(Iso3Codes.EGY);
+        public static GdCountryIso3Code Egypt => new GdCountryIso3Code(Iso3Codes.EGY);
 
         /// <summary>
         /// Western Sahara (ESH)
         /// </summary>
-        public static GdCountryIso3Code WesternSahara => new(Iso3Codes.ESH);
+        public static GdCountryIso3Code WesternSahara => new GdCountryIso3Code(Iso3Codes.ESH);
 
         /// <summary>
         /// Eritrea (ERI)
         /// </summary>
-        public static GdCountryIso3Code Eritrea => new(Iso3Codes.ERI);
+        public static GdCountryIso3Code Eritrea => new GdCountryIso3Code(Iso3Codes.ERI);
 
         /// <summary>
         /// Spain (ESP)
         /// </summary>
-        public static GdCountryIso3Code Spain => new(Iso3Codes.ESP);
+        public static GdCountryIso3Code Spain => new GdCountryIso3Code(Iso3Codes.ESP);
 
         /// <summary>
         /// Ethiopia (ETH)
         /// </summary>
-        public static GdCountryIso3Code Ethiopia => new(Iso3Codes.ETH);
+        public static GdCountryIso3Code Ethiopia => new GdCountryIso3Code(Iso3Codes.ETH);
 
         /// <summary>
         /// Finland (FIN)
         /// </summary>
-        public static GdCountryIso3Code Finland => new(Iso3Codes.FIN);
+        public static GdCountryIso3Code Finland => new GdCountryIso3Code(Iso3Codes.FIN);
 
         /// <summary>
         /// Fiji (FJI)
         /// </summary>
-        public static GdCountryIso3Code Fiji => new(Iso3Codes.FJI);
+        public static GdCountryIso3Code Fiji => new GdCountryIso3Code(Iso3Codes.FJI);
 
         /// <summary>
         /// Falkland Islands (FLK)
         /// </summary>
-        public static GdCountryIso3Code FalklandIslands => new(Iso3Codes.FLK);
+        public static GdCountryIso3Code FalklandIslands => new GdCountryIso3Code(Iso3Codes.FLK);
 
         /// <summary>
         /// Micronesia (FSM)
         /// </summary>
-        public static GdCountryIso3Code Micronesia => new(Iso3Codes.FSM);
+        public static GdCountryIso3Code Micronesia => new GdCountryIso3Code(Iso3Codes.FSM);
 
         /// <summary>
         /// Faroe Islands (FRO)
         /// </summary>
-        public static GdCountryIso3Code FaroeIslands => new(Iso3Codes.FRO);
+        public static GdCountryIso3Code FaroeIslands => new GdCountryIso3Code(Iso3Codes.FRO);
 
         /// <summary>
         /// France (FRA)
         /// </summary>
-        public static GdCountryIso3Code France => new(Iso3Codes.FRA);
+        public static GdCountryIso3Code France => new GdCountryIso3Code(Iso3Codes.FRA);
 
         /// <summary>
         /// Gabon (GAB)
         /// </summary>
-        public static GdCountryIso3Code Gabon => new(Iso3Codes.GAB);
+        public static GdCountryIso3Code Gabon => new GdCountryIso3Code(Iso3Codes.GAB);
 
         /// <summary>
         /// United Kingdom (GBR)
         /// </summary>
-        public static GdCountryIso3Code UnitedKingdom => new(Iso3Codes.GBR);
+        public static GdCountryIso3Code UnitedKingdom => new GdCountryIso3Code(Iso3Codes.GBR);
 
         /// <summary>
         /// Grenada (GRD)
         /// </summary>
-        public static GdCountryIso3Code Grenada => new(Iso3Codes.GRD);
+        public static GdCountryIso3Code Grenada => new GdCountryIso3Code(Iso3Codes.GRD);
 
         /// <summary>
         /// Georgia (GEO)
         /// </summary>
-        public static GdCountryIso3Code Georgia => new(Iso3Codes.GEO);
+        public static GdCountryIso3Code Georgia => new GdCountryIso3Code(Iso3Codes.GEO);
 
         /// <summary>
         /// French Guiana (GUF)
         /// </summary>
-        public static GdCountryIso3Code FrenchGuiana => new(Iso3Codes.GUF);
+        public static GdCountryIso3Code FrenchGuiana => new GdCountryIso3Code(Iso3Codes.GUF);
 
         /// <summary>
         /// Guernsey (GGY)
         /// </summary>
-        public static GdCountryIso3Code Guernsey => new(Iso3Codes.GGY);
+        public static GdCountryIso3Code Guernsey => new GdCountryIso3Code(Iso3Codes.GGY);
 
         /// <summary>
         /// Ghana (GHA)
         /// </summary>
-        public static GdCountryIso3Code Ghana => new(Iso3Codes.GHA);
+        public static GdCountryIso3Code Ghana => new GdCountryIso3Code(Iso3Codes.GHA);
 
         /// <summary>
         /// Gibraltar (GIB)
         /// </summary>
-        public static GdCountryIso3Code Gibraltar => new(Iso3Codes.GIB);
+        public static GdCountryIso3Code Gibraltar => new GdCountryIso3Code(Iso3Codes.GIB);
 
         /// <summary>
         /// Greenland (GRL)
         /// </summary>
-        public static GdCountryIso3Code Greenland => new(Iso3Codes.GRL);
+        public static GdCountryIso3Code Greenland => new GdCountryIso3Code(Iso3Codes.GRL);
 
         /// <summary>
         /// Gambia (GMB)
         /// </summary>
-        public static GdCountryIso3Code Gambia => new(Iso3Codes.GMB);
+        public static GdCountryIso3Code Gambia => new GdCountryIso3Code(Iso3Codes.GMB);
 
         /// <summary>
         /// Guinea, Republic of (GIN)
         /// </summary>
-        public static GdCountryIso3Code GuineaRepublicOf => new(Iso3Codes.GIN);
+        public static GdCountryIso3Code GuineaRepublicOf => new GdCountryIso3Code(Iso3Codes.GIN);
 
         /// <summary>
         /// Global System (GMS)
         /// </summary>
-        public static GdCountryIso3Code GlobalSystem => new(Iso3Codes.GMS);
+        public static GdCountryIso3Code GlobalSystem => new GdCountryIso3Code(Iso3Codes.GMS);
 
         /// <summary>
         /// Guadeloupe (GLP)
         /// </summary>
-        public static GdCountryIso3Code Guadeloupe => new(Iso3Codes.GLP);
+        public static GdCountryIso3Code Guadeloupe => new GdCountryIso3Code(Iso3Codes.GLP);
 
         /// <summary>
         /// Equatorial Guinea (GNQ)
         /// </summary>
-        public static GdCountryIso3Code EquatorialGuinea => new(Iso3Codes.GNQ);
+        public static GdCountryIso3Code EquatorialGuinea => new GdCountryIso3Code(Iso3Codes.GNQ);
 
         /// <summary>
         /// Greece (GRC)
         /// </summary>
-        public static GdCountryIso3Code Greece => new(Iso3Codes.GRC);
+        public static GdCountryIso3Code Greece => new GdCountryIso3Code(Iso3Codes.GRC);
 
         /// <summary>
         /// South Georgia (SGS)
         /// </summary>
-        public static GdCountryIso3Code SouthGeorgia => new(Iso3Codes.SGS);
+        public static GdCountryIso3Code SouthGeorgia => new GdCountryIso3Code(Iso3Codes.SGS);
 
         /// <summary>
         /// Guatemala (GTM)
         /// </summary>
-        public static GdCountryIso3Code Guatemala => new(Iso3Codes.GTM);
+        public static GdCountryIso3Code Guatemala => new GdCountryIso3Code(Iso3Codes.GTM);
 
         /// <summary>
         /// Guam (GUM)
         /// </summary>
-        public static GdCountryIso3Code Guam => new(Iso3Codes.GUM);
+        public static GdCountryIso3Code Guam => new GdCountryIso3Code(Iso3Codes.GUM);
 
         /// <summary>
         /// Guinea-Bissau (GNB)
         /// </summary>
-        public static GdCountryIso3Code GuineaBissau => new(Iso3Codes.GNB);
+        public static GdCountryIso3Code GuineaBissau => new GdCountryIso3Code(Iso3Codes.GNB);
 
         /// <summary>
         /// Guyana (GUY)
         /// </summary>
-        public static GdCountryIso3Code Guyana => new(Iso3Codes.GUY);
+        public static GdCountryIso3Code Guyana => new GdCountryIso3Code(Iso3Codes.GUY);
 
         /// <summary>
         /// Hong Kong (HKG)
         /// </summary>
-        public static GdCountryIso3Code HongKong => new(Iso3Codes.HKG);
+        public static GdCountryIso3Code HongKong => new GdCountryIso3Code(Iso3Codes.HKG);
 
         /// <summary>
         /// Honduras (HND)
         /// </summary>
-        public static GdCountryIso3Code Honduras => new(Iso3Codes.HND);
+        public static GdCountryIso3Code Honduras => new GdCountryIso3Code(Iso3Codes.HND);
 
         /// <summary>
         /// Croatia (HRV)
         /// </summary>
-        public static GdCountryIso3Code Croatia => new(Iso3Codes.HRV);
+        public static GdCountryIso3Code Croatia => new GdCountryIso3Code(Iso3Codes.HRV);
 
         /// <summary>
         /// Haiti (HTI)
         /// </summary>
-        public static GdCountryIso3Code Haiti => new(Iso3Codes.HTI);
+        public static GdCountryIso3Code Haiti => new GdCountryIso3Code(Iso3Codes.HTI);
 
         /// <summary>
         /// Hungary (HUN)
         /// </summary>
-        public static GdCountryIso3Code Hungary => new(Iso3Codes.HUN);
+        public static GdCountryIso3Code Hungary => new GdCountryIso3Code(Iso3Codes.HUN);
 
         /// <summary>
         /// Indonesia (IDN)
         /// </summary>
-        public static GdCountryIso3Code Indonesia => new(Iso3Codes.IDN);
+        public static GdCountryIso3Code Indonesia => new GdCountryIso3Code(Iso3Codes.IDN);
 
         /// <summary>
         /// Ireland (IRL)
         /// </summary>
-        public static GdCountryIso3Code Ireland => new(Iso3Codes.IRL);
+        public static GdCountryIso3Code Ireland => new GdCountryIso3Code(Iso3Codes.IRL);
 
         /// <summary>
         /// Israel (ISR)
         /// </summary>
-        public static GdCountryIso3Code Israel => new(Iso3Codes.ISR);
+        public static GdCountryIso3Code Israel => new GdCountryIso3Code(Iso3Codes.ISR);
 
         /// <summary>
         /// Isle of Man (IMN)
         /// </summary>
-        public static GdCountryIso3Code IsleOfMan => new(Iso3Codes.IMN);
+        public static GdCountryIso3Code IsleOfMan => new GdCountryIso3Code(Iso3Codes.IMN);
 
         /// <summary>
         /// India (IND)
         /// </summary>
-        public static GdCountryIso3Code India => new(Iso3Codes.IND);
+        public static GdCountryIso3Code India => new GdCountryIso3Code(Iso3Codes.IND);
 
         /// <summary>
         /// British Indian Ocean Territory (IOT)
         /// </summary>
-        public static GdCountryIso3Code BritishIndianOceanTerritory => new(Iso3Codes.IOT);
+        public static GdCountryIso3Code BritishIndianOceanTerritory => new GdCountryIso3Code(Iso3Codes.IOT);
 
         /// <summary>
         /// Iraq (IRQ)
         /// </summary>
-        public static GdCountryIso3Code Iraq => new(Iso3Codes.IRQ);
+        public static GdCountryIso3Code Iraq => new GdCountryIso3Code(Iso3Codes.IRQ);
 
         /// <summary>
         /// Iran (IRN)
         /// </summary>
-        public static GdCountryIso3Code Iran => new(Iso3Codes.IRN);
+        public static GdCountryIso3Code Iran => new GdCountryIso3Code(Iso3Codes.IRN);
 
         /// <summary>
         /// Iceland (ISL)
         /// </summary>
-        public static GdCountryIso3Code Iceland => new(Iso3Codes.ISL);
+        public static GdCountryIso3Code Iceland => new GdCountryIso3Code(Iso3Codes.ISL);
 
         /// <summary>
         /// Italy (ITA)
         /// </summary>
-        public static GdCountryIso3Code Italy => new(Iso3Codes.ITA);
+        public static GdCountryIso3Code Italy => new GdCountryIso3Code(Iso3Codes.ITA);
 
         /// <summary>
         /// Jersey (JEY)
         /// </summary>
-        public static GdCountryIso3Code Jersey => new(Iso3Codes.JEY);
+        public static GdCountryIso3Code Jersey => new GdCountryIso3Code(Iso3Codes.JEY);
 
         /// <summary>
         /// Jamaica (JAM)
         /// </summary>
-        public static GdCountryIso3Code Jamaica => new(Iso3Codes.JAM);
+        public static GdCountryIso3Code Jamaica => new GdCountryIso3Code(Iso3Codes.JAM);
 
         /// <summary>
         /// Jordan (JOR)
         /// </summary>
-        public static GdCountryIso3Code Jordan => new(Iso3Codes.JOR);
+        public static GdCountryIso3Code Jordan => new GdCountryIso3Code(Iso3Codes.JOR);
 
         /// <summary>
         /// Japan (JPN)
         /// </summary>
-        public static GdCountryIso3Code Japan => new(Iso3Codes.JPN);
+        public static GdCountryIso3Code Japan => new GdCountryIso3Code(Iso3Codes.JPN);
 
         /// <summary>
         /// Kenya (KEN)
         /// </summary>
-        public static GdCountryIso3Code Kenya => new(Iso3Codes.KEN);
+        public static GdCountryIso3Code Kenya => new GdCountryIso3Code(Iso3Codes.KEN);
 
         /// <summary>
         /// Kyrgyzstan (KGZ)
         /// </summary>
-        public static GdCountryIso3Code Kyrgyzstan => new(Iso3Codes.KGZ);
+        public static GdCountryIso3Code Kyrgyzstan => new GdCountryIso3Code(Iso3Codes.KGZ);
 
         /// <summary>
         /// Cambodia (KHM)
         /// </summary>
-        public static GdCountryIso3Code Cambodia => new(Iso3Codes.KHM);
+        public static GdCountryIso3Code Cambodia => new GdCountryIso3Code(Iso3Codes.KHM);
 
         /// <summary>
         /// Kiribati (KIR)
         /// </summary>
-        public static GdCountryIso3Code Kiribati => new(Iso3Codes.KIR);
+        public static GdCountryIso3Code Kiribati => new GdCountryIso3Code(Iso3Codes.KIR);
 
         /// <summary>
         /// Comoros (COM)
         /// </summary>
-        public static GdCountryIso3Code Comoros => new(Iso3Codes.COM);
+        public static GdCountryIso3Code Comoros => new GdCountryIso3Code(Iso3Codes.COM);
 
         /// <summary>
         /// Saint Kitts And Nevis (KNA)
         /// </summary>
-        public static GdCountryIso3Code SaintKittsAndNevis => new(Iso3Codes.KNA);
+        public static GdCountryIso3Code SaintKittsAndNevis => new GdCountryIso3Code(Iso3Codes.KNA);
 
         /// <summary>
         /// Korea, North (PRK)
         /// </summary>
-        public static GdCountryIso3Code KoreaNorth => new(Iso3Codes.PRK);
+        public static GdCountryIso3Code KoreaNorth => new GdCountryIso3Code(Iso3Codes.PRK);
 
         /// <summary>
         /// Korea, South (KOR)
         /// </summary>
-        public static GdCountryIso3Code KoreaSouth => new(Iso3Codes.KOR);
+        public static GdCountryIso3Code KoreaSouth => new GdCountryIso3Code(Iso3Codes.KOR);
 
         /// <summary>
         /// Kuwait (KWT)
         /// </summary>
-        public static GdCountryIso3Code Kuwait => new(Iso3Codes.KWT);
+        public static GdCountryIso3Code Kuwait => new GdCountryIso3Code(Iso3Codes.KWT);
 
         /// <summary>
         /// Cayman Islands (CYM)
         /// </summary>
-        public static GdCountryIso3Code CaymanIslands => new(Iso3Codes.CYM);
+        public static GdCountryIso3Code CaymanIslands => new GdCountryIso3Code(Iso3Codes.CYM);
 
         /// <summary>
         /// Kazakhstan (KAZ)
         /// </summary>
-        public static GdCountryIso3Code Kazakhstan => new(Iso3Codes.KAZ);
+        public static GdCountryIso3Code Kazakhstan => new GdCountryIso3Code(Iso3Codes.KAZ);
 
         /// <summary>
         /// Laos (LAO)
         /// </summary>
-        public static GdCountryIso3Code Laos => new(Iso3Codes.LAO);
+        public static GdCountryIso3Code Laos => new GdCountryIso3Code(Iso3Codes.LAO);
 
         /// <summary>
         /// Lebanon (LBN)
         /// </summary>
-        public static GdCountryIso3Code Lebanon => new(Iso3Codes.LBN);
+        public static GdCountryIso3Code Lebanon => new GdCountryIso3Code(Iso3Codes.LBN);
 
         /// <summary>
         /// Saint Lucia (LCA)
         /// </summary>
-        public static GdCountryIso3Code SaintLucia => new(Iso3Codes.LCA);
+        public static GdCountryIso3Code SaintLucia => new GdCountryIso3Code(Iso3Codes.LCA);
 
         /// <summary>
         /// Liechtenstein (LIE)
         /// </summary>
-        public static GdCountryIso3Code Liechtenstein => new(Iso3Codes.LIE);
+        public static GdCountryIso3Code Liechtenstein => new GdCountryIso3Code(Iso3Codes.LIE);
 
         /// <summary>
         /// Sri Lanka (LKA)
         /// </summary>
-        public static GdCountryIso3Code SriLanka => new(Iso3Codes.LKA);
+        public static GdCountryIso3Code SriLanka => new GdCountryIso3Code(Iso3Codes.LKA);
 
         /// <summary>
         /// Liberia (LBR)
         /// </summary>
-        public static GdCountryIso3Code Liberia => new(Iso3Codes.LBR);
+        public static GdCountryIso3Code Liberia => new GdCountryIso3Code(Iso3Codes.LBR);
 
         /// <summary>
         /// Lesotho (LSO)
         /// </summary>
-        public static GdCountryIso3Code Lesotho => new(Iso3Codes.LSO);
+        public static GdCountryIso3Code Lesotho => new GdCountryIso3Code(Iso3Codes.LSO);
 
         /// <summary>
         /// Lithuania (LTU)
         /// </summary>
-        public static GdCountryIso3Code Lithuania => new(Iso3Codes.LTU);
+        public static GdCountryIso3Code Lithuania => new GdCountryIso3Code(Iso3Codes.LTU);
 
         /// <summary>
         /// Luxembourg (LUX)
         /// </summary>
-        public static GdCountryIso3Code Luxembourg => new(Iso3Codes.LUX);
+        public static GdCountryIso3Code Luxembourg => new GdCountryIso3Code(Iso3Codes.LUX);
 
         /// <summary>
         /// Latvia (LVA)
         /// </summary>
-        public static GdCountryIso3Code Latvia => new(Iso3Codes.LVA);
+        public static GdCountryIso3Code Latvia => new GdCountryIso3Code(Iso3Codes.LVA);
 
         /// <summary>
         /// Libya (LBY)
         /// </summary>
-        public static GdCountryIso3Code Libya => new(Iso3Codes.LBY);
+        public static GdCountryIso3Code Libya => new GdCountryIso3Code(Iso3Codes.LBY);
 
         /// <summary>
         /// Morocco (MAR)
         /// </summary>
-        public static GdCountryIso3Code Morocco => new(Iso3Codes.MAR);
+        public static GdCountryIso3Code Morocco => new GdCountryIso3Code(Iso3Codes.MAR);
 
         /// <summary>
         /// Monaco (MCO)
         /// </summary>
-        public static GdCountryIso3Code Monaco => new(Iso3Codes.MCO);
+        public static GdCountryIso3Code Monaco => new GdCountryIso3Code(Iso3Codes.MCO);
 
         /// <summary>
         /// Moldova (MDA)
         /// </summary>
-        public static GdCountryIso3Code Moldova => new(Iso3Codes.MDA);
+        public static GdCountryIso3Code Moldova => new GdCountryIso3Code(Iso3Codes.MDA);
 
         /// <summary>
         /// Montenegro (MNE)
         /// </summary>
-        public static GdCountryIso3Code Montenegro => new(Iso3Codes.MNE);
+        public static GdCountryIso3Code Montenegro => new GdCountryIso3Code(Iso3Codes.MNE);
 
         /// <summary>
         /// Madagascar (MDG)
         /// </summary>
-        public static GdCountryIso3Code Madagascar => new(Iso3Codes.MDG);
+        public static GdCountryIso3Code Madagascar => new GdCountryIso3Code(Iso3Codes.MDG);
 
         /// <summary>
         /// Marshall islands (MHL)
         /// </summary>
-        public static GdCountryIso3Code MarshallIslands => new(Iso3Codes.MHL);
+        public static GdCountryIso3Code MarshallIslands => new GdCountryIso3Code(Iso3Codes.MHL);
 
         /// <summary>
         /// Macedonia (MKD)
         /// </summary>
-        public static GdCountryIso3Code Macedonia => new(Iso3Codes.MKD);
+        public static GdCountryIso3Code Macedonia => new GdCountryIso3Code(Iso3Codes.MKD);
 
         /// <summary>
         /// Mali (MLI)
         /// </summary>
-        public static GdCountryIso3Code Mali => new(Iso3Codes.MLI);
+        public static GdCountryIso3Code Mali => new GdCountryIso3Code(Iso3Codes.MLI);
 
         /// <summary>
         /// Myanmar (MMR)
         /// </summary>
-        public static GdCountryIso3Code Myanmar => new(Iso3Codes.MMR);
+        public static GdCountryIso3Code Myanmar => new GdCountryIso3Code(Iso3Codes.MMR);
 
         /// <summary>
         /// Mongolia (MNG)
         /// </summary>
-        public static GdCountryIso3Code Mongolia => new(Iso3Codes.MNG);
+        public static GdCountryIso3Code Mongolia => new GdCountryIso3Code(Iso3Codes.MNG);
 
         /// <summary>
         /// Macau (MAC)
         /// </summary>
-        public static GdCountryIso3Code Macau => new(Iso3Codes.MAC);
+        public static GdCountryIso3Code Macau => new GdCountryIso3Code(Iso3Codes.MAC);
 
         /// <summary>
         /// Northern Mariana Islands (MNP)
         /// </summary>
-        public static GdCountryIso3Code NorthernMarianaIslands => new(Iso3Codes.MNP);
+        public static GdCountryIso3Code NorthernMarianaIslands => new GdCountryIso3Code(Iso3Codes.MNP);
 
         /// <summary>
         /// Martinique (MTQ)
         /// </summary>
-        public static GdCountryIso3Code Martinique => new(Iso3Codes.MTQ);
+        public static GdCountryIso3Code Martinique => new GdCountryIso3Code(Iso3Codes.MTQ);
 
         /// <summary>
         /// Mauritania (MRT)
         /// </summary>
-        public static GdCountryIso3Code Mauritania => new(Iso3Codes.MRT);
+        public static GdCountryIso3Code Mauritania => new GdCountryIso3Code(Iso3Codes.MRT);
 
         /// <summary>
         /// Montserrat (MSR)
         /// </summary>
-        public static GdCountryIso3Code Montserrat => new(Iso3Codes.MSR);
+        public static GdCountryIso3Code Montserrat => new GdCountryIso3Code(Iso3Codes.MSR);
 
         /// <summary>
         /// Malta (MLT)
         /// </summary>
-        public static GdCountryIso3Code Malta => new(Iso3Codes.MLT);
+        public static GdCountryIso3Code Malta => new GdCountryIso3Code(Iso3Codes.MLT);
 
         /// <summary>
         /// Mauritius (MUS)
         /// </summary>
-        public static GdCountryIso3Code Mauritius => new(Iso3Codes.MUS);
+        public static GdCountryIso3Code Mauritius => new GdCountryIso3Code(Iso3Codes.MUS);
 
         /// <summary>
         /// Maldives (MDV)
         /// </summary>
-        public static GdCountryIso3Code Maldives => new(Iso3Codes.MDV);
+        public static GdCountryIso3Code Maldives => new GdCountryIso3Code(Iso3Codes.MDV);
 
         /// <summary>
         /// Malawi (MWI)
         /// </summary>
-        public static GdCountryIso3Code Malawi => new(Iso3Codes.MWI);
+        public static GdCountryIso3Code Malawi => new GdCountryIso3Code(Iso3Codes.MWI);
 
         /// <summary>
         /// Mexico (MEX)
         /// </summary>
-        public static GdCountryIso3Code Mexico => new(Iso3Codes.MEX);
+        public static GdCountryIso3Code Mexico => new GdCountryIso3Code(Iso3Codes.MEX);
 
         /// <summary>
         /// Malaysia (MYS)
         /// </summary>
-        public static GdCountryIso3Code Malaysia => new(Iso3Codes.MYS);
+        public static GdCountryIso3Code Malaysia => new GdCountryIso3Code(Iso3Codes.MYS);
 
         /// <summary>
         /// Mozambique (MOZ)
         /// </summary>
-        public static GdCountryIso3Code Mozambique => new(Iso3Codes.MOZ);
+        public static GdCountryIso3Code Mozambique => new GdCountryIso3Code(Iso3Codes.MOZ);
 
         /// <summary>
         /// Namibia (NAM)
         /// </summary>
-        public static GdCountryIso3Code Namibia => new(Iso3Codes.NAM);
+        public static GdCountryIso3Code Namibia => new GdCountryIso3Code(Iso3Codes.NAM);
 
         /// <summary>
         /// New Caledonia (NCL)
         /// </summary>
-        public static GdCountryIso3Code NewCaledonia => new(Iso3Codes.NCL);
+        public static GdCountryIso3Code NewCaledonia => new GdCountryIso3Code(Iso3Codes.NCL);
 
         /// <summary>
         /// Niger (NER)
         /// </summary>
-        public static GdCountryIso3Code Niger => new(Iso3Codes.NER);
+        public static GdCountryIso3Code Niger => new GdCountryIso3Code(Iso3Codes.NER);
 
         /// <summary>
         /// Norfolk Island (NFK)
         /// </summary>
-        public static GdCountryIso3Code NorfolkIsland => new(Iso3Codes.NFK);
+        public static GdCountryIso3Code NorfolkIsland => new GdCountryIso3Code(Iso3Codes.NFK);
 
         /// <summary>
         /// Nigeria (NGA)
         /// </summary>
-        public static GdCountryIso3Code Nigeria => new(Iso3Codes.NGA);
+        public static GdCountryIso3Code Nigeria => new GdCountryIso3Code(Iso3Codes.NGA);
 
         /// <summary>
         /// Nicaragua (NIC)
         /// </summary>
-        public static GdCountryIso3Code Nicaragua => new(Iso3Codes.NIC);
+        public static GdCountryIso3Code Nicaragua => new GdCountryIso3Code(Iso3Codes.NIC);
 
         /// <summary>
         /// Netherlands, The (NLD)
         /// </summary>
-        public static GdCountryIso3Code NetherlandsThe => new(Iso3Codes.NLD);
+        public static GdCountryIso3Code NetherlandsThe => new GdCountryIso3Code(Iso3Codes.NLD);
 
         /// <summary>
         /// Norway (NOR)
         /// </summary>
-        public static GdCountryIso3Code Norway => new(Iso3Codes.NOR);
+        public static GdCountryIso3Code Norway => new GdCountryIso3Code(Iso3Codes.NOR);
 
         /// <summary>
         /// Nepal (NPL)
         /// </summary>
-        public static GdCountryIso3Code Nepal => new(Iso3Codes.NPL);
+        public static GdCountryIso3Code Nepal => new GdCountryIso3Code(Iso3Codes.NPL);
 
         /// <summary>
         /// Nauru (NRU)
         /// </summary>
-        public static GdCountryIso3Code Nauru => new(Iso3Codes.NRU);
+        public static GdCountryIso3Code Nauru => new GdCountryIso3Code(Iso3Codes.NRU);
 
         /// <summary>
         /// Niue (NIU)
         /// </summary>
-        public static GdCountryIso3Code Niue => new(Iso3Codes.NIU);
+        public static GdCountryIso3Code Niue => new GdCountryIso3Code(Iso3Codes.NIU);
 
         /// <summary>
         /// New Zealand (NZL)
         /// </summary>
-        public static GdCountryIso3Code NewZealand => new(Iso3Codes.NZL);
+        public static GdCountryIso3Code NewZealand => new GdCountryIso3Code(Iso3Codes.NZL);
 
         /// <summary>
         /// Oman (OMN)
         /// </summary>
-        public static GdCountryIso3Code Oman => new(Iso3Codes.OMN);
+        public static GdCountryIso3Code Oman => new GdCountryIso3Code(Iso3Codes.OMN);
 
         /// <summary>
         /// Panama (PAN)
         /// </summary>
-        public static GdCountryIso3Code Panama => new(Iso3Codes.PAN);
+        public static GdCountryIso3Code Panama => new GdCountryIso3Code(Iso3Codes.PAN);
 
         /// <summary>
         /// Peru (PER)
         /// </summary>
-        public static GdCountryIso3Code Peru => new(Iso3Codes.PER);
+        public static GdCountryIso3Code Peru => new GdCountryIso3Code(Iso3Codes.PER);
 
         /// <summary>
         /// French Polynesia (PYF)
         /// </summary>
-        public static GdCountryIso3Code FrenchPolynesia => new(Iso3Codes.PYF);
+        public static GdCountryIso3Code FrenchPolynesia => new GdCountryIso3Code(Iso3Codes.PYF);
 
         /// <summary>
         /// Papua New Guinea (PNG)
         /// </summary>
-        public static GdCountryIso3Code PapuaNewGuinea => new(Iso3Codes.PNG);
+        public static GdCountryIso3Code PapuaNewGuinea => new GdCountryIso3Code(Iso3Codes.PNG);
 
         /// <summary>
         /// Philippines (PHL)
         /// </summary>
-        public static GdCountryIso3Code Philippines => new(Iso3Codes.PHL);
+        public static GdCountryIso3Code Philippines => new GdCountryIso3Code(Iso3Codes.PHL);
 
         /// <summary>
         /// Pakistan (PAK)
         /// </summary>
-        public static GdCountryIso3Code Pakistan => new(Iso3Codes.PAK);
+        public static GdCountryIso3Code Pakistan => new GdCountryIso3Code(Iso3Codes.PAK);
 
         /// <summary>
         /// Poland (POL)
         /// </summary>
-        public static GdCountryIso3Code Poland => new(Iso3Codes.POL);
+        public static GdCountryIso3Code Poland => new GdCountryIso3Code(Iso3Codes.POL);
 
         /// <summary>
         /// Saint Pierre and Miquelon (SPM)
         /// </summary>
-        public static GdCountryIso3Code SaintPierreAndMiquelon => new(Iso3Codes.SPM);
+        public static GdCountryIso3Code SaintPierreAndMiquelon => new GdCountryIso3Code(Iso3Codes.SPM);
 
         /// <summary>
         /// Pitcairn Islands (PCN)
         /// </summary>
-        public static GdCountryIso3Code PitcairnIslands => new(Iso3Codes.PCN);
+        public static GdCountryIso3Code PitcairnIslands => new GdCountryIso3Code(Iso3Codes.PCN);
 
         /// <summary>
         /// Puerto Rico (PRI)
         /// </summary>
-        public static GdCountryIso3Code PuertoRico => new(Iso3Codes.PRI);
+        public static GdCountryIso3Code PuertoRico => new GdCountryIso3Code(Iso3Codes.PRI);
 
         /// <summary>
         /// Palestine (PSE)
         /// </summary>
-        public static GdCountryIso3Code Palestine => new(Iso3Codes.PSE);
+        public static GdCountryIso3Code Palestine => new GdCountryIso3Code(Iso3Codes.PSE);
 
         /// <summary>
         /// Portugal (PRT)
         /// </summary>
-        public static GdCountryIso3Code Portugal => new(Iso3Codes.PRT);
+        public static GdCountryIso3Code Portugal => new GdCountryIso3Code(Iso3Codes.PRT);
 
         /// <summary>
         /// Palau (PLW)
         /// </summary>
-        public static GdCountryIso3Code Palau => new(Iso3Codes.PLW);
+        public static GdCountryIso3Code Palau => new GdCountryIso3Code(Iso3Codes.PLW);
 
         /// <summary>
         /// Paraguay (PRY)
         /// </summary>
-        public static GdCountryIso3Code Paraguay => new(Iso3Codes.PRY);
+        public static GdCountryIso3Code Paraguay => new GdCountryIso3Code(Iso3Codes.PRY);
 
         /// <summary>
         /// Qatar (QAT)
         /// </summary>
-        public static GdCountryIso3Code Qatar => new(Iso3Codes.QAT);
+        public static GdCountryIso3Code Qatar => new GdCountryIso3Code(Iso3Codes.QAT);
 
         /// <summary>
         /// Reunion (REU)
         /// </summary>
-        public static GdCountryIso3Code Reunion => new(Iso3Codes.REU);
+        public static GdCountryIso3Code Reunion => new GdCountryIso3Code(Iso3Codes.REU);
 
         /// <summary>
         /// Romania (ROU)
         /// </summary>
-        public static GdCountryIso3Code Romania => new(Iso3Codes.ROU);
+        public static GdCountryIso3Code Romania => new GdCountryIso3Code(Iso3Codes.ROU);
 
         /// <summary>
         /// Serbia (SRB)
         /// </summary>
-        public static GdCountryIso3Code Serbia => new(Iso3Codes.SRB);
+        public static GdCountryIso3Code Serbia => new GdCountryIso3Code(Iso3Codes.SRB);
 
         /// <summary>
         /// Russia (RUS)
         /// </summary>
-        public static GdCountryIso3Code Russia => new(Iso3Codes.RUS);
+        public static GdCountryIso3Code Russia => new GdCountryIso3Code(Iso3Codes.RUS);
 
         /// <summary>
         /// Rwanda (RWA)
         /// </summary>
-        public static GdCountryIso3Code Rwanda => new(Iso3Codes.RWA);
+        public static GdCountryIso3Code Rwanda => new GdCountryIso3Code(Iso3Codes.RWA);
 
         /// <summary>
         /// Saudi Arabia (SAU)
         /// </summary>
-        public static GdCountryIso3Code SaudiArabia => new(Iso3Codes.SAU);
+        public static GdCountryIso3Code SaudiArabia => new GdCountryIso3Code(Iso3Codes.SAU);
 
         /// <summary>
         /// Solomon Islands (SLB)
         /// </summary>
-        public static GdCountryIso3Code SolomonIslands => new(Iso3Codes.SLB);
+        public static GdCountryIso3Code SolomonIslands => new GdCountryIso3Code(Iso3Codes.SLB);
 
         /// <summary>
         /// Seychelles (SYC)
         /// </summary>
-        public static GdCountryIso3Code Seychelles => new(Iso3Codes.SYC);
+        public static GdCountryIso3Code Seychelles => new GdCountryIso3Code(Iso3Codes.SYC);
 
         /// <summary>
         /// Sudan (SDN)
         /// </summary>
-        public static GdCountryIso3Code Sudan => new(Iso3Codes.SDN);
+        public static GdCountryIso3Code Sudan => new GdCountryIso3Code(Iso3Codes.SDN);
 
         /// <summary>
         /// Sweden (SWE)
         /// </summary>
-        public static GdCountryIso3Code Sweden => new(Iso3Codes.SWE);
+        public static GdCountryIso3Code Sweden => new GdCountryIso3Code(Iso3Codes.SWE);
 
         /// <summary>
         /// Singapore (SGP)
         /// </summary>
-        public static GdCountryIso3Code Singapore => new(Iso3Codes.SGP);
+        public static GdCountryIso3Code Singapore => new GdCountryIso3Code(Iso3Codes.SGP);
 
         /// <summary>
         /// Saint Helena (SHN)
         /// </summary>
-        public static GdCountryIso3Code SaintHelena => new(Iso3Codes.SHN);
+        public static GdCountryIso3Code SaintHelena => new GdCountryIso3Code(Iso3Codes.SHN);
 
         /// <summary>
         /// Slovenia (SVN)
         /// </summary>
-        public static GdCountryIso3Code Slovenia => new(Iso3Codes.SVN);
+        public static GdCountryIso3Code Slovenia => new GdCountryIso3Code(Iso3Codes.SVN);
 
         /// <summary>
         /// Slovakia (SVK)
         /// </summary>
-        public static GdCountryIso3Code Slovakia => new(Iso3Codes.SVK);
+        public static GdCountryIso3Code Slovakia => new GdCountryIso3Code(Iso3Codes.SVK);
 
         /// <summary>
         /// Sierra Leone (SLE)
         /// </summary>
-        public static GdCountryIso3Code SierraLeone => new(Iso3Codes.SLE);
+        public static GdCountryIso3Code SierraLeone => new GdCountryIso3Code(Iso3Codes.SLE);
 
         /// <summary>
         /// San Marino (SMR)
         /// </summary>
-        public static GdCountryIso3Code SanMarino => new(Iso3Codes.SMR);
+        public static GdCountryIso3Code SanMarino => new GdCountryIso3Code(Iso3Codes.SMR);
 
         /// <summary>
         /// Senegal (SEN)
         /// </summary>
-        public static GdCountryIso3Code Senegal => new(Iso3Codes.SEN);
+        public static GdCountryIso3Code Senegal => new GdCountryIso3Code(Iso3Codes.SEN);
 
         /// <summary>
         /// Somalia (SOM)
         /// </summary>
-        public static GdCountryIso3Code Somalia => new(Iso3Codes.SOM);
+        public static GdCountryIso3Code Somalia => new GdCountryIso3Code(Iso3Codes.SOM);
 
         /// <summary>
         /// Suriname (SUR)
         /// </summary>
-        public static GdCountryIso3Code Suriname => new(Iso3Codes.SUR);
+        public static GdCountryIso3Code Suriname => new GdCountryIso3Code(Iso3Codes.SUR);
 
         /// <summary>
         /// South Sudan (SSD)
         /// </summary>
-        public static GdCountryIso3Code SouthSudan => new(Iso3Codes.SSD);
+        public static GdCountryIso3Code SouthSudan => new GdCountryIso3Code(Iso3Codes.SSD);
 
         /// <summary>
         /// Sao Tome and Principe (STP)
         /// </summary>
-        public static GdCountryIso3Code SaoTomeAndPrincipe => new(Iso3Codes.STP);
+        public static GdCountryIso3Code SaoTomeAndPrincipe => new GdCountryIso3Code(Iso3Codes.STP);
 
         /// <summary>
         /// El Salvador (SLV)
         /// </summary>
-        public static GdCountryIso3Code ElSalvador => new(Iso3Codes.SLV);
+        public static GdCountryIso3Code ElSalvador => new GdCountryIso3Code(Iso3Codes.SLV);
 
         /// <summary>
         /// Sint Maarten (SXM)
         /// </summary>
-        public static GdCountryIso3Code SintMaarten => new(Iso3Codes.SXM);
+        public static GdCountryIso3Code SintMaarten => new GdCountryIso3Code(Iso3Codes.SXM);
 
         /// <summary>
         /// Syria (SYR)
         /// </summary>
-        public static GdCountryIso3Code Syria => new(Iso3Codes.SYR);
+        public static GdCountryIso3Code Syria => new GdCountryIso3Code(Iso3Codes.SYR);
 
         /// <summary>
         /// Swaziland (SWZ)
         /// </summary>
-        public static GdCountryIso3Code Swaziland => new(Iso3Codes.SWZ);
+        public static GdCountryIso3Code Swaziland => new GdCountryIso3Code(Iso3Codes.SWZ);
 
         /// <summary>
         /// Tristan da Cunha (TAA)
         /// </summary>
-        public static GdCountryIso3Code TristanDaCunha => new(Iso3Codes.TAA);
+        public static GdCountryIso3Code TristanDaCunha => new GdCountryIso3Code(Iso3Codes.TAA);
 
         /// <summary>
         /// Turks And Caicos Islands (TCA)
         /// </summary>
-        public static GdCountryIso3Code TurksAndCaicosIslands => new(Iso3Codes.TCA);
+        public static GdCountryIso3Code TurksAndCaicosIslands => new GdCountryIso3Code(Iso3Codes.TCA);
 
         /// <summary>
         /// Chad (TCD)
         /// </summary>
-        public static GdCountryIso3Code Chad => new(Iso3Codes.TCD);
+        public static GdCountryIso3Code Chad => new GdCountryIso3Code(Iso3Codes.TCD);
 
         /// <summary>
         /// Togo (TGO)
         /// </summary>
-        public static GdCountryIso3Code Togo => new(Iso3Codes.TGO);
+        public static GdCountryIso3Code Togo => new GdCountryIso3Code(Iso3Codes.TGO);
 
         /// <summary>
         /// Thailand (THA)
         /// </summary>
-        public static GdCountryIso3Code Thailand => new(Iso3Codes.THA);
+        public static GdCountryIso3Code Thailand => new GdCountryIso3Code(Iso3Codes.THA);
 
         /// <summary>
         /// Tajikistan (TJK)
         /// </summary>
-        public static GdCountryIso3Code Tajikistan => new(Iso3Codes.TJK);
+        public static GdCountryIso3Code Tajikistan => new GdCountryIso3Code(Iso3Codes.TJK);
 
         /// <summary>
         /// Tokelau (TKL)
         /// </summary>
-        public static GdCountryIso3Code Tokelau => new(Iso3Codes.TKL);
+        public static GdCountryIso3Code Tokelau => new GdCountryIso3Code(Iso3Codes.TKL);
 
         /// <summary>
         /// East Timor (TMP)
         /// </summary>
-        public static GdCountryIso3Code EastTimor => new(Iso3Codes.TMP);
+        public static GdCountryIso3Code EastTimor => new GdCountryIso3Code(Iso3Codes.TMP);
 
         /// <summary>
         /// Turkmenistan (TKM)
         /// </summary>
-        public static GdCountryIso3Code Turkmenistan => new(Iso3Codes.TKM);
+        public static GdCountryIso3Code Turkmenistan => new GdCountryIso3Code(Iso3Codes.TKM);
 
         /// <summary>
         /// Tunisia (TUN)
         /// </summary>
-        public static GdCountryIso3Code Tunisia => new(Iso3Codes.TUN);
+        public static GdCountryIso3Code Tunisia => new GdCountryIso3Code(Iso3Codes.TUN);
 
         /// <summary>
         /// Tonga (TON)
         /// </summary>
-        public static GdCountryIso3Code Tonga => new(Iso3Codes.TON);
+        public static GdCountryIso3Code Tonga => new GdCountryIso3Code(Iso3Codes.TON);
 
         /// <summary>
         /// Turkey (TUR)
         /// </summary>
-        public static GdCountryIso3Code Turkey => new(Iso3Codes.TUR);
+        public static GdCountryIso3Code Turkey => new GdCountryIso3Code(Iso3Codes.TUR);
 
         /// <summary>
         /// Trinidad And Tobago (TTO)
         /// </summary>
-        public static GdCountryIso3Code TrinidadAndTobago => new(Iso3Codes.TTO);
+        public static GdCountryIso3Code TrinidadAndTobago => new GdCountryIso3Code(Iso3Codes.TTO);
 
         /// <summary>
         /// Tuvalu (TUV)
         /// </summary>
-        public static GdCountryIso3Code Tuvalu => new(Iso3Codes.TUV);
+        public static GdCountryIso3Code Tuvalu => new GdCountryIso3Code(Iso3Codes.TUV);
 
         /// <summary>
         /// Taiwan (TWN)
         /// </summary>
-        public static GdCountryIso3Code Taiwan => new(Iso3Codes.TWN);
+        public static GdCountryIso3Code Taiwan => new GdCountryIso3Code(Iso3Codes.TWN);
 
         /// <summary>
         /// Tanzania (TZA)
         /// </summary>
-        public static GdCountryIso3Code Tanzania => new(Iso3Codes.TZA);
+        public static GdCountryIso3Code Tanzania => new GdCountryIso3Code(Iso3Codes.TZA);
 
         /// <summary>
         /// Ukraine (UKR)
         /// </summary>
-        public static GdCountryIso3Code Ukraine => new(Iso3Codes.UKR);
+        public static GdCountryIso3Code Ukraine => new GdCountryIso3Code(Iso3Codes.UKR);
 
         /// <summary>
         /// Uganda (UGA)
         /// </summary>
-        public static GdCountryIso3Code Uganda => new(Iso3Codes.UGA);
+        public static GdCountryIso3Code Uganda => new GdCountryIso3Code(Iso3Codes.UGA);
 
         /// <summary>
         /// United States (USA)
         /// </summary>
-        public static GdCountryIso3Code UnitedStates => new(Iso3Codes.USA);
+        public static GdCountryIso3Code UnitedStates => new GdCountryIso3Code(Iso3Codes.USA);
 
         /// <summary>
         /// Uruguay (URY)
         /// </summary>
-        public static GdCountryIso3Code Uruguay => new(Iso3Codes.URY);
+        public static GdCountryIso3Code Uruguay => new GdCountryIso3Code(Iso3Codes.URY);
 
         /// <summary>
         /// Uzbekistan (UZB)
         /// </summary>
-        public static GdCountryIso3Code Uzbekistan => new(Iso3Codes.UZB);
+        public static GdCountryIso3Code Uzbekistan => new GdCountryIso3Code(Iso3Codes.UZB);
 
         /// <summary>
         /// Vatican City (VAT)
         /// </summary>
-        public static GdCountryIso3Code VaticanCity => new(Iso3Codes.VAT);
+        public static GdCountryIso3Code VaticanCity => new GdCountryIso3Code(Iso3Codes.VAT);
 
         /// <summary>
         /// Saint Vincent and the Grenadines (VCT)
         /// </summary>
-        public static GdCountryIso3Code SaintVincentAndTheGrenadines => new(Iso3Codes.VCT);
+        public static GdCountryIso3Code SaintVincentAndTheGrenadines => new GdCountryIso3Code(Iso3Codes.VCT);
 
         /// <summary>
         /// Venezuela (VEN)
         /// </summary>
-        public static GdCountryIso3Code Venezuela => new(Iso3Codes.VEN);
+        public static GdCountryIso3Code Venezuela => new GdCountryIso3Code(Iso3Codes.VEN);
 
         /// <summary>
         /// British Virgin Islands (VGB)
         /// </summary>
-        public static GdCountryIso3Code BritishVirginIslands => new(Iso3Codes.VGB);
+        public static GdCountryIso3Code BritishVirginIslands => new GdCountryIso3Code(Iso3Codes.VGB);
 
         /// <summary>
         /// US Virgin Islands (VIR)
         /// </summary>
-        public static GdCountryIso3Code UsVirginIslands => new(Iso3Codes.VIR);
+        public static GdCountryIso3Code UsVirginIslands => new GdCountryIso3Code(Iso3Codes.VIR);
 
         /// <summary>
         /// Vietnam (VNM)
         /// </summary>
-        public static GdCountryIso3Code Vietnam => new(Iso3Codes.VNM);
+        public static GdCountryIso3Code Vietnam => new GdCountryIso3Code(Iso3Codes.VNM);
 
         /// <summary>
         /// Vanuatu (VUT)
         /// </summary>
-        public static GdCountryIso3Code Vanuatu => new(Iso3Codes.VUT);
+        public static GdCountryIso3Code Vanuatu => new GdCountryIso3Code(Iso3Codes.VUT);
 
         /// <summary>
         /// Wallis And Futuna (WLF)
         /// </summary>
-        public static GdCountryIso3Code WallisAndFutuna => new(Iso3Codes.WLF);
+        public static GdCountryIso3Code WallisAndFutuna => new GdCountryIso3Code(Iso3Codes.WLF);
 
         /// <summary>
         /// Samoa (WSM)
         /// </summary>
-        public static GdCountryIso3Code Samoa => new(Iso3Codes.WSM);
+        public static GdCountryIso3Code Samoa => new GdCountryIso3Code(Iso3Codes.WSM);
 
         /// <summary>
         /// Kosovo (UNK)
         /// </summary>
-        public static GdCountryIso3Code Kosovo => new(Iso3Codes.UNK);
+        public static GdCountryIso3Code Kosovo => new GdCountryIso3Code(Iso3Codes.UNK);
 
         /// <summary>
         /// Inmarsat (XNM)
         /// </summary>
-        public static GdCountryIso3Code Inmarsat => new(Iso3Codes.XNM);
+        public static GdCountryIso3Code Inmarsat => new GdCountryIso3Code(Iso3Codes.XNM);
 
         /// <summary>
         /// Yemen (YEM)
         /// </summary>
-        public static GdCountryIso3Code Yemen => new(Iso3Codes.YEM);
+        public static GdCountryIso3Code Yemen => new GdCountryIso3Code(Iso3Codes.YEM);
 
         /// <summary>
         /// Mayotte (MYT)
         /// </summary>
-        public static GdCountryIso3Code Mayotte => new(Iso3Codes.MYT);
+        public static GdCountryIso3Code Mayotte => new GdCountryIso3Code(Iso3Codes.MYT);
 
         /// <summary>
         /// South Africa (ZAF)
         /// </summary>
-        public static GdCountryIso3Code SouthAfrica => new(Iso3Codes.ZAF);
+        public static GdCountryIso3Code SouthAfrica => new GdCountryIso3Code(Iso3Codes.ZAF);
 
         /// <summary>
         /// Zambia (ZMB)
         /// </summary>
-        public static GdCountryIso3Code Zambia => new(Iso3Codes.ZMB);
+        public static GdCountryIso3Code Zambia => new GdCountryIso3Code(Iso3Codes.ZMB);
 
         /// <summary>
         /// Zimbabwe (ZWE)
         /// </summary>
-        public static GdCountryIso3Code Zimbabwe => new(Iso3Codes.ZWE);
+        public static GdCountryIso3Code Zimbabwe => new GdCountryIso3Code(Iso3Codes.ZWE);
 
 
         #endregion

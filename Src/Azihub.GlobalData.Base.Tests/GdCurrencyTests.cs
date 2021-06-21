@@ -1,9 +1,9 @@
-﻿using GlobalData.Base.Country;
-using GlobalData.Base.Currency;
+﻿using Azihub.GlobalData.Base.Country;
+using Azihub.GlobalData.Base.Currency;
 using Xunit;
 using Xunit.Abstractions;
 
-namespace GlobalData.Base.Tests
+namespace Azihub.GlobalData.Base.Tests
 {
     public class GdCurrencyTests
     {
@@ -11,8 +11,6 @@ namespace GlobalData.Base.Tests
         public GdCurrencyTests(ITestOutputHelper output)
         {
             _output = output;
-            DotNetEnv.Env.Load();
-            DotNetEnv.Env.TraversePath().Load();
 
         }
 
@@ -39,6 +37,7 @@ namespace GlobalData.Base.Tests
             //                                Symbol = r.CurrencySymbol,
             //                            });
             var currency = GdCurrencyFiatList.Get(GdCurrencyFiatCode.FromString(code));
+            _output.WriteLine($"code: {code}, Received: {currency.Code} is expecting: {expectedCountryCodeStr}");
             Assert.Contains(currency.Countries, x =>x.Code == expectedCountryCodeStr);
         }
     }

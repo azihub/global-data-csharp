@@ -9,7 +9,7 @@ namespace Azihub.GlobalData.Base.Country
         /// <summary>
         /// Complete country data parsed from CSV to C# code
         /// </summary>
-        private static Dictionary<string, Country> GdCountryDict { get; } = new()
+        private static Dictionary<string, Country> GdCountryDict { get; } = new Dictionary<string, Country>()
         {
             { Iso2Codes.AB, new Country("Abkhazia", null, null, "AB", "ABK", "ABK", 7840, new uint[] { 7840, 7940 }) },
             { Iso2Codes.AC, new Country("Ascension Island", null, null, "AC", "ASC", "SHP", 247, new uint[] { 247 }) },

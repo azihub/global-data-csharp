@@ -1,8 +1,8 @@
-using GlobalData.Base.Country;
-using GlobalData.Base.Country.Exceptions;
+using Azihub.GlobalData.Base.Country;
+using Azihub.GlobalData.Base.Country.Exceptions;
 using Xunit;
 
-namespace GlobalData.Base.Tests
+namespace Azihub.GlobalData.Base.Tests
 {
     public class GdCountryTests
     {
@@ -14,14 +14,14 @@ namespace GlobalData.Base.Tests
         [InlineData("us")]
         public void ParseCountryIso2CodeTest(string code)
         {
-            GdCountryIso2Code countryCode = GdCountryIso2Code.FromString( code );
+            CountryIso2Code countryCode = CountryIso2Code.FromString( code );
             Assert.Equal(code.ToUpper(), countryCode.Code);
         }
 
         [Fact]
         public void ParseCountryIso2CodeFailTest()
         {
-            Assert.Throws<InvalidCountryCodeException>( () => GdCountryIso2Code.FromString("ZZ") );
+            Assert.Throws<InvalidCountryCodeException>( () => CountryIso2Code.FromString("ZZ") );
         }
         #endregion
 
@@ -51,7 +51,7 @@ namespace GlobalData.Base.Tests
         [InlineData(Iso2Codes.US, 1, "USD")]
         public void GetGdCountry(string code, uint callingCode, string expectedCurrency)
         {
-            var country = GdCountryList.Get( GdCountryIso2Code.FromString(code) );
+            var country = CountryList.Get( CountryIso2Code.FromString(code) );
             Assert.Equal(callingCode, country.CallingCode);
             Assert.Equal(expectedCurrency, country.Currency.Code);
         }

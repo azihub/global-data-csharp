@@ -7,7 +7,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Azihub.GlobalData.Base", "A
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Azihub.GlobalData.Base.Tests", "Azihub.GlobalData.Base.Tests\Azihub.GlobalData.Base.Tests.csproj", "{703E5905-32F2-442D-9C7B-963B537A02B8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Azihub.GlobalData.Banks", "Azihub.GlobalData.Banks\Azihub.GlobalData.Banks.csproj", "{3A00AA65-8B98-4DC0-8E39-CC0F53D942F0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Azihub.GlobalData.Banks", "Azihub.GlobalData.Banks\Azihub.GlobalData.Banks.csproj", "{3A00AA65-8B98-4DC0-8E39-CC0F53D942F0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B41A55C0-5721-4B86-9DC3-91C17619D84E}"
+	ProjectSection(SolutionItems) = preProject
+		..\README.md = ..\README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
