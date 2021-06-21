@@ -1,7 +1,7 @@
 ﻿using System;
-using GlobalData.Base.Currency.Interfaces;
+using Azihub.GlobalData.Base.Currency.Interfaces;
 
-namespace GlobalData.Base.Currency
+namespace Azihub.GlobalData.Base.Currency
 {
     class GdCurrencyCrypto : ICurrency
     {

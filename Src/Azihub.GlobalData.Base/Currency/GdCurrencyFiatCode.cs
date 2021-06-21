@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using GlobalData.Base.Currency.Exceptions;
+using Azihub.GlobalData.Base.Currency.Exceptions;
 
-namespace GlobalData.Base.Currency
+namespace Azihub.GlobalData.Base.Currency
 {
     public class GdCurrencyFiatCode
     {

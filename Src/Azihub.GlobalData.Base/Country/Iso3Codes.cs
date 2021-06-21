@@ -1,4 +1,4 @@
-﻿namespace GlobalData.Base.Country
+﻿namespace Azihub.GlobalData.Base.Country
 {
     public static class Iso3Codes
     {

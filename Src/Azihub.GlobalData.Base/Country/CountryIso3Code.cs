@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using GlobalData.Base.Country.Exceptions;
+using Azihub.GlobalData.Base.Country.Exceptions;
 
-namespace GlobalData.Base.Country
+namespace Azihub.GlobalData.Base.Country
 {
     public class GdCountryIso3Code
     {

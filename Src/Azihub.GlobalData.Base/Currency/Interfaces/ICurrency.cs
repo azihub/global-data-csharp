@@ -1,4 +1,4 @@
-﻿namespace GlobalData.Base.Currency.Interfaces
+﻿namespace Azihub.GlobalData.Base.Currency.Interfaces
 {
     public interface ICurrency
     {

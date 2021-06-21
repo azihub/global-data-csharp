@@ -1,4 +1,4 @@
-﻿namespace GlobalData.Base.Currency
+﻿namespace Azihub.GlobalData.Base.Currency
 {
     public static class Iso3FiatCodes
     {

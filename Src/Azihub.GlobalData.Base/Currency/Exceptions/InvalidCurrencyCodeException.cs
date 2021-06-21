@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace GlobalData.Base.Currency.Exceptions
+namespace Azihub.GlobalData.Base.Currency.Exceptions
 {
     /// <summary>
     /// User provided an invalid currency code.

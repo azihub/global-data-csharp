@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace GlobalData.Base.Country.Exceptions
+namespace Azihub.GlobalData.Base.Country.Exceptions
 {
     /// <summary>
     /// User tried to parse a country code that does not exist.

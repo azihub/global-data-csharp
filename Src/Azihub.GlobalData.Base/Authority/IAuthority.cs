@@ -1,4 +1,4 @@
-﻿namespace GlobalData.Base.Authority
+﻿namespace Azihub.GlobalData.Base.Authority
 {
     public interface IAuthorityCode
     {

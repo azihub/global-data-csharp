@@ -1,17 +1,17 @@
 ﻿
-using GlobalData.Base.Currency;
+using Azihub.GlobalData.Base.Currency;
 
-namespace GlobalData.Base.Country
+namespace Azihub.GlobalData.Base.Country
 {
-    public class GdCountry
+    public class Country : ICountry
     {
-        public GdCountry(string name, string namePrefix, string namePostfix, string codeIso2, string codeIso3, string currencyCode, uint callingCode, uint[] callingCodes)
+        public Country(string name, string namePrefix, string namePostfix, string codeIso2, string codeIso3, string currencyCode, uint callingCode, uint[] callingCodes)
         {
             Name = name;
             NameAllCaps = name.ToUpper();
             NamePrefix = namePrefix;
             NamePostfix = namePostfix;
-            CodeIso2 = GdCountryIso2Code.FromString(codeIso2);
+            CodeIso2 = CountryIso2Code.FromString(codeIso2);
             CodeIso3 = GdCountryIso3Code.FromString(codeIso3);
             Currency = GdCurrencyFiatCode.FromString(currencyCode);
             CallingCode = callingCode;
@@ -21,12 +21,12 @@ namespace GlobalData.Base.Country
         public string NameAllCaps { get; }
         public string NamePrefix { get; }
         public string NamePostfix { get; }
-        
+
         /// <summary>
         /// ISO 3166-1 alpha-2
         /// https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
         /// </summary>
-        public GdCountryIso2Code CodeIso2 { get; }
+        public CountryIso2Code CodeIso2 { get; }
 
         /// <summary>
         /// ISO 3166-1 alpha-3

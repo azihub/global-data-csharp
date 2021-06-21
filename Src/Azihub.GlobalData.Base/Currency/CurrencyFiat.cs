@@ -1,15 +1,15 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using GlobalData.Base.Authority;
-using GlobalData.Base.Country;
-using GlobalData.Base.Currency.Interfaces;
+using Azihub.GlobalData.Base.Authority;
+using Azihub.GlobalData.Base.Country;
+using Azihub.GlobalData.Base.Currency.Interfaces;
 
-namespace GlobalData.Base.Currency
+namespace Azihub.GlobalData.Base.Currency
 {
     /// <summary>
     /// Based on ISO 4217 : https://en.wikipedia.org/wiki/ISO_4217
     /// </summary>
-    public class GdCurrencyFiat : ICurrency
+    public class CurrencyFiat : ICurrency
     {
         /// <summary>
         /// Fullname
@@ -26,7 +26,7 @@ namespace GlobalData.Base.Currency
                 // ReSharper disable once ConvertIfStatementToReturnStatement
                 if (Code == "EUR")
                     return "EU";
-                return GdCountryList.GetAll().First(x => x.Currency.Code == Code).CodeIso2.Code.ToUpper();
+                return CountryList.GetAll().First(x => x.Currency.Code == Code).CodeIso2.Code.ToUpper();
             }
         }
         public string Symbol { get; set; }
@@ -47,6 +47,6 @@ namespace GlobalData.Base.Currency
         /// <summary>
         /// List of countries using the currency.
         /// </summary>
-        public IList<GdCountryIso2Code> Countries { get; set; }
+        public IList<CountryIso2Code> Countries { get; set; }
     }
 }
