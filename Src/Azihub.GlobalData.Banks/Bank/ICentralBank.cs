@@ -2,15 +2,8 @@
 {
     public interface ICentralBank
     {
-        public string Name { get; set; }
-        public string RegionCode { get; set; }
-        public string Website { get; set; }
-    }
-
-    public class CentralBankUnion : ICentralBank
-    {
-        public string Name { get; set; }
-        public string RegionCode { get; set; }
-        public string Website { get; set; }
+        string Name { get; set; }
+        string RegionCode { get; set; }
+        string Website { get; set; }
     }
 }
