@@ -10,11 +10,13 @@ RUN dotnet restore Azihub.GlobalData.Base.Tests/Azihub.GlobalData.Base.Tests.csp
 
 # Copy everything else and build
 COPY . ./
+RUN dotnet test Azihub.GlobalData.Base.Tests -c Release
 RUN dotnet publish -c Release -o out
-RUN dotnet test
 
 # Build runtime image
 FROM mcr.microsoft.com/dotnet/aspnet:3.1
 WORKDIR /app
 COPY --from=build-env /app/out .
-ENTRYPOINT ["dotnet", "aspnetapp.dll"]
+ENTRYPOINT ["dotnet", "Azihub.GlobalData.Base.Tests.dll"]
+#CMD ["dotnet", "test"]
+#ENTRYPOINT ["dotnet", "aspnetapp.dll"]
