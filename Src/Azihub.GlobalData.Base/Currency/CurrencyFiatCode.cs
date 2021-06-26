@@ -466,7 +466,7 @@ namespace Azihub.GlobalData.Base.Currency
         /// <summary>
         /// Ghanaian cedi
         /// </summary>
-        public static CurrencyFiatCode Ghanaian_cedi => new CurrencyFiatCode(Iso3FiatCodes.GHC);
+        public static CurrencyFiatCode Ghanaian_cedi => new CurrencyFiatCode(Iso3FiatCodes.GHS);
 
         /// <summary>
         /// Gibraltar Pound 

@@ -36,7 +36,7 @@ namespace Azihub.GlobalData.Base.Tests
             //                                DecimalCount = r.,
             //                                Symbol = r.CurrencySymbol,
             //                            });
-            var currency = GdCurrencyFiatList.Get(CurrencyFiatCode.FromString(code));
+            var currency = CurrencyFiatList.Get(CurrencyFiatCode.FromString(code));
             _output.WriteLine($"code: {code}, Received: {currency.Code} is expecting: {expectedCountryCodeStr}");
             Assert.Contains(currency.Countries, x =>x.Code == expectedCountryCodeStr);
         }
