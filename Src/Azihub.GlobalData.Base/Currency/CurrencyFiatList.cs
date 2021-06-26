@@ -5,7 +5,7 @@ using Azihub.GlobalData.Base.Country;
 
 namespace Azihub.GlobalData.Base.Currency
 {
-    public static class GdCurrencyFiatList
+    public static class CurrencyFiatList
     {
         /// <summary>
         /// Complete country data parsed from CSV to C# code
@@ -197,7 +197,7 @@ namespace Azihub.GlobalData.Base.Currency
         /// </summary>
         /// <param name="gdCountryCode"></param>
         /// <returns>Instance of GdCountry</returns>
-        public static CurrencyFiat Get(GdCurrencyFiatCode gdCountryCode)
+        public static CurrencyFiat Get(CurrencyFiatCode gdCountryCode)
         {
             if (GdCurrencyFiatListDict.TryGetValue(gdCountryCode.Code, out CurrencyFiat value))
                 return value;

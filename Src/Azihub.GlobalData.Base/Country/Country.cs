@@ -14,7 +14,7 @@ namespace Azihub.GlobalData.Base.Country
             NamePostfix = namePostfix;
             CodeIso2 = CountryIso2Code.FromString(codeIso2);
             CodeIso3 = GdCountryIso3Code.FromString(codeIso3);
-            Currency = GdCurrencyFiatCode.FromString(currencyCode);
+            Currency = CurrencyFiatCode.FromString(currencyCode);
             CallingCode = callingCode;
             CallingCodes = callingCodes;
         }
@@ -38,7 +38,7 @@ namespace Azihub.GlobalData.Base.Country
         /// <summary>
         /// Based on ISO 4217 : https://en.wikipedia.org/wiki/ISO_4217
         /// </summary>
-        public GdCurrencyFiatCode Currency { get; }
+        public CurrencyFiatCode Currency { get; }
 
         /// <summary>
         /// Primary country code https://en.wikipedia.org/wiki/List_of_country_calling_codes

@@ -7,15 +7,41 @@
     <Authors>Mason Chase</Authors>
     <Company>Azihub</Company>
     <Product>Global Data Base</Product>
+    <NoPackageAnalysis>true</NoPackageAnalysis>
+    <Summary>
+      Base Data including:
+      Country, Currency and Address
+    </Summary>
     <Description>Base Data including:
 - Country
 - Currency
 - Address</Description>
+    <Copyright>Azihub</Copyright>
+    <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+    <PackageProjectUrl>https://global-data.azihub.com</PackageProjectUrl>
+    <PackageIcon>azihub.png</PackageIcon>
+    <PackageIconUrl />
+    <RepositoryUrl>https://github.com/azihub/global-data-csharp</RepositoryUrl>
+    <AssemblyVersion>0.1.0.0</AssemblyVersion>
+    <FileVersion>0.1.0.0</FileVersion>
+    <Version>0.1.0</Version>
+    <PackageReleaseNotes>Initial models for basic Country and Currency are loaded</PackageReleaseNotes>
   </PropertyGroup>
   
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DocumentationFile></DocumentationFile>
     <WarningsAsErrors>;NU1605;NU1574</WarningsAsErrors>
   </PropertyGroup>
+  
+  <ItemGroup>
+    <None Include="..\..\azihub.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+    <None Include="..\..\LICENSE.md">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
 
 </Project>
