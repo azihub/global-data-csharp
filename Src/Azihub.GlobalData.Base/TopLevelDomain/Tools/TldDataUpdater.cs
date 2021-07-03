@@ -1,6 +1,8 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using Azihub.Utilities.Base.Extensions.String;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
@@ -11,7 +13,7 @@ namespace Azihub.GlobalData.Base.TopLevelDomain.Tools
     public class TldDataUpdater
     {
         private readonly ILogger Logger;
-        private IList<string> TldList { get; set; }
+        private IanaOrgTlds IanaOrgTlds { get; set; }
         public TldDataUpdater(ILogger<TldDataUpdater> logger)
         {
             Logger = logger;
@@ -19,45 +21,24 @@ namespace Azihub.GlobalData.Base.TopLevelDomain.Tools
         public void Rebuild()
         {
 
-            TldList = FetchTlds();
+            IanaOrgTlds = FetchTlds();
 
-            (string tldConsts, string tldDict) = CodeGenerator.GenCodes(TldList);
             //_logger.LogDebug($"Parsed {blockchains.Count} blockchain");
 
 
             //(string assetSymbolsClass, string assetsDict) = CodeGenerator.GenAssetSymbols(assets.Values.ToList());
 
-            TldAlphaByDomainHash signature = CodeSignatureService.GetSignatures();
+            IanaOrgTlds ianaOrgTldsJson = CodeSignatureService.GetIanaTldsFromJson();
 
+            if (IanaOrgTlds.Hash != ianaOrgTldsJson.Hash)
+            {
+                Logger.LogInformation("Tld List needs to update.");
+                (string tldConsts, string tldDict) = CodeGenerator.GenCodes(IanaOrgTlds);
+                CodeSignatureService.SaveSignatures(IanaOrgTlds);
 
-            string tldConstsSha256 = tldConsts.GetSha256();
-            string tldDictSha256 = tldDict.GetSha256();
-
-            //if (assetSymbolSha256 != signature.AssetConstsCs)
-            //{
-            //    _logger.LogInformation("AssetSymbol needs to update");
-            //    CodeSignatureService.SaveSignatures(new CodeSignatureService
-            //    {
-            //        AssetConstsCs = assetSymbolSha256,
-            //        AssetsDictCs = assetsDictSha256
-            //    });
-
-            //    File.WriteAllText(AssetSymbolsPath, assetSymbolsClass);
-            //}
-
-            //if (assetsDictSha256 != signature.AssetsDictCs)
-            //{
-            //    _logger.LogInformation("AssetsDict needs to update");
-            //    CodeSignatureService.SaveSignatures(new CodeSignatureService
-            //    {
-            //        AssetConstsCs = assetSymbolSha256,
-            //        AssetsDictCs = assetsDictSha256
-            //    });
-
-            //    File.WriteAllText(AssetsDictPath, assetsDict);
-            //}
-
-            //AssetImages.Persist(ref assets);
+                File.WriteAllText(tldConsts, tldConsts);
+                File.WriteAllText(tldDict, tldDict);
+            }
 
             //var newClassNode = SyntaxFactory.ParseSyntaxTree(assetSymbolsClass).GetRoot()
             //                                .DescendantNodes()
@@ -74,14 +55,14 @@ namespace Azihub.GlobalData.Base.TopLevelDomain.Tools
             //OutputHelper.WriteLine(blockchains.Select(x => x.Value).ToArray().ToString());
         }
 
-        public static List<string> FetchTlds()
+        public static IanaOrgTlds FetchTlds()
         {
             var httpClient = new HttpClient();
-            var response = httpClient.GetAsync(IanaOrg.TLDS_ALPHA_BY_DOMAIN_URL).ConfigureAwait(true).GetAwaiter();
+            var response = httpClient.GetAsync(IanaOrgTlds.TLDS_ALPHA_BY_DOMAIN_URL).ConfigureAwait(true).GetAwaiter();
             string body = response.GetResult().Content.ReadAsStringAsync().ConfigureAwait(true).GetAwaiter().GetResult();
             List<string> list = Regex.Split(body, "\r\n|\r|\n").ToList();
             list.RemoveAll(x => x.ToUpper().Trim().StartsWith("#"));
-            return list;
+            return new IanaOrgTlds(body, list);
         }
     }
 }

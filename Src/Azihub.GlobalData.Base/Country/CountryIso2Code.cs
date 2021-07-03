@@ -22,8 +22,8 @@ namespace Azihub.GlobalData.Base.Country
             return Code;
         }
 
-        #region Dictionary
         public static Dictionary<string, CountryIso2Code> Codes { get; } = new Dictionary<string, CountryIso2Code>()
+        #region Dictionary
         {
             {Iso2Codes.AB, new CountryIso2Code(Iso2Codes.AB)},
             {Iso2Codes.AC, new CountryIso2Code(Iso2Codes.AC)},

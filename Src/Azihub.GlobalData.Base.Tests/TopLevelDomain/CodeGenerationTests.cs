@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
@@ -17,22 +18,24 @@ namespace Azihub.GlobalData.Base.Tests
         [Fact]
         public void FetchTopLevelDomainsTest()
         {
-            IEnumerable<string> list = TldDataUpdater.FetchTlds();
-            Output.WriteLine($"Fetched {list.Count()} items");
-            Assert.True(condition: list.Any());
-            Assert.Contains(list, x => x == "COM");
-            Assert.Contains(list, x => x == "NET");
-            Assert.Contains(list, x => x == "ORG");
-            Assert.Contains(list, x => x == "EDU");
-            Assert.Contains(list, x => x == "GOV");
-            Assert.Contains(list, x => x == "MIL");
+            IanaOrgTlds ianaOrgTlds = TldDataUpdater.FetchTlds();
+            Output.WriteLine($"Fetched {ianaOrgTlds.List.Count()} items");
+            Assert.True(condition: ianaOrgTlds.List.Any());
+            Assert.Contains(ianaOrgTlds.List, x => x == "COM");
+            Assert.Contains(ianaOrgTlds.List, x => x == "NET");
+            Assert.Contains(ianaOrgTlds.List, x => x == "ORG");
+            Assert.Contains(ianaOrgTlds.List, x => x == "EDU");
+            Assert.Contains(ianaOrgTlds.List, x => x == "GOV");
+            Assert.Contains(ianaOrgTlds.List, x => x == "MIL");
         }
 
         [Fact]
         public void GetCodeSignatureTest()
         {
-            TldAlphaByDomainHash tldHash = CodeSignatureService.GetSignatures();
+            IanaOrgTlds tldHash = CodeSignatureService.GetIanaTldsFromJson();
             Assert.Equal(64, tldHash.Hash.Length);
+            Assert.True(tldHash.Count > 0);
+            Assert.True( ! String.IsNullOrEmpty(tldHash.Body) );
         }
     }
 }

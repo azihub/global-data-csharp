@@ -110,3 +110,25 @@ public void GetGdCurrencyFiat(string code, string expectedCountryCodeStr)
 The purpose of the list is to validate domain name, this is very useful
 to validate if the email or domain is a valid domain by Iana's standard.
 
+Usages:
+```C#
+[Theory]
+[InlineData("COM")]
+[InlineData("net")]
+[InlineData("org")]
+[InlineData("gov")]
+public void ValidateTldTest(string tldStr)
+{
+    Tld tld = Tld.FromString(tldStr);
+    Output.WriteLine($"Expected: {tldStr}, Output: {tld.Value}");
+    Assert.Equal(tldStr.ToLower(), tld.Value);
+}
+
+[Fact]
+public void InvalidTldTest()
+{
+    Assert.Throws<InvalidTopLevelDomainException>(
+        () => Tld.FromString("DOESNOTEXISTS")
+        );
+}
+```

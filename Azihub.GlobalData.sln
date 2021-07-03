@@ -11,8 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Azihub.GlobalData.Banks", "
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B41A55C0-5721-4B86-9DC3-91C17619D84E}"
 	ProjectSection(SolutionItems) = preProject
-		..\LICENSE.md = ..\LICENSE.md
-		..\README.md = ..\README.md
+		LICENSE.md = LICENSE.md
+		README.md = README.md
 	EndProjectSection
 EndProject
 Global

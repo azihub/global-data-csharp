@@ -14,22 +14,22 @@ namespace Azihub.GlobalData.Base.TopLevelDomain.Tools
         /// </summary>
         /// <param name="assetStrings"></param>
         /// <returns></returns>
-        public static (string, string) GenCodes(IEnumerable<string> tlds)
+        public static (string, string) GenCodes(IanaOrgTlds ianaOrgTlds)
         {
             StringBuilder tldConsts = new StringBuilder();
             tldConsts.Append(GetAssetSymbolsHeader());
 
             StringBuilder tldDict = new StringBuilder();
-            tldDict.Append(GetAssetDictHeader());
+            tldDict.Append(GetDictHeader());
 
-            foreach (string tld in tlds)
+            foreach (string tld in ianaOrgTlds.List)
             {
                 tldConsts.Append(GetConstant(tld));
                 tldDict.Append(GetDict(tld));
             }
 
             tldConsts.Append(GetConstFooter());
-            tldDict.Append(GetAssetDictFooter());
+            tldDict.Append(GetDictFooter());
 
             return (tldConsts.ToString(), tldDict.ToString());
         }
@@ -68,23 +68,19 @@ namespace Azihub.GlobalData.Base.TopLevelDomain.Tools
         /// Refer to <see cref="TldDictSample" />
         /// </summary>
         /// <returns></returns>
-        private static string GetAssetDictHeader()
+        private static string GetDictHeader()
         {
-            return @"using System;
-using System.IO;
-using System.Collections.Generic;
+            return @"using System.Collections.Generic;
+using System.Linq;
 
-namespace TrustWallet.Asset.Data
+namespace Azihub.GlobalData.Base.TopLevelDomain
 {
-    public static partial class Assets
+    public partial class Tld
     {
-        /// <summary>
-        /// Collection of assets
-        /// </summary>
-        public static IDictionary<string, IAsset> GetAssets()
-        {
-            var assets = new Dictionary<string, IAsset>();
-            #region DictData";
+        public static IList<Tld> TldsList => TldsDict.Values.ToList();
+
+        private static readonly Dictionary<string, Tld> TldsDict = new Dictionary<string, Tld>()
+        {";
 
         }
 
@@ -93,7 +89,7 @@ namespace TrustWallet.Asset.Data
         {
             StringBuilder assetDictItem = new StringBuilder();
             name = name.ToUpper();
-            assetDictItem.Append($@"                {{ ""{name}"", new Tld(TldConsts.{name}) }}");
+            assetDictItem.Append($@"                {{ ""TldConsts.{name}"", new Tld(TldConsts.{name}) }}");
             
             return assetDictItem.ToString();
 
@@ -103,7 +99,7 @@ namespace TrustWallet.Asset.Data
         /// Footer for for AssetDict <see cref="TldDictSample" />
         /// </summary>
         /// <returns></returns>
-        private static string GetAssetDictFooter()
+        private static string GetDictFooter()
         {
             return @"
             return tldDicts;

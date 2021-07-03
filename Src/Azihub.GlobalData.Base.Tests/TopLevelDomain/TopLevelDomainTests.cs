@@ -1,9 +1,6 @@
 ﻿using Azihub.GlobalData.Base.Tests.Abstract;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Azihub.GlobalData.Base.TopLevelDomain;
+using Azihub.GlobalData.Base.TopLevelDomain.Exceptions;
 using Xunit;
 using Xunit.Abstractions;
 
@@ -13,10 +10,24 @@ namespace Azihub.GlobalData.Base.Tests.TopLevelDomain
     {
         public TopLevelDomainTests(ITestOutputHelper output) : base(output) { }
         
-        [Fact]
-        public void ValidateTldTest()
+        [Theory]
+        [InlineData("COM")]
+        [InlineData("net")]
+        [InlineData("org")]
+        [InlineData("gov")]
+        public void ValidateTldTest(string tldStr)
         {
+            Tld tld = Tld.FromString(tldStr);
+            Output.WriteLine($"Expected: {tldStr}, Output: {tld.Value}");
+            Assert.Equal(tldStr.ToLower(), tld.Value);
+        }
 
+        [Fact]
+        public void InvalidTldTest()
+        {
+            Assert.Throws<InvalidTopLevelDomainException>(
+                () => Tld.FromString("DOESNOTEXISTS")
+                );
         }
     }
 }
