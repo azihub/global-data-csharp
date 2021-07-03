@@ -8,11 +8,7 @@ namespace Azihub.GlobalData.Base.Country
 
     public class CountryIso2Code
     {
-        public CountryIso2Code()
-        {
-
-        }
-        public CountryIso2Code(string code)
+        private CountryIso2Code(string code)
         {
             Code = code;
         }
@@ -279,8 +275,6 @@ namespace Azihub.GlobalData.Base.Country
         };
         #endregion
 
-        /*
-        */
         /// <summary>
         /// Create GdCountryCode from string value (case insensitive)
         /// </summary>

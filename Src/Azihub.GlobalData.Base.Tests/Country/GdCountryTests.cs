@@ -1,11 +1,15 @@
 using Azihub.GlobalData.Base.Country;
 using Azihub.GlobalData.Base.Country.Exceptions;
+using Azihub.GlobalData.Base.Tests.Abstract;
 using Xunit;
+using Xunit.Abstractions;
 
 namespace Azihub.GlobalData.Base.Tests
 {
-    public class GdCountryTests
+    public class GdCountryTests : TestBase
     {
+        public GdCountryTests(ITestOutputHelper output) : base(output) { }
+
         #region Iso2
         [Theory]
         [InlineData(Iso2Codes.AF)]
@@ -15,7 +19,18 @@ namespace Azihub.GlobalData.Base.Tests
         public void ParseCountryIso2CodeTest(string code)
         {
             CountryIso2Code countryCode = CountryIso2Code.FromString( code );
+            Output.WriteLine($"Expected: {code.ToUpper()} , output: {countryCode.Code}");
             Assert.Equal(code.ToUpper(), countryCode.Code);
+        }
+
+        [Theory]
+        [InlineData(Iso2Codes.AF, Iso2Codes.Afghanistan)]
+        [InlineData(Iso2Codes.IR, Iso2Codes.Iran)]
+        [InlineData(Iso2Codes.MY, Iso2Codes.Malaysia)]
+        [InlineData(Iso2Codes.US, Iso2Codes.United_States)]
+        public void Iso2FullNameCodeTest(string code, string fullnameCode)
+        {
+            Assert.Equal(code, fullnameCode);
         }
 
         [Fact]
@@ -52,6 +67,7 @@ namespace Azihub.GlobalData.Base.Tests
         public void GetGdCountry(string code, uint callingCode, string expectedCurrency)
         {
             var country = CountryList.Get( CountryIso2Code.FromString(code) );
+            Output.WriteLine($"Expected currency: {expectedCurrency}, output: {country.Currency.Code}");
             Assert.Equal(callingCode, country.CallingCode);
             Assert.Equal(expectedCurrency, country.Currency.Code);
         }
