@@ -1,5 +1,9 @@
-﻿using System;
+﻿using Microsoft.CodeAnalysis;
+using Microsoft.CodeAnalysis.CSharp;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Azihub.GlobalData.Base.TopLevelDomain.Tools
@@ -30,6 +34,17 @@ namespace Azihub.GlobalData.Base.TopLevelDomain.Tools
 
             tldConsts.Append(GetConstFooter());
             tldDict.Append(GetDictFooter());
+
+            #region 
+            var newClassNode = SyntaxFactory.ParseSyntaxTree(tldConsts.ToString()).GetRoot()
+                                            .DescendantNodes()
+                                            .OfType<ClassDeclarationSyntax>()
+                                            .FirstOrDefault();
+            // Retrieve the parent namespace declaration
+            var parentNamespace = (NamespaceDeclarationSyntax) newClassNode.Parent;
+            // Add the new class to the namespace
+            parentNamespace.AddMembers(newClassNode).NormalizeWhitespace();
+            #endregion
 
             return (tldConsts.ToString(), tldDict.ToString());
         }

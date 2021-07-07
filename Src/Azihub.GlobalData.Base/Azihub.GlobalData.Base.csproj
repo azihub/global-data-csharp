@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
@@ -15,16 +15,17 @@
     <Description>Base Data including:
 - Country
 - Currency
-- Address</Description>
+- Address
+- Top Level Domain</Description>
     <Copyright>Azihub</Copyright>
     <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
     <PackageProjectUrl>https://global-data.azihub.com</PackageProjectUrl>
     <PackageIcon>azihub.png</PackageIcon>
     <PackageIconUrl />
     <RepositoryUrl>https://github.com/azihub/global-data-csharp</RepositoryUrl>
-    <AssemblyVersion>0.1.1.0</AssemblyVersion>
-    <FileVersion>0.1.1</FileVersion>
-    <Version>0.1.1</Version>
+    <AssemblyVersion>0.1.2.0</AssemblyVersion>
+    <FileVersion>0.1.2</FileVersion>
+    <Version>0.1.2</Version>
     <PackageReleaseNotes>Initial models for basic Country and Currency are loaded</PackageReleaseNotes>
   </PropertyGroup>
   
@@ -46,8 +47,25 @@
   
   <ItemGroup>
     <PackageReference Include="Azihub.Utilities.Base" Version="0.1.3" />
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="3.10.0" />
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="5.0.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <None Update="TopLevelDomain\IanaOrgTlds.json">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>IanaOrgTlds.txt</LastGenOutput>
+    </None>
+    <None Update="TopLevelDomain\IanaOrgTlds.txt">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>IanaOrgTlds.json</DependentUpon>
+    </None>
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
   </ItemGroup>
 
 </Project>

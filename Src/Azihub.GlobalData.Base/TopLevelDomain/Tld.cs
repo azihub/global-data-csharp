@@ -25,5 +25,24 @@ namespace Azihub.GlobalData.Base.TopLevelDomain
 
             throw new InvalidTopLevelDomainException(tldString);
         }
+
+
+        /// <summary>
+        /// Validate a Top Level Domain
+        /// </summary>
+        /// <param name="tld"></param>
+        /// <returns></returns>
+        public static bool IsValid(string tldString)
+        {
+            tldString = tldString.Trim().ToLower();
+
+            if (string.IsNullOrEmpty(tldString))
+                return false;
+
+            if (TldsDict.ContainsKey(tldString))
+                return true;
+
+            return false;
+        }
     }
 }

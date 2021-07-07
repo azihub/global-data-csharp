@@ -7,17 +7,17 @@ namespace Azihub.GlobalData.Base.TopLevelDomain.Tools
     public static class CodeSignatureService
     {
         private const string TldDataSignatureJson = "IanaOrgTlds.json";
-        public static IanaOrgTlds GetIanaTldsFromJson()
+        public static IanaOrgTlds GetIanaOrgTldsFromJson()
         {
             string signatureJson = File.ReadAllText($"{TldDataPath}{DS}{TldDataSignatureJson}");
             IanaOrgTlds tldAlphaByDomainHash = JsonConvert.DeserializeObject<IanaOrgTlds>(signatureJson);
             return tldAlphaByDomainHash;
         }
 
-        public static void SaveSignatures(IanaOrgTlds ianaOrgTldsListHash)
+        public static void SaveIanaOrgTldsToJson(IanaOrgTlds ianaOrgTldsListHash)
         {
-            string TldDataSignatureJson = JsonConvert.SerializeObject(ianaOrgTldsListHash);
-            File.WriteAllText($"{TldDataPath}{DS}{TldDataSignatureJson}", TldDataSignatureJson);
+            string tldDataJson = JsonConvert.SerializeObject(ianaOrgTldsListHash, Formatting.Indented);
+            File.WriteAllText($"{TldDataPath}{DS}{TldDataSignatureJson}", tldDataJson);
         }
     }
 }

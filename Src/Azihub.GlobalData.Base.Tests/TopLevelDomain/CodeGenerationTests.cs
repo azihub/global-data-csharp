@@ -1,8 +1,5 @@
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Net.Http;
-using System.Security.Cryptography;
 using Azihub.GlobalData.Base.Tests.Abstract;
 using Azihub.GlobalData.Base.TopLevelDomain;
 using Azihub.GlobalData.Base.TopLevelDomain.Tools;
@@ -15,11 +12,18 @@ namespace Azihub.GlobalData.Base.Tests
     {
         public CodeGenerationTests(ITestOutputHelper output) : base(output) { }
 
+        private const string TLD_SAMPLES = @"COM
+NET
+ORG
+INT
+EDU
+MIL";
+
         [Fact]
         public void FetchTopLevelDomainsTest()
         {
             IanaOrgTlds ianaOrgTlds = TldDataUpdater.FetchTlds();
-            Output.WriteLine($"Fetched {ianaOrgTlds.List.Count()} items");
+            Output.WriteLine($"Fetched {ianaOrgTlds.List.Count} items");
             Assert.True(condition: ianaOrgTlds.List.Any());
             Assert.Contains(ianaOrgTlds.List, x => x == "COM");
             Assert.Contains(ianaOrgTlds.List, x => x == "NET");
@@ -32,10 +36,29 @@ namespace Azihub.GlobalData.Base.Tests
         [Fact]
         public void GetCodeSignatureTest()
         {
-            IanaOrgTlds tldHash = CodeSignatureService.GetIanaTldsFromJson();
+            IanaOrgTlds tldHash = CodeSignatureService.GetIanaOrgTldsFromJson();
             Assert.Equal(64, tldHash.Hash.Length);
             Assert.True(tldHash.Count > 0);
-            Assert.True( ! String.IsNullOrEmpty(tldHash.Body) );
+            Assert.True(!String.IsNullOrEmpty(tldHash.Body));
+        }
+
+        // Uncomment below to test save
+        [Fact]
+        public void SaveCodeSignatureTest()
+        {
+            IanaOrgTlds tldHash = new(TLD_SAMPLES);
+            CodeSignatureService.SaveIanaOrgTldsToJson(tldHash);
+        }
+
+        [Fact]
+        public void CodeGenerationRebuildTest()
+        {
+            //var tldDataUpdater = new TldDataUpdater(Output.);
+            //TldDataUpdater.Rebud();
+            IanaOrgTlds ianaOrgTlds = new(TLD_SAMPLES);
+            (string consts, string dict) = CodeGenerator.GenCodes(ianaOrgTlds);
+            Output.WriteLine($"Consts:\n{consts}");
+            Output.WriteLine($"Consts:\n{dict}");
         }
     }
 }

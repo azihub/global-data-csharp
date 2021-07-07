@@ -1,0 +1,13 @@
+{
+  "Body": "COM\r\nNET\r\nORG\r\nINT\r\nEDU\r\nMIL",
+  "Hash": "a5ec391ccd0cfdb00cdff82b2c8ca4ca59db3aedcc150709237bc9a46acb0a0e",
+  "Count": 6,
+  "List": [
+    "COM",
+    "NET",
+    "ORG",
+    "INT",
+    "EDU",
+    "MIL"
+  ]
+}

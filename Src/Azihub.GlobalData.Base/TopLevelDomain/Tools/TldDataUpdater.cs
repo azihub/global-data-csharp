@@ -28,13 +28,13 @@ namespace Azihub.GlobalData.Base.TopLevelDomain.Tools
 
             //(string assetSymbolsClass, string assetsDict) = CodeGenerator.GenAssetSymbols(assets.Values.ToList());
 
-            IanaOrgTlds ianaOrgTldsJson = CodeSignatureService.GetIanaTldsFromJson();
+            IanaOrgTlds ianaOrgTldsJson = CodeSignatureService.GetIanaOrgTldsFromJson();
 
             if (IanaOrgTlds.Hash != ianaOrgTldsJson.Hash)
             {
                 Logger.LogInformation("Tld List needs to update.");
                 (string tldConsts, string tldDict) = CodeGenerator.GenCodes(IanaOrgTlds);
-                CodeSignatureService.SaveSignatures(IanaOrgTlds);
+                CodeSignatureService.SaveIanaOrgTldsToJson(IanaOrgTlds);
 
                 File.WriteAllText(tldConsts, tldConsts);
                 File.WriteAllText(tldDict, tldDict);
