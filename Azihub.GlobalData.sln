@@ -15,11 +15,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Azihub.GlobalData.Validators", "Azihub.GlobalData.Validators\Azihub.GlobalData.Validators.csproj", "{D9C73C03-9F14-4435-81B7-651BB472C9AB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Azihub.GlobalData.Validators", "Src\Azihub.GlobalData.Validators\Azihub.GlobalData.Validators.csproj", "{D9C73C03-9F14-4435-81B7-651BB472C9AB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Azihub.GlobalData.Validators.Tests", "Azihub.GlobalData.Validators.Tests\Azihub.GlobalData.Validators.Tests.csproj", "{128EF6C7-F7B8-40A7-9A92-C5AE61B1966B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Azihub.GlobalData.Validators.Tests", "Src\Azihub.GlobalData.Validators.Tests\Azihub.GlobalData.Validators.Tests.csproj", "{128EF6C7-F7B8-40A7-9A92-C5AE61B1966B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Azihub.GlobalData.Updater", "Azihub.GlobalData.Updater\Azihub.GlobalData.Updater.csproj", "{9511A660-A14B-4A4C-B612-4D94BEF5D782}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Azihub.GlobalData.Updater", "Src\Azihub.GlobalData.Updater\Azihub.GlobalData.Updater.csproj", "{9511A660-A14B-4A4C-B612-4D94BEF5D782}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
