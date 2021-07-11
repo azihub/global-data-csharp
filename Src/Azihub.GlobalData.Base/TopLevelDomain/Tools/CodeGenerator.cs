@@ -1,8 +1,7 @@
 ﻿using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
-using System;
-using System.Collections.Generic;
+using static System.Environment;
 using System.Linq;
 using System.Text;
 
@@ -95,7 +94,8 @@ namespace Azihub.GlobalData.Base.TopLevelDomain
         public static IList<Tld> TldsList => TldsDict.Values.ToList();
 
         private static readonly Dictionary<string, Tld> TldsDict = new Dictionary<string, Tld>()
-        {";
+        {
+";
 
         }
 
@@ -104,7 +104,7 @@ namespace Azihub.GlobalData.Base.TopLevelDomain
         {
             StringBuilder assetDictItem = new StringBuilder();
             name = name.ToUpper();
-            assetDictItem.Append($@"                {{ ""TldConsts.{name}"", new Tld(TldConsts.{name}) }}");
+            assetDictItem.Append($@"                {{ TldConsts.{name}, new Tld(TldConsts.{name}) }}{NewLine}");
             
             return assetDictItem.ToString();
 

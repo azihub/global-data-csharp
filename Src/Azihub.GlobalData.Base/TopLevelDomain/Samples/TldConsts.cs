@@ -1,6 +1,6 @@
-﻿namespace Azihub.GlobalData.Base.TopLevelDomain
+﻿namespace Azihub.GlobalData.Base.TopLevelDomain.Samples
 {
-    public static class TldConstsSample
+    public static class TldConsts
     {
         /// <summary>
         /// Commercial

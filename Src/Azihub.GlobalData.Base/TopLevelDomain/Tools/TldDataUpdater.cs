@@ -18,41 +18,14 @@ namespace Azihub.GlobalData.Base.TopLevelDomain.Tools
         {
             Logger = logger;
         }
+
         public void Rebuild()
         {
-
             IanaOrgTlds = FetchTlds();
-
-            //_logger.LogDebug($"Parsed {blockchains.Count} blockchain");
-
-
-            //(string assetSymbolsClass, string assetsDict) = CodeGenerator.GenAssetSymbols(assets.Values.ToList());
-
-            IanaOrgTlds ianaOrgTldsJson = CodeSignatureService.GetIanaOrgTldsFromJson();
-
-            if (IanaOrgTlds.Hash != ianaOrgTldsJson.Hash)
-            {
-                Logger.LogInformation("Tld List needs to update.");
-                (string tldConsts, string tldDict) = CodeGenerator.GenCodes(IanaOrgTlds);
-                CodeSignatureService.SaveIanaOrgTldsToJson(IanaOrgTlds);
-
-                File.WriteAllText(tldConsts, tldConsts);
-                File.WriteAllText(tldDict, tldDict);
-            }
-
-            //var newClassNode = SyntaxFactory.ParseSyntaxTree(assetSymbolsClass).GetRoot()
-            //                                .DescendantNodes()
-            //                                .OfType<ClassDeclarationSyntax>()
-            //                                .FirstOrDefault();
-            ////// Retrieve the parent namespace declaration
-            //var parentNamespace = (NamespaceDeclarationSyntax)newClassNode.Parent;
-            //// Add the new class to the namespace
-            //var newParentNamespace = parentNamespace.AddMembers(newClassNode).NormalizeWhitespace();
-
-
-
-
-            //OutputHelper.WriteLine(blockchains.Select(x => x.Value).ToArray().ToString());
+            CodeSignatureService.SaveIanaOrgTldsToJson(IanaOrgTlds);
+            (string tldConsts, string tldDict) = CodeGenerator.GenCodes(IanaOrgTlds);
+            File.WriteAllText(Settings.TldConstsPath, tldConsts);
+            File.WriteAllText(Settings.TldDictPath, tldDict);
         }
 
         public static IanaOrgTlds FetchTlds()

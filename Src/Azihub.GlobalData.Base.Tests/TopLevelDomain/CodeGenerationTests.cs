@@ -51,14 +51,25 @@ MIL";
         }
 
         [Fact]
-        public void CodeGenerationRebuildTest()
+        public void CodeGenerationTest()
         {
-            //var tldDataUpdater = new TldDataUpdater(Output.);
-            //TldDataUpdater.Rebud();
             IanaOrgTlds ianaOrgTlds = new(TLD_SAMPLES);
             (string consts, string dict) = CodeGenerator.GenCodes(ianaOrgTlds);
             Output.WriteLine($"Consts:\n{consts}");
             Output.WriteLine($"Consts:\n{dict}");
+        }
+        
+        [Fact]
+        public void CodeGenerateUpdateNeededTest()
+        {
+            IanaOrgTlds tldHash = CodeSignatureService.GetIanaOrgTldsFromJson();
+            IanaOrgTlds tldLatest = TldDataUpdater.FetchTlds();
+
+#if DEBUG
+            TldDataUpdater tldDataUpdater = new(Output.BuildLoggerFor<TldDataUpdater>());
+            tldDataUpdater.Rebuild();
+#endif   
+            Assert.Equal(tldHash.Hash, tldLatest.Hash);
         }
     }
 }
