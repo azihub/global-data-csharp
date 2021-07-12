@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Azihub.GlobalData.Base.TopLevelDomain
@@ -15,7 +15,7 @@ namespace Azihub.GlobalData.Base.TopLevelDomain
                 { TldConsts.INT, new Tld(TldConsts.INT) },
                 { TldConsts.EDU, new Tld(TldConsts.EDU) },
                 { TldConsts.GOV, new Tld(TldConsts.GOV) },
-                { TldConsts.MIL, new Tld(TldConsts.MIL) },
+                { TldConsts.MIL, new Tld(TldConsts.MIL) }
         };
     }
 }

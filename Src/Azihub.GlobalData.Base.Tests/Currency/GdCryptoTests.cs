@@ -1,9 +1,9 @@
-﻿using Azihub.GlobalData.Base.Tests.Abstract;
-using NoobsMuc.Coinmarketcap.Client;
+﻿using NoobsMuc.Coinmarketcap.Client;
 using CmcCurrency = NoobsMuc.Coinmarketcap.Client.Currency;
 using System;
 using Xunit;
 using Xunit.Abstractions;
+using Azihub.Utilities.Base.Tests;
 
 namespace Azihub.GlobalData.Base.Tests.Currency
 {

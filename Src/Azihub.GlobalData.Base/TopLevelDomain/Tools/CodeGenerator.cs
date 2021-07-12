@@ -4,6 +4,7 @@ using Microsoft.CodeAnalysis.CSharp.Syntax;
 using static System.Environment;
 using System.Linq;
 using System.Text;
+using Azihub.Utilities.Base.Extensions.String;
 
 namespace Azihub.GlobalData.Base.TopLevelDomain.Tools
 {
@@ -27,7 +28,7 @@ namespace Azihub.GlobalData.Base.TopLevelDomain.Tools
 
             foreach (string tld in ianaOrgTlds.List)
             {
-                tldConsts.Append(GetConstant(tld));
+                tldConsts.Append(GetConstant(tld.ToConstantCase()));
                 tldDict.Append(GetDict(tld));
             }
 
@@ -104,7 +105,7 @@ namespace Azihub.GlobalData.Base.TopLevelDomain
         {
             StringBuilder assetDictItem = new StringBuilder();
             name = name.ToUpper();
-            assetDictItem.Append($@"                {{ TldConsts.{name}, new Tld(TldConsts.{name}) }}{NewLine}");
+            assetDictItem.Append($@"                {{ TldConsts.{name}, new Tld(TldConsts.{name}) }},{NewLine}");
             
             return assetDictItem.ToString();
 
@@ -117,8 +118,7 @@ namespace Azihub.GlobalData.Base.TopLevelDomain
         private static string GetDictFooter()
         {
             return @"
-            return tldDicts;
-        }
+        };
     }
 }
 ";

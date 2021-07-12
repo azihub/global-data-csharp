@@ -1,7 +1,8 @@
 ﻿using Azihub.GlobalData.Base.Country;
 using Azihub.GlobalData.Base.Currency;
 using Azihub.GlobalData.Base.Currency.Exceptions;
-using Azihub.GlobalData.Base.Tests.Abstract;
+using Azihub.Utilities.Base.Tests;
+
 using Xunit;
 using Xunit.Abstractions;
 

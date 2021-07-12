@@ -11,7 +11,7 @@ namespace Azihub.GlobalData.Base.TopLevelDomain.Tools
         private const string TldConstsCs = "TldConsts.cs";
         public static IanaOrgTlds GetIanaOrgTldsFromJson()
         {
-            string signatureJson = (string) File.ReadAllText($"{TldDataPath}{DS}{TldDataSignatureJson}");
+            string signatureJson = File.ReadAllText($"{TldDataPath}{DS}{TldDataSignatureJson}");
             IanaOrgTlds tldAlphaByDomainHash = JsonConvert.DeserializeObject<IanaOrgTlds>(signatureJson, new IanaOrgTldsConverter());
             return tldAlphaByDomainHash;
         }

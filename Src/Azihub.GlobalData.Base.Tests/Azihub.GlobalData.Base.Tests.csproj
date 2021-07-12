@@ -14,7 +14,7 @@
     <PackageReference Include="Divergic.Logging.Xunit" Version="3.6.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="5.0.0" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="5.0.0" />
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.9.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.10.0" />
     <PackageReference Include="NoobsMuc.Coinmarketcap.Client" Version="2.1.1" />
     <PackageReference Include="xunit" Version="2.4.1">
       <NoWarn>NU1701</NoWarn>

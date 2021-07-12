@@ -1,6 +1,6 @@
-﻿using Azihub.GlobalData.Base.Tests.Abstract;
-using Azihub.GlobalData.Base.TopLevelDomain;
+﻿using Azihub.GlobalData.Base.TopLevelDomain;
 using Azihub.GlobalData.Base.TopLevelDomain.Exceptions;
+using Azihub.Utilities.Base.Tests;
 using Xunit;
 using Xunit.Abstractions;
 
