@@ -1,4 +1,5 @@
 ﻿using Azihub.Utilities.Base.Extensions.String;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,7 +27,6 @@ namespace Azihub.GlobalData.Base.TopLevelDomain
             SanitizeList();
         }
 
-
         /// <summary>
         /// Used for json serialization only
         /// </summary>
@@ -52,18 +52,28 @@ namespace Azihub.GlobalData.Base.TopLevelDomain
             List.RemoveAll(x => x.ToUpper().Trim().StartsWith("#"));
             List.RemoveAll(x => String.IsNullOrEmpty(x));
         }
-        
+
         /// <summary>
         /// Original string fetched from URL <see cref="TLDS_ALPHA_BY_DOMAIN_URL" />
         /// </summary>
         public string Body { get; private set; }
-        
+
+
+        /// <summary>
+        /// Byte[] is stored as .txt file separately therefor ignored in .json file
+        /// Original string fetched from URL <see cref="TLDS_ALPHA_BY_DOMAIN_URL" />
+        /// </summary>
+        [JsonIgnore]
+        public byte[] Bytes { get; set; }
+
         /// <summary>
         /// Sha256 Hash of Body
         /// </summary>
         public string Hash { get; private set; }
 
+#pragma warning disable IDE1006 // Naming Styles : overlap with 'Count' property
         private uint? _count { get; set; }
+#pragma warning restore IDE1006 // Naming Styles
         public uint Count 
         { 
             get

@@ -64,11 +64,11 @@ namespace Azihub.GlobalData.Base.TopLevelDomain.Tools
 
         private static string GetConstant(string name)
         {
-            name = name.ToUpper();
+            string varName = name.ToUpper().ToConstantCase();
             return "        /// <summary>\n" +
                    "        /// " + name + "\n" +
                    "        /// </summary>\n" +
-                 $@"        public const string {name} = ""{name}"";" + "\n\n";
+                 $@"        public const string {varName} = ""{name}"";" + "\n\n";
         }
 
         private static string GetConstFooter()
@@ -104,7 +104,7 @@ namespace Azihub.GlobalData.Base.TopLevelDomain
         private static string GetDict(string name)
         {
             StringBuilder assetDictItem = new StringBuilder();
-            name = name.ToUpper();
+            name = name.ToUpper().ToConstantCase();
             assetDictItem.Append($@"                {{ TldConsts.{name}, new Tld(TldConsts.{name}) }},{NewLine}");
             
             return assetDictItem.ToString();

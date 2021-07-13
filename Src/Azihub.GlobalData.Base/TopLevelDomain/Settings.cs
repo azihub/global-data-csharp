@@ -9,5 +9,9 @@ namespace Azihub.GlobalData.Base
         public static string TldConstsPath => $"{TldDataPath}TldConsts.cs";
         public static string TldDictPath => $"{TldDataPath}TldDict.cs";
 
+        public static string TldDataSignatureJson = "IanaOrgTlds.json";
+        public static string TldDataTxt = "tlds-alpha-by-domain.txt";
+        public static string TldDictCs = "TldDict.cs";
+        public static string TldConstsCs = "TldConsts.cs";
     }
 }

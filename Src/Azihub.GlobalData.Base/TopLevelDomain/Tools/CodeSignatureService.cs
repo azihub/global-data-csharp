@@ -6,21 +6,23 @@ namespace Azihub.GlobalData.Base.TopLevelDomain.Tools
 {
     public static class CodeSignatureService
     {
-        private const string TldDataSignatureJson = "IanaOrgTlds.json";
-        private const string TldDictCs = "TldDict.cs";
-        private const string TldConstsCs = "TldConsts.cs";
         public static IanaOrgTlds GetIanaOrgTldsFromJson()
         {
             string signatureJson = File.ReadAllText($"{TldDataPath}{DS}{TldDataSignatureJson}");
             IanaOrgTlds tldAlphaByDomainHash = JsonConvert.DeserializeObject<IanaOrgTlds>(signatureJson, new IanaOrgTldsConverter());
+
+            tldAlphaByDomainHash.Bytes = File.ReadAllBytes($"{TldDataPath}{DS}{TldDataTxt}");
             return tldAlphaByDomainHash;
         }
 
-        public static void SaveIanaOrgTldsToJson(IanaOrgTlds ianaOrgTldsListHash)
+        public static void SaveIanaOrgTldsToJson(IanaOrgTlds ianaOrgTlds)
         {
-            string tldDataJson = JsonConvert.SerializeObject(ianaOrgTldsListHash, Formatting.Indented);
+            string tldDataJson = JsonConvert.SerializeObject(ianaOrgTlds, Formatting.Indented);
+            File.WriteAllBytes($"{TldDataPath}{DS}{TldDataTxt}", ianaOrgTlds.Bytes);
             File.WriteAllText($"{TldDataPath}{DS}{TldDataSignatureJson}", tldDataJson);
         }
+
+
 
         public static void SaveIanaOrgTldsToCs(string consts, string dict)
         {

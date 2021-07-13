@@ -1,4 +1,5 @@
 ﻿using Azihub.Utilities.Base.Extensions.String;
+using static Azihub.GlobalData.Base.Settings;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
@@ -28,11 +29,19 @@ namespace Azihub.GlobalData.Base.TopLevelDomain.Tools
             File.WriteAllText(Settings.TldDictPath, tldDict);
         }
 
+        /// <summary>
+        /// Return object of IanaOrgTlds and set of byte array to keep original data.
+        /// </summary>
+        /// <returns></returns>
         public static IanaOrgTlds FetchTlds()
         {
             var httpClient = new HttpClient();
             var response = httpClient.GetAsync(IanaOrgTlds.TLDS_ALPHA_BY_DOMAIN_URL).ConfigureAwait(true).GetAwaiter();
             string body = response.GetResult().Content.ReadAsStringAsync().ConfigureAwait(true).GetAwaiter().GetResult();
+            byte[] bytes = response.GetResult().Content.ReadAsByteArrayAsync().ConfigureAwait(true).GetAwaiter().GetResult();
+
+            // Keep local copy to see changes through git diff
+            File.WriteAllBytes($"{TldDataPath}{DS}{TldDataTxt}", bytes);
             List<string> list = Regex.Split(body, "\r\n|\r|\n").ToList();
             list.RemoveAll(x => x.ToUpper().Trim().StartsWith("#"));
             return new IanaOrgTlds(body, list);
