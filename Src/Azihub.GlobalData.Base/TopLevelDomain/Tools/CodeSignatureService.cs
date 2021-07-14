@@ -15,11 +15,14 @@ namespace Azihub.GlobalData.Base.TopLevelDomain.Tools
             return tldAlphaByDomainHash;
         }
 
-        public static void SaveIanaOrgTldsToJson(IanaOrgTlds ianaOrgTlds)
+        public static void SaveIanaOrgTldsToJson(IanaOrgTlds ianaOrgTlds, bool persist = true)
         {
             string tldDataJson = JsonConvert.SerializeObject(ianaOrgTlds, Formatting.Indented);
-            File.WriteAllBytes($"{TldDataPath}{DS}{TldDataTxt}", ianaOrgTlds.Bytes);
-            File.WriteAllText($"{TldDataPath}{DS}{TldDataSignatureJson}", tldDataJson);
+            if (persist)
+            {
+                File.WriteAllBytes($"{TldDataPath}{DS}{TldDataTxt}", ianaOrgTlds.Bytes);
+                File.WriteAllText($"{TldDataPath}{DS}{TldDataSignatureJson}", tldDataJson);
+            }
         }
 
 

@@ -19,8 +19,10 @@ namespace Azihub.GlobalData.Base.TopLevelDomain.Tools
             string body = jObject.GetValue(nameof(IanaOrgTlds.Body)).ToString();
             string hash = jObject.GetValue(nameof(IanaOrgTlds.Hash)).ToString();
             uint count = (uint) jObject.GetValue(nameof(IanaOrgTlds.Count));
-            var list = jObject.GetValue(nameof(IanaOrgTlds.List)).ToObject<List<string>>();
-            return new IanaOrgTlds(body, hash, count, list);
+            List<string> list = jObject.GetValue(nameof(IanaOrgTlds.List)).ToObject<List<string>>();
+            string version = jObject.GetValue(nameof(IanaOrgTlds.Version)).ToObject<string>();
+            string lastUpdate = jObject.GetValue(nameof(IanaOrgTlds.LastUpdate)).ToObject<string>();
+            return new IanaOrgTlds(body, hash, count, list, version, lastUpdate);
         }
 
         public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)

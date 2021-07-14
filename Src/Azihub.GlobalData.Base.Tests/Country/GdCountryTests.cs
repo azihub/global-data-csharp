@@ -4,7 +4,7 @@ using Azihub.Utilities.Base.Tests;
 using Xunit;
 using Xunit.Abstractions;
 
-namespace Azihub.GlobalData.Base.Tests
+namespace Azihub.GlobalData.Base.Tests.Country
 {
     public class GdCountryTests : TestBase
     {

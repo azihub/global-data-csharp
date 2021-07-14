@@ -23,6 +23,7 @@ namespace Azihub.GlobalData.Base.TopLevelDomain.Tools
         public void Rebuild()
         {
             IanaOrgTlds = FetchTlds();
+            Logger.LogInformation($"Fetched IanaOrgTlds with {IanaOrgTlds.Count} records");
             CodeSignatureService.SaveIanaOrgTldsToJson(IanaOrgTlds);
             (string tldConsts, string tldDict) = CodeGenerator.GenCodes(IanaOrgTlds);
             File.WriteAllText(Settings.TldConstsPath, tldConsts);
@@ -40,11 +41,9 @@ namespace Azihub.GlobalData.Base.TopLevelDomain.Tools
             string body = response.GetResult().Content.ReadAsStringAsync().ConfigureAwait(true).GetAwaiter().GetResult();
             byte[] bytes = response.GetResult().Content.ReadAsByteArrayAsync().ConfigureAwait(true).GetAwaiter().GetResult();
 
-            // Keep local copy to see changes through git diff
-            File.WriteAllBytes($"{TldDataPath}{DS}{TldDataTxt}", bytes);
             List<string> list = Regex.Split(body, "\r\n|\r|\n").ToList();
             list.RemoveAll(x => x.ToUpper().Trim().StartsWith("#"));
-            return new IanaOrgTlds(body, list);
+            return new IanaOrgTlds(body, list, bytes);
         }
     }
 }

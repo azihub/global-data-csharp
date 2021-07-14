@@ -6,13 +6,14 @@ using Azihub.Utilities.Base.Tests;
 using Xunit;
 using Xunit.Abstractions;
 
-namespace Azihub.GlobalData.Base.Tests
+namespace Azihub.GlobalData.Base.Tests.Country
 {
     public class CodeGenerationTests : TestBase
     {
         public CodeGenerationTests(ITestOutputHelper output) : base(output) { }
 
-        private const string TLD_SAMPLES = @"COM
+        private const string TLD_SAMPLES = @"# Version 2021071200, Last Updated Mon Jul 12 07:07:02 2021 UTC
+COM
 NET
 ORG
 INT
@@ -47,7 +48,7 @@ MIL";
         public void SaveCodeSignatureTest()
         {
             IanaOrgTlds tldHash = new(TLD_SAMPLES);
-            CodeSignatureService.SaveIanaOrgTldsToJson(tldHash);
+            CodeSignatureService.SaveIanaOrgTldsToJson(tldHash, false);
         }
 
         [Fact]
@@ -55,8 +56,8 @@ MIL";
         {
             IanaOrgTlds ianaOrgTlds = new(TLD_SAMPLES);
             (string consts, string dict) = CodeGenerator.GenCodes(ianaOrgTlds);
-            Output.WriteLine($"Consts:\n{consts}");
-            Output.WriteLine($"Consts:\n{dict}");
+            Output.WriteLine($"Consts:\n{consts}\n\n");
+            Output.WriteLine($"Dict:\n{dict}");
         }
         
         [Fact]
