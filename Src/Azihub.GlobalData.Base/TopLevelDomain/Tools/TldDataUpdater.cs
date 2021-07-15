@@ -1,5 +1,5 @@
 ﻿using Azihub.Utilities.Base.Extensions.String;
-using static Azihub.GlobalData.Base.Settings;
+using static Azihub.GlobalData.Base.TopLevelDomain.Settings;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;

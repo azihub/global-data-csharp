@@ -11,7 +11,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="CoinGeckoAsyncApi" Version="1.4.4" />
     <PackageReference Include="Divergic.Logging.Xunit" Version="3.6.0" />
+    <PackageReference Include="Mc2.CoinMarketCap.NetStandard" Version="0.1.1" />
     <PackageReference Include="Microsoft.AspNetCore.Hosting.Abstractions" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.TestHost" Version="5.0.7" />
@@ -31,7 +33,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\app-console-csharp\azihub-utilities-base-csharp\Azihub.Utilities.Base\Azihub.Utilities.Base.csproj" />
-    <ProjectReference Include="..\..\..\coincapmarket-csharp-masonchase\CoinCapMarket\CoinMarketCap.NetStandard.csproj" />
     <ProjectReference Include="..\Azihub.GlobalData.Banks\Azihub.GlobalData.Banks.csproj" />
     <ProjectReference Include="..\Azihub.GlobalData.Base\Azihub.GlobalData.Base.csproj" />
   </ItemGroup>

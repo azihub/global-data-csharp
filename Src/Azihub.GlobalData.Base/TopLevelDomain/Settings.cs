@@ -1,6 +1,6 @@
 ﻿using System.IO;
 
-namespace Azihub.GlobalData.Base
+namespace Azihub.GlobalData.Base.TopLevelDomain
 {
     public static class Settings
     {

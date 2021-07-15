@@ -7,11 +7,15 @@ using CmcCurrency = NoobsMuc.Coinmarketcap.Client.Currency;
 using static Azihub.GlobalData.Base.Tests.Settings.AppSettings;
 using System.Linq;
 using System.Collections.Generic;
-using CoinMarketCap;
-using CoinMarketCap.Models.Cryptocurrency;
-using CoinMarketCap.Models;
-using CoinMarketCap.Options;
+using Mc2.CoinMarketCap;
+using Mc2.CoinMarketCap.NetStandard.Models.Cryptocurrency;
+using Mc2.CoinMarketCap.NetStandard.Models;
+using Mc2.CoinMarketCap.NetStandard.Options;
 using CoinGecko.Clients;
+using Mc2.CoinMarketCap.NetStandard.ClientEndpoints;
+using Mc2.CoinMarketCap.NetStandard.ClientEndpoints.ClientProperties;
+using Mc2.CoinMarketCap.NetStandard.ClientEndpoints.CryptoInfo;
+using Mc2.CoinMarketCap.NetStandard.ClientEndpoints.CryptoInfo.ResponseProperties;
 
 namespace Azihub.GlobalData.Base.Tests.Currency
 {
@@ -32,34 +36,18 @@ namespace Azihub.GlobalData.Base.Tests.Currency
             );
         }
 
-        [Fact]
-        public void GetCoinCapListingsIzehrungTest()
-        {
-            var client = new CoinMarketCapClient(Global.CoinmarketcapApiKey);
-            IdMapParameters parameters = new IdMapParameters {  };
-            Response<List<IdMap>> response = client.GetCryptocurrencyIdMap(parameters);
-            List<IdMap> currencies = response.Data;
-            Output.WriteLine(
-               string.Join(",\n", currencies.Select(c => String.Concat(c.Id, ":", c.Name, ":", c.Symbol, ":Slug=", c.Slug)).ToArray())
-            );
-            //var listingsResponse = await client.GetCryptocurrencyIdMapAsync(new IdMapParameters { Symbol = "LINK" }, CancellationToken.None);
-
-        }
 
         [Fact]
         public void GetCoinCapCoinDataIzehrungTest()
         {
-            var client = new CoinMarketCapClient(Global.CoinmarketcapApiKey);
-            MetadataParameters parameters = new MetadataParameters {
-                Id = new long[] { CryptocurrencyId.Bitcoin } 
-            };
-            Response<List<Metadata>> response = client.GetCryptocurrencyInfo(parameters);
-            List<Metadata> currencies = response.Data;
+            CoinMarketCapClient client = new CoinMarketCapClient(Global.CoinmarketcapApiKey);
+            CryptoInfoRequest request = new CryptoInfoRequest(new long[] { CryptocurrencyId.BITCOIN } );
+            Response<CryptoInfoResponse> response = client.GetCryptocurrencyInfo(request);
+            Dictionary<string, Metadata> currencies = response.Data.MetadataDict;
             Output.WriteLine(
-               string.Join(",\n", currencies.Select(c => String.Concat(c.Id, ":", c.Name, ":", c.Symbol, ":Slug=", c.Slug, ":Logo=", c.Logo, ":SourceCode=", c.Urls.SourceCode)).ToArray())
+               string.Join(",\n", currencies.Values.Select(c => string.Concat(c.Id, ":", c.Name, ":", c.Symbol, ":Slug=", c.Slug, ":Logo=", c.Logo, ":SourceCode=", c.UrlLinks.SourceCode)).ToArray())
             );
             //var listingsResponse = await client.GetCryptocurrencyIdMapAsync(new IdMapParameters { Symbol = "LINK" }, CancellationToken.None);
-
         }
 
         [Fact]

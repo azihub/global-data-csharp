@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 using System.IO;
-using static Azihub.GlobalData.Base.Settings;
+using static Azihub.GlobalData.Base.TopLevelDomain.Settings;
 
 namespace Azihub.GlobalData.Base.TopLevelDomain.Tools
 {
