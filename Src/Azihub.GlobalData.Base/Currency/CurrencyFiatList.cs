@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Azihub.GlobalData.Base.Country;
+using Azihub.GlobalData.Base.Currency.Exceptions;
 
 namespace Azihub.GlobalData.Base.Currency
 {
@@ -197,7 +198,7 @@ namespace Azihub.GlobalData.Base.Currency
             if (GdCurrencyFiatListDict.TryGetValue(gdCountryCode.Code, out CurrencyFiat value))
                 return value;
 
-            throw new Exception("Bad Country Code");
+            throw new InvalidCurrencyCodeException(gdCountryCode.Code);
         }
 
         public static CurrencyFiat[] GetAll()
