@@ -7,7 +7,7 @@ namespace Azihub.GlobalData.Base.TopLevelDomain.Exceptions
     public class InvalidTopLevelDomainException : Exception
     {
         public InvalidTopLevelDomainException(string address)
-            : base($"Invalid address: {address}")
+            : base($"Invalid TLD: {address}")
         {
             Address = address;
         }

@@ -11,15 +11,15 @@ namespace Azihub.GlobalData.Base.Tests.TopLevelDomain
         public TopLevelDomainTests(ITestOutputHelper output) : base(output) { }
         
         [Theory]
-        [InlineData("COM")]
-        [InlineData("net")]
-        [InlineData("org")]
-        [InlineData("gov")]
-        public void ValidateTldTest(string tldStr)
+        [InlineData("COM", TldConsts.COM)]
+        [InlineData("net", TldConsts.NET)]
+        [InlineData("org", TldConsts.ORG)]
+        [InlineData("gov", TldConsts.GOV)]
+        public void ValidateTldTest(string tldStr, string expected)
         {
             Tld tld = Tld.FromString(tldStr);
             Output.WriteLine($"Expected: {tldStr}, Output: {tld.Value}");
-            Assert.Equal(tldStr.ToLower(), tld.Value);
+            Assert.Equal(expected, tld.Value);
         }
 
         [Fact]

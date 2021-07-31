@@ -40,8 +40,8 @@ namespace Azihub.GlobalData.Base.Tests.Currency
         [Fact]
         public void GetCoinCapCoinDataIzehrungTest()
         {
-            CoinMarketCapClient client = new CoinMarketCapClient(Global.CoinmarketcapApiKey);
-            CryptoInfoRequest request = new CryptoInfoRequest(new long[] { CryptocurrencyId.BITCOIN } );
+            CoinMarketCapClient client = new(Global.CoinmarketcapApiKey);
+            CryptoInfoRequest request = new(new long[] { CryptocurrencyId.BITCOIN } );
             Response<CryptoInfoResponse> response = client.GetCryptocurrencyInfo(request);
             Dictionary<string, Metadata> currencies = response.Data.MetadataDict;
             Output.WriteLine(

@@ -48,5 +48,20 @@ namespace Azihub.GlobalData.Base.Currency
         /// List of countries using the currency.
         /// </summary>
         public IList<CountryIso2Code> Countries { get; set; }
+
+        /// <summary>
+        /// Get a GdCountry by Iso2 Code.
+        /// </summary>
+        /// <param name="gdCountryCode"></param>
+        /// <returns>Instance of GdCountry</returns>
+        public static CurrencyFiat Get(CurrencyFiatCode gdCountryCode)
+        {
+            return CurrencyFiatList.Get(gdCountryCode);
+        }
+
+        public static CurrencyFiat[] GetAll()
+        {
+            return CurrencyFiatList.GetAll();
+        }
     }
 }

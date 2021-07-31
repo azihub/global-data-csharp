@@ -9,10 +9,10 @@ namespace Azihub.GlobalData.Base.Validators
     {
         public static bool IsValidEmailAddress(string address)
         {
-            MailAddress mailAddress = GetEmailAddress(address);
-
+            
             try
             {
+                MailAddress mailAddress = GetEmailAddress(address);
                 string tld = Regex.Match(mailAddress.Address, @"\.(?<tld>[a-z]{2,})$", RegexOptions.IgnoreCase).Groups["tld"].Value;
                 if (Tld.IsValid(tld))
                     return true;

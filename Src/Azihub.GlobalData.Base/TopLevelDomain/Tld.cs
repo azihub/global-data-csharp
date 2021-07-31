@@ -15,7 +15,7 @@ namespace Azihub.GlobalData.Base.TopLevelDomain
 
         public static Tld FromString(string tldString)
         {
-            tldString = tldString.Trim().ToLower();
+            tldString = tldString.Trim().ToUpper();
 
             if (string.IsNullOrEmpty(tldString))
                 throw new InvalidTopLevelDomainException(tldString);
@@ -34,7 +34,7 @@ namespace Azihub.GlobalData.Base.TopLevelDomain
         /// <returns></returns>
         public static bool IsValid(string tldString)
         {
-            tldString = tldString.Trim().ToLower();
+            tldString = tldString.Trim().ToUpper();
 
             if (string.IsNullOrEmpty(tldString))
                 return false;
