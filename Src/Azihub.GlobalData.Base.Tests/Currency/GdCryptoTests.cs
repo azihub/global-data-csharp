@@ -2,16 +2,17 @@
 using System;
 using Xunit;
 using Xunit.Abstractions;
-using Azihub.Utilities.Base.Tests;
 using CmcCurrency = NoobsMuc.Coinmarketcap.Client.Currency;
 using static Azihub.GlobalData.Base.Tests.Settings.AppSettings;
 using System.Linq;
 using System.Collections.Generic;
+using Azihub.Utilities.Base.Tests;
 using Mc2.CoinMarketCap;
 using Mc2.CoinMarketCap.NetStandard.Models.Cryptocurrency;
 using Mc2.CoinMarketCap.NetStandard.Models;
 using Mc2.CoinMarketCap.NetStandard.Options;
 using CoinGecko.Clients;
+using CoinGecko.Entities.Response.Coins;
 using Mc2.CoinMarketCap.NetStandard.ClientEndpoints;
 using Mc2.CoinMarketCap.NetStandard.ClientEndpoints.ClientProperties;
 using Mc2.CoinMarketCap.NetStandard.ClientEndpoints.CryptoInfo;
@@ -30,7 +31,7 @@ namespace Azihub.GlobalData.Base.Tests.Currency
         public void GetCoinCapListingsNoobsMucTest()
         {
             ICoinmarketcapClient client = new CoinmarketcapClient(Global.CoinmarketcapApiKey);
-            var currencies = client.GetCurrencies(5000);
+            IEnumerable<CmcCurrency> currencies = client.GetCurrencies(5000);
             Output.WriteLine(
                 string.Join(",\n", currencies.Select(c => String.Concat(c.Id, ":", c.Name, ":", c.Symbol)).ToArray())
             );
@@ -53,9 +54,9 @@ namespace Azihub.GlobalData.Base.Tests.Currency
         [Fact]
         public void GetCoinGeckoGetListTest()
         {
-            var client = CoinGeckoClient.Instance;
+            CoinGeckoClient client = CoinGeckoClient.Instance;
 
-            var currencies = client.CoinsClient.GetAllCoinsData("id", 5000, 1,"en",false).GetAwaiter().GetResult();
+            IReadOnlyList<CoinFullData> currencies = client.CoinsClient.GetAllCoinsData("id", 5000, 1,"en",false).GetAwaiter().GetResult();
             Output.WriteLine(
                string.Join(",\n", currencies.Select(c => string.Concat(c.Id, ":", c.Name, ":", c.Symbol, ":Slug=", c.Localization)).ToArray())
             );

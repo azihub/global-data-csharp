@@ -11,6 +11,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Azihub.Utilities.Base" Version="0.1.10" />
     <PackageReference Include="CoinGeckoAsyncApi" Version="1.4.4" />
     <PackageReference Include="Divergic.Logging.Xunit" Version="3.6.0" />
     <PackageReference Include="Mc2.CoinMarketCap.NetStandard" Version="0.1.1" />
@@ -33,6 +34,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\app-console-csharp\azihub-utilities-base-csharp\Azihub.Utilities.Base\Azihub.Utilities.Base.csproj" />
+    <ProjectReference Include="..\..\..\appstract-csharp\azihub-utilities-base-csharp\Azihub.Utilities.Base\Azihub.Utilities.Base.csproj" />
     <ProjectReference Include="..\Azihub.GlobalData.Banks\Azihub.GlobalData.Banks.csproj" />
     <ProjectReference Include="..\Azihub.GlobalData.Base\Azihub.GlobalData.Base.csproj" />
   </ItemGroup>

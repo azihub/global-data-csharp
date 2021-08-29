@@ -10,7 +10,7 @@ namespace Azihub.GlobalData.Base.Currency.CryptoCurrency.ModelsStandard
         /// </summary>
         public static IDictionary<string, IAsset> GetAssets()
         {
-            var assets = new Dictionary<string, IAsset>();
+            Dictionary<string, IAsset> assets = new Dictionary<string, IAsset>();
             #region DictData
             #endregion
             return assets;

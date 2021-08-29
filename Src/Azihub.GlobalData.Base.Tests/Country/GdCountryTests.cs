@@ -66,7 +66,7 @@ namespace Azihub.GlobalData.Base.Tests.Country
         [InlineData(Iso2Codes.US, 1, "USD")]
         public void GetGdCountry(string code, uint callingCode, string expectedCurrency)
         {
-            var country = CountryList.Get( CountryIso2Code.FromString(code) );
+            Base.Country.Country country = CountryList.Get( CountryIso2Code.FromString(code) );
             Output.WriteLine($"Expected currency: {expectedCurrency}, output: {country.Currency.Code}");
             Assert.Equal(callingCode, country.CallingCode);
             Assert.Equal(expectedCurrency, country.Currency.Code);

@@ -16,7 +16,7 @@ namespace Azihub.GlobalData.Base.TopLevelDomain.Tools
         /// <summary>
         /// Generate a constant string to update static code data. 
         /// </summary>
-        /// <param name="assetStrings"></param>
+        /// <param name="ianaOrgTlds"></param>
         /// <returns></returns>
         public static (string, string) GenCodes(IanaOrgTlds ianaOrgTlds)
         {
@@ -36,14 +36,14 @@ namespace Azihub.GlobalData.Base.TopLevelDomain.Tools
             tldDict.Append(GetDictFooter());
 
             #region 
-            var newClassNode = SyntaxFactory.ParseSyntaxTree(tldConsts.ToString()).GetRoot()
+            ClassDeclarationSyntax newClassNode = SyntaxFactory.ParseSyntaxTree(tldConsts.ToString()).GetRoot()
                                             .DescendantNodes()
                                             .OfType<ClassDeclarationSyntax>()
                                             .FirstOrDefault();
             // Retrieve the parent namespace declaration
-            var parentNamespace = (NamespaceDeclarationSyntax) newClassNode.Parent;
+            NamespaceDeclarationSyntax parentNamespace = (NamespaceDeclarationSyntax) newClassNode?.Parent;
             // Add the new class to the namespace
-            parentNamespace.AddMembers(newClassNode).NormalizeWhitespace();
+            parentNamespace?.AddMembers(newClassNode).NormalizeWhitespace();
             #endregion
 
             return (tldConsts.ToString(), tldDict.ToString());

@@ -19,9 +19,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Azihub.GlobalData.Validator
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Azihub.GlobalData.Validators.Tests", "Src\Azihub.GlobalData.Validators.Tests\Azihub.GlobalData.Validators.Tests.csproj", "{128EF6C7-F7B8-40A7-9A92-C5AE61B1966B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Azihub.GlobalData.Updater", "Src\Azihub.GlobalData.Updater\Azihub.GlobalData.Updater.csproj", "{9511A660-A14B-4A4C-B612-4D94BEF5D782}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Azihub.GlobalData.Updater", "Src\Azihub.GlobalData.Updater", "{9511A660-A14B-4A4C-B612-4D94BEF5D782}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Azihub.Utilities.Base", "..\app-console-csharp\azihub-utilities-base-csharp\Azihub.Utilities.Base\Azihub.Utilities.Base.csproj", "{E3484477-71EC-4F48-B43A-55FC4E80318C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Azihub.Utilities.Base", "..\appstract-csharp\azihub-utilities-base-csharp\Azihub.Utilities.Base\Azihub.Utilities.Base.csproj", "{E3484477-71EC-4F48-B43A-55FC4E80318C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

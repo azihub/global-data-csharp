@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net.Http;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Text.RegularExpressions;
 
@@ -36,8 +37,8 @@ namespace Azihub.GlobalData.Base.TopLevelDomain.Tools
         /// <returns></returns>
         public static IanaOrgTlds FetchTlds()
         {
-            var httpClient = new HttpClient();
-            var response = httpClient.GetAsync(IanaOrgTlds.TLDS_ALPHA_BY_DOMAIN_URL).ConfigureAwait(true).GetAwaiter();
+            HttpClient httpClient = new HttpClient();
+            ConfiguredTaskAwaitable<HttpResponseMessage>.ConfiguredTaskAwaiter response = httpClient.GetAsync(IanaOrgTlds.TLDS_ALPHA_BY_DOMAIN_URL).ConfigureAwait(true).GetAwaiter();
             string body = response.GetResult().Content.ReadAsStringAsync().ConfigureAwait(true).GetAwaiter().GetResult();
             byte[] bytes = response.GetResult().Content.ReadAsByteArrayAsync().ConfigureAwait(true).GetAwaiter().GetResult();
 

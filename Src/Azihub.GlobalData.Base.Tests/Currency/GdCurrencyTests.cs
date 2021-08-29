@@ -25,7 +25,7 @@ namespace Azihub.GlobalData.Base.Tests.Country
         [InlineData(Iso3FiatCodes.MYR, Iso2Codes.Malaysia)]
         public void GetGdCurrencyFiat(string code, string expectedCountryCodeStr)
         {
-            var currency = CurrencyFiatList.Get(CurrencyFiatCode.FromString(code));
+            CurrencyFiat currency = CurrencyFiatList.Get(CurrencyFiatCode.FromString(code));
             Output.WriteLine($"code: {code}, Received: {currency.Code} is expecting: {expectedCountryCodeStr}");
             Assert.Contains(currency.Countries, x =>x.Code == expectedCountryCodeStr);
         }

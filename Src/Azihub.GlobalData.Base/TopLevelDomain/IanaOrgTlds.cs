@@ -52,7 +52,7 @@ namespace Azihub.GlobalData.Base.TopLevelDomain
         private void SetVersionUpdate()
         {
             const string regexPatternHeader = @"Version (?<version>\d{1,}), Last Updated (?<LastUpdate>.*UTC)";
-            var result = Regex.Match(Body, regexPatternHeader, RegexOptions.IgnoreCase).Groups;
+            GroupCollection result = Regex.Match(Body, regexPatternHeader, RegexOptions.IgnoreCase).Groups;
             Version = result["version"].Value;
             const string regexPatternLastUpdate = @"ddd MMM dd hh:mm:ss yyyy UTC"; // Jul 12 07:07:02 2021 UTC"
             LastUpdate = DateTime.ParseExact(result["LastUpdate"].Value,

@@ -132,3 +132,23 @@ public void InvalidTldTest()
         );
 }
 ```
+
+
+## Networking: MediaTypes
+
+.NET is missing a Type of [MediaTypes](https://en.wikipedia.org/wiki/Media_type "Wikipedia article")
+This section is a work in progress of implementation based on Iana standard.
+
+Usage:
+```C#
+[Theory]
+[InlineData("application/json","json")]
+[InlineData("text/plain","txt")]
+public void TestGetMediaTypeFromString(string code, string expectedExtension)
+{
+    MediaType mediaType = MediaType.FromString(code);
+
+    Output.WriteLine($"MediaType {code} has extension:" + mediaType.Extensions.First(x => x.Contains(expectedExtension)));
+    Assert.Equal(expectedExtension, mediaType.Extensions.First(x => x.Contains(expectedExtension)));
+}
+```
