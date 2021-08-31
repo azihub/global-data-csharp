@@ -42,7 +42,7 @@ namespace Azihub.GlobalData.Base.Currency
         /// <summary>
         /// Country/Territory/Union that issued the currency.
         /// </summary>
-        public IAuthority IssuingAuthority { get; set; }
+        public IAuthorityCodeIso2 IssuingAuthority { get; set; }
 
         /// <summary>
         /// List of countries using the currency.

@@ -33,7 +33,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\app-console-csharp\azihub-utilities-base-csharp\Azihub.Utilities.Base\Azihub.Utilities.Base.csproj" />
     <ProjectReference Include="..\..\..\appstract-csharp\azihub-utilities-base-csharp\Azihub.Utilities.Base\Azihub.Utilities.Base.csproj" />
     <ProjectReference Include="..\Azihub.GlobalData.Banks\Azihub.GlobalData.Banks.csproj" />
     <ProjectReference Include="..\Azihub.GlobalData.Base\Azihub.GlobalData.Base.csproj" />

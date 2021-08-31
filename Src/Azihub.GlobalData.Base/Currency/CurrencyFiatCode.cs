@@ -17,6 +17,11 @@ namespace Azihub.GlobalData.Base.Currency
             return Code;
         }
 
+        public CurrencyFiat GetCurrencyFiat()
+        {
+            return CurrencyFiatList.Get(this);
+        }
+
         #region Dictionary
         /// <summary>
         /// Hold all countries in private memory space

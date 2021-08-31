@@ -1,19 +1,19 @@
-﻿using System.Collections.Generic;
-using System.Runtime.Serialization;
+﻿using System;
+using System.Collections.Generic;
+using Azihub.GlobalData.Base.Authority;
 using Azihub.GlobalData.Base.Country.Exceptions;
 
 namespace Azihub.GlobalData.Base.Country
 {
-    [DataContract]
-
-    public class CountryIso2Code
+    public class CountryIso2Code : IAuthorityCodeIso2
     {
+        [Obsolete("Use FromString() method", true)]
+        public CountryIso2Code() { }
+
         private CountryIso2Code(string code)
         {
             Code = code;
         }
-
-        [DataMember(Order = 6)]
 
         public string Code { get; }
 
@@ -835,7 +835,6 @@ namespace Azihub.GlobalData.Base.Country
         /// <summary>
         /// Iran (IR)
         /// </summary>
-        [DataMember(Order = 7)]
         public static CountryIso2Code Iran => new CountryIso2Code(Iso2Codes.IR);
 
         /// <summary>

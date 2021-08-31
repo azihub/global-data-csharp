@@ -1,8 +1,8 @@
 ﻿namespace Azihub.GlobalData.Base.Authority
 {
-    public interface IAuthorityCode
+    public interface IAuthorityCodeIso2
     {
-        string Code { get; set; }
+        string Code { get; }
     }
 
     public interface IAuthority
@@ -11,7 +11,7 @@
         /// <summary>
         /// Two Letter code assignment of authority or region
         /// </summary>
-        IAuthorityCode AuthorityCode { get; set; }
+        IAuthorityCodeIso2 AuthorityCode { get; set; }
         Type Type { get; set; }
     }
 
