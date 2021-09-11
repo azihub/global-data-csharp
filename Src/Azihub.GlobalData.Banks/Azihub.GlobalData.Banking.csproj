@@ -5,6 +5,10 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <PackageReference Condition="'$(Configuration)' == 'Release'" Include="Azihub.GlobalData.Base" Version="0.1.4" />
+    </ItemGroup>
+
+    <ItemGroup>
       <ProjectReference Include="..\Azihub.GlobalData.Base\Azihub.GlobalData.Base.csproj" />
     </ItemGroup>
 

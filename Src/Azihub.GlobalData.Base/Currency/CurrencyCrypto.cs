@@ -5,6 +5,7 @@ namespace Azihub.GlobalData.Base.Currency
 {
     class GdCurrencyCrypto : ICurrency
     {
+        public ushort Id { get; }
         public string Code { get; set; }
         public string Name { get; set; }
         public string Symbol { get; set; }

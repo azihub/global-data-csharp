@@ -1,4 +1,5 @@
 using Azihub.GlobalData.Banking.Banks;
+using Azihub.GlobalData.Base.Country;
 using Azihub.Utilities.Base.Tests;
 using System;
 using Xunit;
@@ -18,6 +19,7 @@ namespace Azihub.GlobalData.Banking.Tests
             BicCode cimbBicCode = BicCode.FromString(BicCodesConsts.MY_CIMB_KL);
 
             Assert.Equal("CIBBMYKL", cimbBicCode.Code);
+            Assert.Equal(CountryIso2Code.Malaysia, cimbBicCode.CountryCode);
         }
 
         [Fact]

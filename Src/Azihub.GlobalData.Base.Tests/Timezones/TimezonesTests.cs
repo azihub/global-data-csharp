@@ -21,10 +21,10 @@ namespace Azihub.GlobalData.Base.Tests.Timezones
         [Fact]
         public void TimezonesIanaTests()
         {
-            var tzCollection = TZConvert.KnownIanaTimeZoneNames;
+            ICollection<string> tzCollection = TZConvert.KnownIanaTimeZoneNames;
             foreach (string timezone in tzCollection)
             {
-                Output.WriteLine("public const string "+timezone.Replace("/","__")
+                Output.WriteLine("public const string "+timezone.Replace("+", "_P_").Replace("-","_M_").Replace("/","__")
                     .ToConstantCase(true)+" = \""+timezone+"\";");
             }
         }
@@ -32,7 +32,7 @@ namespace Azihub.GlobalData.Base.Tests.Timezones
         [Fact]
         public void TimezonesWindowsTests()
         {
-            var tzCollection = TZConvert.KnownWindowsTimeZoneIds;
+            ICollection<string> tzCollection = TZConvert.KnownWindowsTimeZoneIds;
             foreach (string timezone in tzCollection)
             {
                 Output.WriteLine("public const string "+timezone.Replace("/","__")
@@ -68,21 +68,20 @@ namespace Azihub.GlobalData.Base.Tests.Timezones
         {
             Output.WriteLine("Total timezone count: " + TimeZoneInfo.GetSystemTimeZones().Count);
             Dictionary<string, TimeZoneInfo> dict = new();
-            string abr = "";
-            bool added = false;
             foreach (TimeZoneInfo z in TimeZoneInfo.GetSystemTimeZones())
             {
                 Output.WriteLine(GetAbbreviation(z.Id));
                 Output.WriteLine(z.DisplayName+"|"+ z.Id + "|"+z.StandardName+"|"+z.BaseUtcOffset);
-                added = false;
+                bool added;
                 do
                 {
+                    string abr;
                     if (z.Id.Substring(0, 3) == "UTC")
                         abr = z.Id;
                     else
                         abr = GetAbbreviation(z.Id);
 
-                    
+
                     if (!dict.ContainsKey(abr))
                     {
                         dict.TryAdd(abr, z);
@@ -108,7 +107,7 @@ namespace Azihub.GlobalData.Base.Tests.Timezones
             }
         }
 
-        private string GetAbbreviation(string text)
+        private static string GetAbbreviation(string text)
         {
             const string pattern = @"((?<=^|\s)(\w{1})|([A-Z]))";
             return string.Join(string.Empty, Regex.Matches(text, pattern).OfType<Match>().Select(x => x.Value.ToUpper()));

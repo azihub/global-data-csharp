@@ -27,11 +27,15 @@
     <FileVersion>0.1.5</FileVersion>
     <Version>0.1.5</Version>
     <PackageReleaseNotes>Added TimeZoneId provided by Microsoft.</PackageReleaseNotes>
+    <ApplicationIcon />
+    <Win32Resource />
   </PropertyGroup>
   
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile></DocumentationFile>
+    <DocumentationFile>D:\Works\global-data-csharp\Src\Azihub.GlobalData.Base\Azihub.GlobalData.Base.xml</DocumentationFile>
     <WarningsAsErrors>;NU1605;NU1574</WarningsAsErrors>
+    <PlatformTarget>x64</PlatformTarget>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
   </PropertyGroup>
   
   <ItemGroup>
@@ -70,6 +74,12 @@
   
   <ItemGroup>
     <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Compile Update="Currency\CurrencyFiat.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
   </ItemGroup>
 
 </Project>

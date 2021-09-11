@@ -5,7 +5,7 @@ using Azihub.GlobalData.Base.Country.Exceptions;
 
 namespace Azihub.GlobalData.Base.Country
 {
-    public class CountryIso2Code : IAuthorityCodeIso2
+    public class CountryIso2Code : IAuthorityCodeIso2 , IEquatable<CountryIso2Code>
     {
         [Obsolete("Use FromString() method", true)]
         public CountryIso2Code() { }
@@ -291,6 +291,11 @@ namespace Azihub.GlobalData.Base.Country
                 return gdCountryCode;
 
             throw new InvalidCountryCodeException(code);
+        }
+
+        public bool Equals(CountryIso2Code other)
+        {
+            return Code == other.Code;
         }
 
         #region Country Name

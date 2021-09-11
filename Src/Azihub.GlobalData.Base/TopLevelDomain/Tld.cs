@@ -5,13 +5,16 @@ using System.Text;
 
 namespace Azihub.GlobalData.Base.TopLevelDomain
 {
-    public partial class Tld
+    public partial class Tld : IEquatable<Tld>
     {
+        [Obsolete("Use FromString() method", true)]
+        public Tld() { }
+
         private Tld(string value)
         {
-            Value = value;
+            Code = value;
         }
-        public string Value { get; set; }
+        public string Code { get; set; }
 
         public static Tld FromString(string tldString)
         {
@@ -43,6 +46,11 @@ namespace Azihub.GlobalData.Base.TopLevelDomain
                 return true;
 
             return false;
+        }
+
+        public bool Equals(Tld other)
+        {
+            return Code == other.Code;
         }
     }
 }

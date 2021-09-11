@@ -18,8 +18,8 @@ namespace Azihub.GlobalData.Base.Tests.TopLevelDomain
         public void ValidateTldTest(string tldStr, string expected)
         {
             Tld tld = Tld.FromString(tldStr);
-            Output.WriteLine($"Expected: {tldStr}, Output: {tld.Value}");
-            Assert.Equal(expected, tld.Value);
+            Output.WriteLine($"Expected: {tldStr}, Output: {tld.Code}");
+            Assert.Equal(expected, tld.Code);
         }
 
         [Fact]

@@ -22,6 +22,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Src\Azihub.GlobalData.Banks\Azihub.GlobalData.Banking.csproj" />
+    <ProjectReference Include="..\Src\Azihub.GlobalData.Base\Azihub.GlobalData.Base.csproj" />
   </ItemGroup>
 
 </Project>
