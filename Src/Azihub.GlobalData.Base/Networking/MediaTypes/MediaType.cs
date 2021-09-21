@@ -5,7 +5,10 @@ using System.Text;
 
 namespace Azihub.GlobalData.Base.Networking.MediaTypes
 {
-    public partial class MediaType
+    /// <summary>
+    /// https://www.iana.org/assignments/media-types/media-types.xhtml
+    /// </summary>
+    public partial class MediaType : IEquatable<MediaType>
     {
         private MediaType(string value, string[] extensions, string[] reference)
         {
@@ -13,10 +16,28 @@ namespace Azihub.GlobalData.Base.Networking.MediaTypes
             Extensions = extensions;
             Reference = reference;
         }
+
+        /// <summary>
+        /// String value of file MIME format (Example: "text/plain")
+        /// </summary>
         public string Value { get; set; }
+
+        /// <summary>
+        /// File extension (example .txt).
+        /// </summary>
         public string[] Extensions { get; set; }
+
+
+        /// <summary>
+        /// IANA's reference field (Work in progress)
+        /// </summary>
         public string[] Reference { get; set; }
 
+        /// <summary>
+        /// Create object from string value. this will also validate if string value is a correct match to a valid MIME type.
+        /// </summary>
+        /// <param name="typeString"></param>
+        /// <returns></returns>
         public static MediaType FromString(string typeString)
         {
             typeString = typeString.Trim().ToLower();
@@ -34,7 +55,7 @@ namespace Azihub.GlobalData.Base.Networking.MediaTypes
         /// <summary>
         /// Validate a Top Level Domain
         /// </summary>
-        /// <param name="tld"></param>
+        /// <param name="typeString"></param>
         /// <returns></returns>
         public static bool IsValid(string typeString)
         {
@@ -47,6 +68,16 @@ namespace Azihub.GlobalData.Base.Networking.MediaTypes
                 return true;
 
             return false;
+        }
+
+        /// <summary>
+        /// Compare object to object based on <see cref="Value"/> property.
+        /// </summary>
+        /// <param name="other"></param>
+        /// <returns></returns>
+        public bool Equals(MediaType other)
+        {
+            return Value == other.Value;
         }
     }
 }

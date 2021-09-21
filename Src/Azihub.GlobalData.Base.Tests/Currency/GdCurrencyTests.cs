@@ -14,6 +14,17 @@ namespace Azihub.GlobalData.Base.Tests.Country
         public GdCurrencyTests(ITestOutputHelper output) : base(output) { }
 
         [Fact]
+        public void GdCurrencyUShortValueTest()
+        {
+            GD<FiatCurrency> usDollar = new GD<FiatCurrency>.FromString("USD");
+            JsonConvert
+            Assert.Equal(1, usDollar.Id);
+            Assert.Equal("USD", usDollar.Code.Value);
+            Assert.Equal("US Dollar", usDollar.Data.Name);
+        }
+
+        #region LegacyCurrency
+        [Fact]
         public void CurrencyCodeValidationTest()
         {
             Assert.Throws<InvalidCurrencyCodeException>(() => CurrencyFiatCode.FromString("ZZZ"));
@@ -48,6 +59,55 @@ namespace Azihub.GlobalData.Base.Tests.Country
                 string flag = currency.GetFlag();
                 Output.WriteLine($"Flag for {currency.Code} currency is {flag}");
                 Assert.False(string.IsNullOrEmpty(flag));
+            }
+        }
+        #endregion
+    }
+
+    public class FiatCurrency : IGData<FiatCurrency>
+    {
+        private FiatCurrency(string code)
+        {
+            Code = code;
+        }
+
+        public string Code { get; }
+
+        public FiatCurrency Data { get; }
+        FiatCurrency IGData<FiatCurrency>.FromString(string code)
+        {
+            return FromString(code);
+        }
+
+        public static FiatCurrency FromString(string code)
+        {
+            return new(code);
+        }
+    }
+
+    public class ByteArray<T> where T : IGData<T>
+    {
+        public byte ByteCount { get; }
+    }
+
+    public class GD<T> where T : IGData<T>
+    {
+        public byte[] Id { get; }
+        public string Code
+        {
+            get
+            {
+                return Data.Code;
+            }
+        }
+
+        public IGData<T> Data { get; }
+
+        public class FromString : GD<T>
+        {
+            public FromString(string usd)
+            {
+                return new()
             }
         }
     }
