@@ -133,11 +133,6 @@ namespace Azihub.GlobalData.Base.TopLevelDomain
         public const string AF = "AF";
 
         /// <summary>
-        /// AFAMILYCOMPANY
-        /// </summary>
-        public const string AFAMILYCOMPANY = "AFAMILYCOMPANY";
-
-        /// <summary>
         /// AFL
         /// </summary>
         public const string AFL = "AFL";
@@ -1808,11 +1803,6 @@ namespace Azihub.GlobalData.Base.TopLevelDomain
         public const string DUBAI = "DUBAI";
 
         /// <summary>
-        /// DUCK
-        /// </summary>
-        public const string DUCK = "DUCK";
-
-        /// <summary>
         /// DUNLOP
         /// </summary>
         public const string DUNLOP = "DUNLOP";
@@ -2476,11 +2466,6 @@ namespace Azihub.GlobalData.Base.TopLevelDomain
         /// GL
         /// </summary>
         public const string GL = "GL";
-
-        /// <summary>
-        /// GLADE
-        /// </summary>
-        public const string GLADE = "GLADE";
 
         /// <summary>
         /// GLASS
@@ -4113,6 +4098,11 @@ namespace Azihub.GlobalData.Base.TopLevelDomain
         public const string MUSEUM = "MUSEUM";
 
         /// <summary>
+        /// MUSIC
+        /// </summary>
+        public const string MUSIC = "MUSIC";
+
+        /// <summary>
         /// MUTUAL
         /// </summary>
         public const string MUTUAL = "MUTUAL";
@@ -4391,11 +4381,6 @@ namespace Azihub.GlobalData.Base.TopLevelDomain
         /// OBSERVER
         /// </summary>
         public const string OBSERVER = "OBSERVER";
-
-        /// <summary>
-        /// OFF
-        /// </summary>
-        public const string OFF = "OFF";
 
         /// <summary>
         /// OFFICE
@@ -4888,11 +4873,6 @@ namespace Azihub.GlobalData.Base.TopLevelDomain
         public const string QUEST = "QUEST";
 
         /// <summary>
-        /// QVC
-        /// </summary>
-        public const string QVC = "QVC";
-
-        /// <summary>
         /// RACING
         /// </summary>
         public const string RACING = "RACING";
@@ -4901,11 +4881,6 @@ namespace Azihub.GlobalData.Base.TopLevelDomain
         /// RADIO
         /// </summary>
         public const string RADIO = "RADIO";
-
-        /// <summary>
-        /// RAID
-        /// </summary>
-        public const string RAID = "RAID";
 
         /// <summary>
         /// RE
@@ -5061,11 +5036,6 @@ namespace Azihub.GlobalData.Base.TopLevelDomain
         /// RIP
         /// </summary>
         public const string RIP = "RIP";
-
-        /// <summary>
-        /// RMIT
-        /// </summary>
-        public const string RMIT = "RMIT";
 
         /// <summary>
         /// RO
@@ -5291,11 +5261,6 @@ namespace Azihub.GlobalData.Base.TopLevelDomain
         /// SCIENCE
         /// </summary>
         public const string SCIENCE = "SCIENCE";
-
-        /// <summary>
-        /// SCJOHNSON
-        /// </summary>
-        public const string SCJOHNSON = "SCJOHNSON";
 
         /// <summary>
         /// SCOT
@@ -5756,11 +5721,6 @@ namespace Azihub.GlobalData.Base.TopLevelDomain
         /// SWATCH
         /// </summary>
         public const string SWATCH = "SWATCH";
-
-        /// <summary>
-        /// SWIFTCOVER
-        /// </summary>
-        public const string SWIFTCOVER = "SWIFTCOVER";
 
         /// <summary>
         /// SWISS
@@ -6651,11 +6611,6 @@ namespace Azihub.GlobalData.Base.TopLevelDomain
         /// XN3HCRJ9C
         /// </summary>
         public const string XN3HCRJ9C = "XN3HCRJ9C";
-
-        /// <summary>
-        /// XN3OQ18VL8PN36A
-        /// </summary>
-        public const string XN3OQ18VL8PN36A = "XN3OQ18VL8PN36A";
 
         /// <summary>
         /// XN3PXU8K
