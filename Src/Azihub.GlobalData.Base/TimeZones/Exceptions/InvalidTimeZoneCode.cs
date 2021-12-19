@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace Azihub.GlobalData.Base.Timezones.Exceptions
+namespace Azihub.GlobalData.Base.TimeZones.Exceptions
 {
     public class InvalidTimeZoneCode : Exception
     {

@@ -1,9 +1,8 @@
-﻿using Azihub.GlobalData.Base.Tests.Abstract;
-using Azihub.GlobalData.Validators;
+﻿using Azihub.Utilities.Base.Tests;
 using Xunit;
 using Xunit.Abstractions;
 
-namespace Azihub.Utilities.Tests.Validators
+namespace Azihub.GlobalData.Validators.Tests
 {
     public class MobileTests : TestBase
     {

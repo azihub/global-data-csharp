@@ -1,10 +1,9 @@
-﻿using Azihub.GlobalData.Base.Tests.Abstract;
-using Azihub.GlobalData.Validators;
-using System.Net.Mail;
+﻿using System.Net.Mail;
+using Azihub.Utilities.Base.Tests;
 using Xunit;
 using Xunit.Abstractions;
 
-namespace Azihub.Utilities.Tests.Valitators
+namespace Azihub.GlobalData.Validators.Tests
 {
     public class EmailAddressTests : TestBase
     {

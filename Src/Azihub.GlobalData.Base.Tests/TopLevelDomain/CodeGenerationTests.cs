@@ -6,7 +6,7 @@ using Azihub.Utilities.Base.Tests;
 using Xunit;
 using Xunit.Abstractions;
 
-namespace Azihub.GlobalData.Base.Tests.Country
+namespace Azihub.GlobalData.Base.Tests.TopLevelDomain
 {
     public class CodeGenerationTests : TestBase
     {

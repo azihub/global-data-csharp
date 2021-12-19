@@ -1,9 +1,6 @@
 ﻿using Azihub.Utilities.Base.Settings.Interfaces;
 using Azihub.GlobalData.Base.Tests.Settings;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.Extensions.Configuration;
-using Microsoft.AspNetCore.Hosting;
 
 namespace Azihub.GlobalData.Base.Tests
 {

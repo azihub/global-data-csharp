@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Azihub.GlobalData.Base.Currency.Interfaces
+﻿namespace Azihub.GlobalData.Base.Currency.Interfaces
 {
     public interface ICurrencyCode : IShortId
     {

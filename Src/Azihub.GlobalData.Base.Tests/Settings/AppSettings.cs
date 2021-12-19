@@ -1,11 +1,4 @@
-﻿using Azihub.Utilities.Base.Settings;
-using Azihub.Utilities.Base.Settings.Interfaces;
-using Azihub.Utilities.Base.Tools;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Azihub.Utilities.Base.Tools;
 
 namespace Azihub.GlobalData.Base.Tests.Settings
 {

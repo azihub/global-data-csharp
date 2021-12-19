@@ -1,13 +1,13 @@
-﻿using Azihub.GlobalData.Base.Country;
+﻿using System.Collections.Generic;
+using Azihub.GlobalData.Base.Country;
 using Azihub.GlobalData.Base.Currency;
 using Azihub.GlobalData.Base.Currency.Exceptions;
 using Azihub.GlobalData.Base.Currency.Extensions;
 using Azihub.Utilities.Base.Tests;
-using System.Collections.Generic;
 using Xunit;
 using Xunit.Abstractions;
 
-namespace Azihub.GlobalData.Base.Tests.Country
+namespace Azihub.GlobalData.Base.Tests.Currency
 {
     public class GdCurrencyTests : TestBase
     {

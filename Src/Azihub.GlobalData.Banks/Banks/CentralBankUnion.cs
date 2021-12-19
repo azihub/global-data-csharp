@@ -1,4 +1,4 @@
-﻿namespace GlobalData.Base.Bank
+﻿namespace Azihub.GlobalData.Banking.Banks
 {
     public class CentralBankUnion : ICentralBank
     {

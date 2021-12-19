@@ -1,5 +1,4 @@
 ﻿using Azihub.GlobalData.Base.Country;
-using Azihub.GlobalData.Base.Country.Interfaces;
 
 namespace Azihub.GlobalData.Base.Address
 {

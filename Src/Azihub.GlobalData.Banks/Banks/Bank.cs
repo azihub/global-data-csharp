@@ -1,7 +1,5 @@
 ﻿using Azihub.GlobalData.Base.Country;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Azihub.GlobalData.Banking.Banks
 {

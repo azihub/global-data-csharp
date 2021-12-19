@@ -1,6 +1,4 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-
-namespace Azihub.GlobalData.Validators.Tests
+﻿namespace Azihub.GlobalData.Validators.Tests
 {
     public class Startup
     {

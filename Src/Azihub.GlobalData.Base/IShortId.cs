@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Azihub.GlobalData.Base
+﻿namespace Azihub.GlobalData.Base
 {
     /// <summary>
     /// 16-bit Ensure transport and storing ID or code uses minimized footprint,

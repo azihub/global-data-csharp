@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Azihub.GlobalData.Banking.Banks
+﻿namespace Azihub.GlobalData.Banking.Banks
 {
     public class BicCodes
     {

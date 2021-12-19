@@ -1,85 +1,78 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
-    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Authors>Mason Chase</Authors>
-    <Company>Azihub</Company>
-    <Product>Global Data Base</Product>
-    <NoPackageAnalysis>true</NoPackageAnalysis>
-    <Summary>
-      Base Data including:
-      Country, Currency and Address
-    </Summary>
-    <Description>Base Data including:
-- Country
-- Currency
-- Address
-- Top Level Domain</Description>
-    <Copyright>Azihub</Copyright>
-    <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
-    <PackageProjectUrl>https://global-data.azihub.com</PackageProjectUrl>
-    <PackageIcon>azihub.png</PackageIcon>
-    <PackageIconUrl />
-    <RepositoryUrl>https://github.com/azihub/global-data-csharp</RepositoryUrl>
-    <AssemblyVersion>0.1.5.0</AssemblyVersion>
-    <FileVersion>0.1.5</FileVersion>
-    <Version>0.1.5</Version>
-    <PackageReleaseNotes>Added TimeZoneId provided by Microsoft.</PackageReleaseNotes>
-    <ApplicationIcon />
-    <Win32Resource />
-  </PropertyGroup>
-  
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>D:\Works\global-data-csharp\Src\Azihub.GlobalData.Base\Azihub.GlobalData.Base.xml</DocumentationFile>
-    <WarningsAsErrors>;NU1605;NU1574</WarningsAsErrors>
-    <PlatformTarget>x64</PlatformTarget>
-    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
-  </PropertyGroup>
-  
-  <ItemGroup>
-    <None Include="..\..\azihub.png">
-      <Pack>True</Pack>
-      <PackagePath></PackagePath>
-    </None>
-    <None Include="..\..\LICENSE.md">
-      <Pack>True</Pack>
-      <PackagePath></PackagePath>
-    </None>
-  </ItemGroup>
-  
-  <ItemGroup>
-    <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.0.0-3.final" />
-    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="3.1.17" />
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
-  </ItemGroup>
-  
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\appstract-csharp\azihub-utilities-base-csharp\Azihub.Utilities.Base\Azihub.Utilities.Base.csproj" />
-  </ItemGroup>
-  
-  <ItemGroup>
-    <None Update="TopLevelDomain\IanaOrgTlds.json">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>IanaOrgTlds.txt</LastGenOutput>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="TopLevelDomain\IanaOrgTlds.txt">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>IanaOrgTlds.json</DependentUpon>
-    </None>
-  </ItemGroup>
-  
-  <ItemGroup>
-    <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
-  </ItemGroup>
-  
-  <ItemGroup>
-    <Compile Update="Currency\CurrencyFiat.cs">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Compile>
-  </ItemGroup>
+	<PropertyGroup>
+		<TargetFramework>netstandard2.0</TargetFramework>
+		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<Authors>Mason Chase</Authors>
+		<Company>Azihub</Company>
+		<Product>Global Data Base</Product>
+		<NoPackageAnalysis>true</NoPackageAnalysis>
+		<Summary>
+			Base Data including:
+			Country, Currency and Address
+		</Summary>
+		<Description>
+			Base Data including:
+			- Country
+			- Currency
+			- Address
+			- Top Level Domain
+		</Description>
+		<Copyright>Azihub</Copyright>
+		<PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+		<PackageProjectUrl>https://global-data.azihub.com</PackageProjectUrl>
+		<PackageIcon>azihub.png</PackageIcon>
+		<PackageIconUrl />
+		<RepositoryUrl>https://github.com/azihub/global-data-csharp</RepositoryUrl>
+		<AssemblyVersion>0.1.5.0</AssemblyVersion>
+		<FileVersion>0.1.5</FileVersion>
+		<Version>0.1.5</Version>
+		<PackageReleaseNotes>Added TimeZoneId provided by Microsoft.</PackageReleaseNotes>
+		<ApplicationIcon />
+		<Win32Resource />
+	</PropertyGroup>
+
+
+	<ItemGroup>
+		<None Include="..\..\azihub.png">
+			<Pack>True</Pack>
+			<PackagePath></PackagePath>
+		</None>
+		<None Include="..\..\LICENSE.md">
+			<Pack>True</Pack>
+			<PackagePath></PackagePath>
+		</None>
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Azihub.Utilities.Base" Version="0.1.13" />
+		<PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.0.0-3.final" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="5.0.0" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Update="TopLevelDomain\IanaOrgTlds.json">
+			<Generator>TextTemplatingFileGenerator</Generator>
+			<LastGenOutput>IanaOrgTlds.txt</LastGenOutput>
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="TopLevelDomain\IanaOrgTlds.txt">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>IanaOrgTlds.json</DependentUpon>
+		</None>
+	</ItemGroup>
+
+	<ItemGroup>
+		<Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Compile Update="Currency\CurrencyFiat.cs">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Compile>
+	</ItemGroup>
 
 </Project>

@@ -1,13 +1,9 @@
-﻿using Azihub.Utilities.Base.Extensions.String;
-using static Azihub.GlobalData.Base.TopLevelDomain.Settings;
-using Microsoft.Extensions.Logging;
-using System;
+﻿using Microsoft.Extensions.Logging;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Runtime.CompilerServices;
-using System.Text;
 using System.Text.RegularExpressions;
 
 namespace Azihub.GlobalData.Base.TopLevelDomain.Tools

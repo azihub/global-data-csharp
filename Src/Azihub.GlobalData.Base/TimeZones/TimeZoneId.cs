@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Azihub.GlobalData.Base.Timezones.Exceptions;
+﻿using Azihub.GlobalData.Base.TimeZones.Exceptions;
 
 namespace Azihub.GlobalData.Base.TimeZones
 {

@@ -1,8 +1,6 @@
 ﻿using Azihub.GlobalData.Base.TopLevelDomain;
 using System;
-using System.Collections.Generic;
 using System.Net.Mail;
-using System.Text;
 using System.Text.RegularExpressions;
 
 namespace Azihub.GlobalData.Validators
