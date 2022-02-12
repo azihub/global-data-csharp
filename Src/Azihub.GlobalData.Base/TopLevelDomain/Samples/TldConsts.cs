@@ -18,7 +18,8 @@
         public static string NET = "net";
 
         /// <summary>
-        /// International
+        /// EN: International
+        /// NL: Inter
         /// </summary>
         public static string INT = "int";
 

@@ -59,16 +59,6 @@ namespace Azihub.GlobalData.Base.TopLevelDomain
                 regexPatternLastUpdate,
                 CultureInfo.InvariantCulture,
                 DateTimeStyles.AllowWhiteSpaces);
-            //const string regexPatternDate = @"(?<month>\w\w\w) (?<day>\d\d) (?<hour>\d\d):(?<minute>\d\d):(?<second>\d\d) (?<year>\d{4,4})";
-            //var groups = Regex.Match(Body, regexPatternDate, RegexOptions.IgnoreCase).Groups;
-            //LastUpdate = new DateTime(
-            //    int.Parse(groups["year"].Value),
-            //    ,
-            //    int.Parse(groups["day"].Value),
-            //    int.Parse(groups["hour"].Value),
-            //    int.Parse(groups["minute"].Value),
-            //    int.Parse(groups["second"].Value)
-            //    ); 
         }
 
         private void SetListFromBody()

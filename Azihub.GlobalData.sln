@@ -19,7 +19,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Azihub.GlobalData.Validator
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Azihub.GlobalData.Validators.Tests", "Src\Azihub.GlobalData.Validators.Tests\Azihub.GlobalData.Validators.Tests.csproj", "{128EF6C7-F7B8-40A7-9A92-C5AE61B1966B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Azihub.GlobalData.Banking.Tests", "Azihub.GlobalData.Banking.Tests\Azihub.GlobalData.Banking.Tests.csproj", "{3AC27037-B116-49BD-8A36-CEC23951F050}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Azihub.GlobalData.Banking.Tests", "Src\Azihub.GlobalData.Banking.Tests\Azihub.GlobalData.Banking.Tests.csproj", "{3AC27037-B116-49BD-8A36-CEC23951F050}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

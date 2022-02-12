@@ -35,16 +35,14 @@ namespace Azihub.GlobalData.Base.TopLevelDomain.Tools
             tldConsts.Append(GetConstFooter());
             tldDict.Append(GetDictFooter());
 
-            #region 
             ClassDeclarationSyntax newClassNode = SyntaxFactory.ParseSyntaxTree(tldConsts.ToString()).GetRoot()
                                             .DescendantNodes()
                                             .OfType<ClassDeclarationSyntax>()
                                             .FirstOrDefault();
-            // Retrieve the parent namespace declaration
+            
             NamespaceDeclarationSyntax parentNamespace = (NamespaceDeclarationSyntax) newClassNode?.Parent;
-            // Add the new class to the namespace
+            
             parentNamespace?.AddMembers(newClassNode).NormalizeWhitespace();
-            #endregion
 
             return (tldConsts.ToString(), tldDict.ToString());
         }

@@ -1508,11 +1508,6 @@ namespace Azihub.GlobalData.Base.TopLevelDomain
         public const string CRUISES = "CRUISES";
 
         /// <summary>
-        /// CSC
-        /// </summary>
-        public const string CSC = "CSC";
-
-        /// <summary>
         /// CU
         /// </summary>
         public const string CU = "CU";
@@ -3591,11 +3586,6 @@ namespace Azihub.GlobalData.Base.TopLevelDomain
         /// LIVING
         /// </summary>
         public const string LIVING = "LIVING";
-
-        /// <summary>
-        /// LIXIL
-        /// </summary>
-        public const string LIXIL = "LIXIL";
 
         /// <summary>
         /// LK
