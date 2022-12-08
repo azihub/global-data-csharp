@@ -49,7 +49,7 @@
 		<PackageReference Include="Azihub.Utilities.Base" Version="0.1.13" />
 		<PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.0.0-3.final" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="5.0.0" />
-		<PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
 	</ItemGroup>
 
 	<ItemGroup>
